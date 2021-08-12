@@ -1,0 +1,32 @@
+/* Подключение стилей Bootstrap */
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+/* Подключение стилей swiper */
+@import '../../node_modules/swiper/swiper.scss';
+
+/* Переопределение дефолтных значений переменных Bootstrap и определение своих */
+@import 'helpers/variables';
+
+/* Подключение стилей проекта */
+@import "helpers/fonts";
+@import "helpers/extends";
+@import "helpers/transition";
+
+/* ============= common ============= */
+@import "components/common";
+/* ============= common .end/ ============= */
+
+/* ============= header ============= */
+@import "components/header";
+/* ============= header .end/ ============= */
+
+/* ============= main ============= */
+@import "components/main";
+
+/* another pages styles/ */
+/*@import "somepage";*/
+/* ============= main .end/ ============= */
+
+/* ============= footer ============= */
+@import "components/footer";
+/* ============= footer .end/ ============= */

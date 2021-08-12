@@ -1,0 +1,336 @@
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  @extend %fontFamily;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.4;
+  background-color: $white;
+  color: $black;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+  font-weight: 400;
+  line-height: inherit;
+}
+
+.h1,
+h1 {
+  font-size: 46px;
+  line-height: 55px;
+}
+
+.h2,
+h2 {
+  font-size: 36px;
+}
+
+.h3,
+h3 {
+  font-size: 30px;
+}
+
+.h4,
+h4 {
+  font-size: 24px;
+}
+
+.h5,
+h5 {
+  font-size: 20px;
+}
+
+.h6,
+h6 {
+  font-size: 18px;
+}
+
+a {
+  background-color: transparent;
+  color: $mainTxtDark;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $mainTxtDark;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+  pointer-events: none;
+}
+
+.dummy {
+  z-index: -1000;
+}
+
+.txt-lg {
+  font-size: 20px;
+}
+.txt-md {
+  font-size: 22px;
+}
+.txt-sm {
+  font-size: 18px;
+}
+
+
+/*  ===================  */
+
+.btn-reset {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: unset;
+  color: unset;
+  appearance: none;
+}
+
+.btn {
+  padding: 14px 0;
+  border-radius: 100px;
+  box-shadow: none;
+  @extend %fontFamily;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: inherit;
+  transition: all 0.3s linear 0s;
+
+  &:hover {
+    /*color: $complementaryBlue;*/
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &.disabled,
+  &:disabled {
+    opacity: 1;
+  }
+}
+
+.btn-primary {
+  /*border-color: $complementaryYellow;
+  background-color: $complementaryYellow;*/
+  color: $white;
+}
+.btn-primary:hover {
+  /*border-color: $selectionHover;
+  background-color: $selectionHover;*/
+  color: $white;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+  /*border-color: $selectionHover;
+  background-color: $selectionHover;*/
+  color: $white;
+  box-shadow: none;
+}
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  /*border-color: $selectionHover;
+  background-color: $selectionHover;*/
+  color: $white;
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-secondary {
+  /*border-color: $complementaryGrey;
+  background-color: $complementaryGrey;
+  color: $complementaryBlue;*/
+}
+.btn-secondary:hover {
+  /*border-color: $complementaryGreyHover;
+  background-color: $complementaryGreyHover;
+  color: $complementaryBlue;*/
+}
+.btn-secondary:focus,
+.btn-secondary.focus {
+  /*border-color: $complementaryGreyHover;
+  background-color: $complementaryGreyHover;
+  color: $complementaryBlue;*/
+  box-shadow: none;
+}
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  /*border-color: $complementaryGreyHover;
+  background-color: $complementaryGreyHover;
+  color: $complementaryBlue;*/
+}
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled,
+.btn-secondary.disabled,
+.btn-secondary:disabled {
+  /*color: $midGrey2;
+  background-color: $lightGrey;
+  border-color: $lightGrey;*/
+}
+
+.btn--link {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  /*color: $complementaryBlue;*/
+  font-weight: normal;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-out {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  border-color: transparent;
+  border-radius: 0;
+  background-color: transparent;
+  /*color: $mainDarkBlue;*/
+
+  &:hover {
+    /*color: $complementaryBlue;*/
+  }
+  &__icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+  &__icon use {
+    /*fill: $mainDarkBlue;*/
+    transition: all 0.3s linear 0s;
+  }
+  &:hover &__icon use {
+    /*fill: $complementaryBlue;*/
+  }
+}
+.btn-out.disabled {
+  /*color: $midGrey2;*/
+}
+.btn-out.disabled .btn-out__icon use {
+  /*fill: $midGrey2;*/
+}
+
+.i-block-mt {
+  /*margin-top: get($indent, xl);*/
+}
+.i-block-mb {
+  /*margin-bottom: get($indent, xl);*/
+}
+.i-block-pt {
+  /*padding-top: get($indent, xl);*/
+}
+.i-block-pb {
+  /*padding-bottom: get($indent, xl);*/
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .fade {
+    transition: all 0.3s linear 0s;
+  }
+}
+
+.info-prompt {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before {
+    content: "i";
+    position: absolute;
+    color: $white;
+    font-weight: 900;
+    font-size: 12px;
+  }
+  &--inline-flex {
+    display: inline-flex;
+  }
+  &--yellow {
+    /*background-color: $complementaryYellow;*/
+  }
+  &--grey {
+    /*background-color: $infoPromptGrey;*/
+  }
+  &__cnt {
+    bottom: calc(100% + 10px);
+    min-width: 0;
+    margin-left: -2px;
+    padding: 6px 11px;
+    border-radius: 6px;
+    /*background-color: $darkGrey;*/
+    color: $white;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.3s linear 0s;
+  }
+  &__cnt::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    /*background-color: $darkGrey;*/
+    transform: translate(-50%, 50%) rotate(45deg);
+  }
+  &:hover &__cnt {
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+.tooltip {
+  font-family: inherit;
+  line-height: inherit;
+  font-size: 12px;
+}
+
+@media (min-width: 1440px) and (max-width: 1599.98px) {
+  .container {
+    max-width: 1380px;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1560px;
+  }
+}
