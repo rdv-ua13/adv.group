@@ -1,194 +1,121 @@
 .header {
-  position: absolute;
-  z-index: 5;
-  top: 0;
-  right: 0;
-  left: 0;
-  min-width: 320px;
-  width: 100%;
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	right: 0;
+	left: 0;
+	min-width: 320px;
+	width: 100%;
 
-  &__top {
-    padding-top: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid $white;
-  }
-  &__logo {
-    display: block;
-  }
+	&__top {
+		padding-top: 25px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid $white;
+	}
 }
 
-@media (min-width: 992px) {
-  .header {
-    &__logo,
-    &__logo-i {
-      min-width: 200px;
-      min-height: 55px;
-      width: 200px;
-      height: 55px;
-    }
-  }
-}
 
 @media (min-width: 768px) {
-  .header {
-    &__top {
-      min-height: 100px;
-      height: 100px;
-    }
-    &__top-nav,
-    &__user,
-    &__user-item {
-      display: flex;
-    }
-    &__user {
-      position: relative;
-      flex-direction: column;
-    }
-    &__top-nav {
-      padding-top: 15px;
-      padding-bottom: 5px;
-    }
-    .nav-top {
-      padding-right: 15px;
-    }
-    &__user {
-      padding-left: 15px;
-    }
-    &__top-nav,
-    &__user-item {
-      justify-content: flex-end;
-    }
-    &__user-item {
-      font-weight: 500;
-    }
-    .nav-top__item,
-    &__user-item {
-      line-height: 1;
-    }
-    &__user-item:last-of-type {
-      position: absolute;
-      top: 100px;
-      right: 0;
-    }
-    &__user-item span {
-      white-space: nowrap;
-    }
-    &__user-i {
-      display: block;
-      margin-right: 15px;
-    }
-    &__user-i,
-    &__user-i img {
-      min-width: 24px;
-      min-height: 24px;
-      width: 24px;
-      height: 24px;
-    }
+	.header {
+		&__top {
+			min-height: 100px;
+			height: 100px;
+		}
+		&__user:last-of-type {
+			position: absolute;
+			top: 98px;
+			right: 15px;
+		}
+		&__user-i,
+		&__user-i img {
+			min-width: 24px;
+			min-height: 24px;
+			width: 24px;
+			height: 24px;
+		}
+	}
 
-    &__bottom {
-      padding-top: 18px;
-    }
-  }
+	.nav-top-item {
+		border-bottom: 2px solid transparent;
+		transition: all 0.3s ease;
 
-  .nav-top {
-    display: flex;
+		&:hover {
+			border-color: $mainRed;
+		}
+	}
 
-    &__item {
-      display: block;
-      padding: 0 10px 11px;
-      border-bottom: 2px solid transparent;
-    }
-    &__item:hover {
-      border-color: $mainRed;
-    }
-    &__item:not(:last-of-type) {
-      margin-right: 30px;
-    }
-    &__item:last-of-type {
-      margin-right: 10px;
-    }
-  }
-
-  .nav-bottom {
-    display: flex;
-
-    &__item {
-      position: relative;
-      padding: 25px;
-      border-radius: 25px;
-      line-height: 1;
-      transition: all 0.3s ease;
-    }
-    &__item:hover {
-      background-color: $hoverMidGrey;
-    }
-    &__item--contains::before,
-    &__item--contains::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      width: 10px;
-      height: 1px;
-      background-color: $mainTxtDark;
-      transition: all 0.3s ease;
-    }
-    &__item--contains::before {
-      right: 0px;
-      transform: rotate(-45deg);
-    }
-    &__item--contains::after {
-      right: 7px;
-      transform: rotate(45deg);
-    }
-    &__item--contains:hover::before,
-    &__item--contains:hover::after {
-      background-color: transparent;
-    }
-    &__item:not(:last-of-type) {
-      margin-right: 25px;
-    }
-    &__link {
-      display: block;
-    }
-    &__item:hover &__link {
-      color: $white;
-      text-shadow: -2px 0px #333333;
-    }
-    &__drop {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      display: none;
-      width: 430px;
-      padding: 30px 35px;
-      border-radius: 30px;
-      box-shadow: 10px 10px 10px rgba(0,0,0,0.08);
-      background-color: $white;
-      color: $mainTxtDark;
-      list-style: none;
-    }
-    &__item:hover &__drop {
-      display: block;
-    }
-    &__drop-item {
-      position: relative;
-      padding-left: 40px;
-      line-height: 36px;
-    }
-    &__drop-item::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 36px;
-      height: 36px;
-      background-image: url("/build/img/ellipse.png");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      background-size: cover;
-    }
-    &__drop-item:not(:last-of-type) {
-      margin-bottom: 10px;
-    }
-  }
+	.nav-bottom {
+		&__item {
+			transition: all 0.3s ease;
+		}
+		&__item:hover {
+			background-color: $hoverMidGrey;
+		}
+		&__item--contains::before,
+		&__item--contains::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			width: 10px;
+			height: 1px;
+			background-color: $mainTxtDark;
+		}
+		&__item--contains::before {
+			right: 0px;
+			transform: rotate(-45deg);
+		}
+		&__item--contains::after {
+			right: 7px;
+			transform: rotate(45deg);
+		}
+		&__item--contains:hover::before,
+		&__item--contains:hover::after {
+			background-color: transparent;
+		}
+		&__link,
+		&__item:hover &__drop {
+			display: block;
+		}
+		&__item:hover &__link {
+			color: $white;
+			text-shadow: -2px 0px #333333;
+		}
+		&__drop {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			display: none;
+			width: 430px;
+			padding: 30px 35px;
+			border-radius: 30px;
+			box-shadow: 10px 15px 15px 0 rgba(52, 34, 34, 0.15);
+			background-color: $white;
+			color: $mainTxtDark;
+			list-style: none;
+		}
+		&__drop-item {
+			position: relative;
+			padding-left: 40px;
+			line-height: 36px;
+		}
+		&__drop-item::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 36px;
+			height: 36px;
+			background-image: url("/build/img/ellipse.png");
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			background-size: cover;
+		}
+		&__drop-item:not(:last-of-type) {
+			margin-bottom: 10px;
+		}
+		&__drop-item:hover a {
+			color: $mainRed;
+			transition: all 0.3s ease;
+		}
+	}
 }
