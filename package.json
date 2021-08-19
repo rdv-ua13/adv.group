@@ -31,7 +31,7 @@
     "gulp-uglify": "^3.0.2",
     "imagemin-pngquant": "^9.0.2",
     "sass": "^1.35.1",
-    "swiper": "^6.7.0"
+    "swiper": "^6.8.2"
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
