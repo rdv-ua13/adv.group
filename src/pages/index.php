@@ -1,6 +1,6 @@
 <?php include($_SERVER["DOCUMENT_ROOT"].'/build/components/header.php');?>
 
-<div class="intro intro--main mb-md-6 mb-lg-7 mb-xl-8">
+<div class="intro intro--main mb-4 mb-md-6 mb-lg-7 mb-xl-8">
     <div class="intro__wrapper" style="background-image: url('/build/img/nordwood-themes-kRNZiGKtz48-unsplash.jpg')">
         <div class="container intro__content">
             <h1 class="intro__title">
@@ -11,87 +11,87 @@
                 <div>Оргтехника, сервис, кликовые контракты,</div>
                 <div>пост печатная техника, компьютеры</div>
             </div>
-            <div class="d-flex">
-                <div class="intro__service">
-                    <div class="intro__service-view">
+            <div class="d-flex flex-column flex-md-row">
+                <a class="intro__service" href="#">
+                    <span class="intro__service-view">
                         <svg class="">
                           <use xlink:href="/build/img/sprite.svg#barter"></use>
                         </svg>
-                    </div>
-                    <div class="intro__service-title">
+                    </span>
+                    <span class="intro__service-title">
                         <span>Оптовые </span>
-                        <a class="intro__service-link" href="#">продажи</a>
-                    </div>
-                </div>
-                <div class="intro__service">
-                    <div class="intro__service-view">
+                        <span class="intro__service-link">продажи</span>
+                    </span>
+                </a>
+                <a class="intro__service" href="#">
+                    <span class="intro__service-view">
                         <svg class="">
                             <use xlink:href="/build/img/sprite.svg#handshake"></use>
                         </svg>
-                    </div>
-                    <div class="intro__service-title">
+                    </span>
+                    <span class="intro__service-title">
                         <span>Решения для </span>
-                        <a class="intro__service-link" href="#">бизнеса</a>
-                    </div>
-                </div>
-                <div class="intro__service">
-                    <div class="intro__service-view">
+                        <span class="intro__service-link">бизнеса</span>
+                    </span>
+                </a>
+                <a class="intro__service" href="#">
+                    <span class="intro__service-view">
                         <svg class="">
                             <use xlink:href="/build/img/sprite.svg#settings"></use>
                         </svg>
-                    </div>
-                    <div class="intro__service-title">
+                    </span>
+                    <span class="intro__service-title">
                         <span>Сервис и </span>
-                        <a class="intro__service-link" href="#">ремонт</a>
-                    </div>
-                </div>
-                <div class="intro__service">
-                    <div class="intro__service-view">
+                        <span class="intro__service-link">ремонт</span>
+                    </span>
+                </a>
+                <a class="intro__service" href="#">
+                    <span class="intro__service-view">
                         <svg class="">
                             <use xlink:href="/build/img/sprite.svg#consult"></use>
                         </svg>
-                    </div>
-                    <div class="intro__service-title">
+                    </span>
+                    <span class="intro__service-title">
                         <span></span>
-                        <a class="intro__service-link" href="#">Услуги</a>
-                    </div>
-                </div>
+                        <span class="intro__service-link">Услуги</span>
+                    </span>
+                </a>
             </div>
         </div>
     </div>
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-12 mb-md-6 mb-lg-7 mb-xl-8">
-            <div class="h2 mb-md-5 mb-lg-6 mb-xl-7">Преимущества</div>
+        <div class="col-12 mb-4 mb-md-6 mb-lg-7 mb-xl-8">
+            <div class="h2 mb-3 mb-md-5 mb-lg-6 mb-xl-7">Преимущества</div>
             <div class="row">
-                <div class="col-md-4 benefit mb-xl-8">
+                <div class="col-12 col-md-4 benefit mb-md-5 mb-lg-6 mb-xl-8">
                     <div class="benefit__item">
                         <div class="h2 pb-md-2 text--red">25</div>
                         <div>лучших брендов</div>
                     </div>
                 </div>
-                <div class="col-md-4 benefit mb-xl-8">
+                <div class="col-12 col-md-4 benefit mb-md-5 mb-lg-6 mb-xl-8">
                     <div class="benefit__item">
                         <div class="h2 pb-md-2 text--red">30 000</div>
                         <div>наименований товаров</div>
                     </div>
                 </div>
-                <div class="col-md-4 benefit mb-xl-8">
+                <div class="col-12 col-md-4 benefit mb-md-5 mb-lg-6 mb-xl-8">
                     <div class="benefit__item">
                         <div class="h2 pb-md-2 text--red">50</div>
                         <div>опытных сотрудников</div>
                     </div>
                 </div>
-                <div class="col-md-4 benefit">
+                <div class="col-12 col-md-4 benefit">
                     <div class="benefit__item">
                         Собственная складская база и логистика
                     </div>
                 </div>
-                <div class="col-md-4 benefit">
+                <div class="col-12 col-md-4 benefit">
                     <div class="benefit__item">Сервис, ремонт, гарантия</div>
                 </div>
-                <div class="col-md-4 benefit">
+                <div class="col-12 col-md-4 benefit">
                     <div class="benefit__item">Низкая оптовая цена</div>
                 </div>
             </div>
@@ -100,30 +100,30 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-12 mb-md-6 mb-lg-7 mb-xl-8">
-            <div class="h2 mb-md-5 mb-lg-6 mb-xl-7">Деятельность <span class="text--red">«АРВ Трейдинг»</span></div>
+        <div class="col-12 mb-4 mb-md-6 mb-lg-7 mb-xl-8">
+            <div class="h2 mb-3 mb-md-5 mb-lg-6 mb-xl-7">Деятельность <span class="text--red">«АРВ Трейдинг»</span></div>
             <div class="row">
                 <div class="col-md-12 activity">
                     <div class="row">
-                        <div class="col-md-11 mx-md-auto mb-md-7 pt-md-7">
+                        <div class="col-md-11 mx-md-auto mb-4 mb-sm-5 mb-lg-7 pt-4 pt-sm-5 pt-lg-7">
                             <div class="row">
-                                <div class="col-md-4 mb-md-4">
-                                    <div class="activity__item p-md-3 rounded-4_5 fsz-lg lh-1_2">Оргтехника и расходные материалы</div>
+                                <div class="col-md-4 mb-3 mb-md-4">
+                                    <div class="activity__item">Оргтехника и расходные материалы</div>
                                 </div>
-                                <div class="col-md-4 mb-md-4">
-                                    <div class="activity__item p-md-3 rounded-4_5 fsz-lg lh-1_2">Обслуживание офисной и компьютерной оргтехники</div>
+                                <div class="col-md-4 mb-3 mb-md-4">
+                                    <div class="activity__item">Обслуживание офисной и компьютерной оргтехники</div>
                                 </div>
-                                <div class="col-md-4 mb-md-4">
-                                    <div class="activity__item p-md-3 rounded-4_5 fsz-lg lh-1_2">Аутсорсинг печати</div>
+                                <div class="col-md-4 mb-3 mb-md-4">
+                                    <div class="activity__item">Аутсорсинг печати</div>
+                                </div>
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="activity__item">Профессиональное постпечатное оборудование</div>
+                                </div>
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="activity__item">Компьютерная техника</div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="activity__item p-md-3 rounded-4_5 fsz-lg lh-1_2">Профессиональное постпечатное оборудование</div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="activity__item p-md-3 rounded-4_5 fsz-lg lh-1_2">Компьютерная техника</div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="activity__item p-md-3 rounded-4_5 fsz-lg lh-1_2">Гарантийный ремонт копировальной и печатной техники</div>
+                                    <div class="activity__item">Гарантийный ремонт копировальной и печатной техники</div>
                                 </div>
                             </div>
                         </div>
@@ -135,8 +135,8 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-12 mb-md-6 mb-lg-7 mb-xl-8">
-            <div class="h2 mb-md-5 mb-lg-6 mb-xl-7">Наши <span class="text--red">партнеры</span></div>
+        <div class="col-12 mb-4 mb-md-6 mb-lg-7 mb-xl-8">
+            <div class="h2 mb-3 mb-md-5 mb-lg-6 mb-xl-7">Наши <span class="text--red">партнеры</span></div>
             <div class="row">
                 <div class="col-md-12 partners">
                     <div class="row">
@@ -193,14 +193,16 @@
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 mb-md-6 mb-lg-7 mb-xl-8">
+        <div class="col-12 mb-4 mb-md-6 mb-lg-7 mb-xl-8">
             <div class="ask">
-                <div class="ask__wrapper rounded-5" style="background-image: url('/build/img/30258560048197094_aacd.jpeg')">
+                <div class="ask__wrapper" style="background-image: url('/build/img/30258560048197094_aacd.jpeg')">
+                    <div class="ask__design right"></div>
+                    <div class="ask__design left"></div>
                     <div class="container">
-                        <div class="position-relative px-md-8 pt-md-5 pb-md-8">
-                            <div class="h2 mb-md-2 text--red fw-5">Есть вопросы?</div>
-                            <div class="mb-md-7 fw-5 fsz-lg">Оставьте свой номер телефона, мы обязательно перезвоним вам!</div>
-                            <form class="ask-form px-md-8" method="post">
+                        <div class="position-relative pt-3 pb-5 pt-md-5 pb-md-8">
+                            <div class="h2 mb-1 mb-md-3 text--red fw-5">Есть вопросы?</div>
+                            <div class="mb-4 mb-lg-5 mb-lg-7 fw-5 fsz-lg">Оставьте свой номер телефона, мы обязательно перезвоним вам!</div>
+                            <form class="ask-form px-lg-5 px-xl-7" method="post">
                                 <div class="ask-form__item">
                                     <input type="text" name="NAME" required="" placeholder="Ваше имя">
                                 </div>
@@ -220,8 +222,8 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-12 mb-md-6 mb-lg-7 mb-xl-8">
-            <div class="h2 mb-md-5 mb-lg-6 mb-xl-7">Сертификаты <span class="text--red">и награды</span></div>
+        <div class="col-12 mb-4 mb-md-6 mb-lg-7 mb-xl-8">
+            <div class="h2 mb-3 mb-md-5 mb-lg-6 mb-xl-7">Сертификаты <span class="text--red">и награды</span></div>
             <div class="row">
                 <div class="col-md-12 awards">
                     <div class="row">
@@ -276,6 +278,48 @@
                                     <img src="/build/img/award-1.png" alt="award">
                                 </div>
                             </div>
+
+							<?/*<div class="swiper-scroll-x js-awards swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/build/img/award-1.png" alt="award">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/build/img/award-2.png" alt="award">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/build/img/award-3.png" alt="award">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/build/img/award-4.png" alt="award">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/build/img/award-5.png" alt="award">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/build/img/award-6.png" alt="award">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/build/img/award-3.png" alt="award">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/build/img/award-5.png" alt="award">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/build/img/award-2.png" alt="award">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/build/img/award-4.png" alt="award">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/build/img/award-1.png" alt="award">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/build/img/award-1.png" alt="award">6
+                                    </div>
+                                </div>
+                                <div class="swiper-scrollbar"></div>
+                            </div>*/?>
                         </div>
                     </div>
                 </div>
@@ -283,10 +327,11 @@
         </div>
     </div>
 </div>
+
 <div class="container">
     <div class="row">
-        <div class="col-12 mb-md-6 mb-lg-7 mb-xl-8">
-            <div class="h2 mb-md-5 mb-lg-6 mb-xl-7">Вендоры</div>
+        <div class="col-12 mb-4 mb-md-6 mb-lg-7 mb-xl-8">
+            <div class="h2 mb-3 mb-md-5 mb-lg-6 mb-xl-7">Вендоры</div>
             <div class="row">
                 <div class="col-md-12 vendors">
                     <div class="row">
@@ -355,6 +400,5 @@
         </div>
     </div>
 </div>
-
 
 <? include($_SERVER["DOCUMENT_ROOT"].'/build/components/footer.php');?>

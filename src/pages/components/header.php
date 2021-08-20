@@ -12,40 +12,47 @@
     <header class="header">
         <div class="container">
             <div class="row">
-                <div class="header__col order-1 col-lg-2 col-xl-3 mb-md-3">
+                <div class="order-1 col-4 col-sm-3 mb-md-3 py-2 py-sm-3 py-md-0 d-flex align-items-center">
                     <a class="logo" href="/">
                         <img class="logo-i" src="/build/img/logo.png" alt="logo">
                     </a>
                 </div>
-                <div class="header__col order-md-2 col-lg-10 col-xl-9 mb-md-3">
+                <div class="order-3 order-md-2 col-4 col-sm-3 col-md-9 mb-md-3 py-2 py-sm-3 py-md-0">
                     <div class="row h-100">
-                        <nav class="col-xl-8 col-xxxl-9 d-none d-md-flex justify-content-end align-items-center fsz-md">
-                            <a class="nav-top-item d-block mx-md-3 px-xl-2 lh-1" href="">О компании</a>
-                            <a class="nav-top-item d-block mx-md-3 px-xl-2 lh-1" href="">Новости</a>
-                            <a class="nav-top-item d-block mx-md-3 px-xl-2 lh-1" href="">Контакты</a>
+                        <nav class="col-md-12 col-xl-8 col-xxxl-9 mb-md-3 mb-xl-0 d-none d-md-flex justify-content-end align-items-center fsz-md">
+                            <a class="nav-top-item" href="">О компании</a>
+                            <a class="nav-top-item" href="">Новости</a>
+                            <a class="nav-top-item" href="">Контакты</a>
                         </nav>
-                        <div class="col-xl-4 col-xxxl-3 position-relative d-flex justify-content-end align-items-center fsz-md">
-                            <a class="user-control d-flex d-md-none lh-1" href="#">
-                                <span class="user-control__i d-block">
-                                    <img src="/build/img/user.png" alt="login to personal area">
-                                </span>
-                            </a>
-                            <a class="user-control d-flex align-items-center fw-5 lh-1" href="tel:+74955805556">
-                                <span class="user-control__i d-block mr-md-2">
-                                    <img src="/build/img/call.png" alt="contact phone">
+                        <div class="user-control-top col-md-12 col-xl-4 col-xxxl-3 fsz-md">
+                            <a class="user-control js-call order-2 order-md-1" href="tel:+74955805556">
+                                <span class="user-control__i">
+                                    <? /* src from js/script.js */ ?>
+                                    <img src="" alt="contact phone">
                                 </span>
                                 <span>+7 (495) 580-55-56</span>
+                            </a>
+                            <a class="user-control js-user order-1 order-md-2 d-xl-none" href="#">
+                                <span class="user-control__i">
+                                    <? /* src from js/script.js */ ?>
+                                    <img src="" alt="login to b2b">
+                                </span>
+                                <span>Войти в B2B</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="header__col order-md-3 col-md-12 pt-md-3">
-                    <div class="row">
-                        <div class="col-xl-9 col-xxl-10">
-                            <div class="nav-bottom d-flex flex-wrap flex-column flex-md-row align-items-md-center">
+                <div class="nav-bottom-container order-2 order-md-3 col-4 col-sm-6 col-md-12 pt-md-3">
+                    <div class="row h-100">
+                        <div class="nav-bottom-wrapper col-md-12 col-xl-9 col-xxl-10">
+                            <div class="menu-btn"><span></span></div>
+                            <div class="nav-bottom">
                                 <div class="nav-bottom__item">
-                                    <a class="nav-bottom__link fsz-md" href="#">Оптовые продажи</a>
+                                    <a class="nav-bottom__link js-nav-bottom-link fsz-md" href="#">
+                                        <span>Оптовые</span>
+                                        <span>продажи</span>
+                                    </a>
                                     <ul class="nav-bottom__drop fsz-sm">
                                         <li class="nav-bottom__drop-item">
                                             <a href="#">Лизинг оргтехники</a>
@@ -62,7 +69,10 @@
                                     </ul>
                                 </div>
                                 <div class="nav-bottom__item">
-                                    <a class="nav-bottom__link fsz-md" href="#">Решения для бизнеса</a>
+                                    <a class="nav-bottom__link js-nav-bottom-link fsz-md" href="#">
+                                        <span>Решения</span>
+                                        <span>для бизнеса</span>
+                                    </a>
                                     <ul class="nav-bottom__drop fsz-sm">
                                         <li class="nav-bottom__drop-item">
                                             <a href="#">Лизинг оргтехники</a>
@@ -79,7 +89,10 @@
                                     </ul>
                                 </div>
                                 <div class="nav-bottom__item">
-                                    <a class="nav-bottom__link fsz-md" href="#">Сервис и ремонт</a>
+                                    <a class="nav-bottom__link js-nav-bottom-link fsz-md" href="#">
+                                        <span>Сервис и</span>
+                                        <span>ремонт</span>
+                                    </a>
                                     <ul class="nav-bottom__drop fsz-sm">
                                         <li class="nav-bottom__drop-item">
                                             <a href="#">Лизинг оргтехники</a>
@@ -96,7 +109,9 @@
                                     </ul>
                                 </div>
                                 <div class="nav-bottom__item">
-                                    <a class="nav-bottom__link fsz-md" href="#">Услуги</a>
+                                    <a class="nav-bottom__link js-nav-bottom-link fsz-md" href="#">
+                                        <span>Услуги</span>
+                                    </a>
                                     <ul class="nav-bottom__drop fsz-sm">
                                         <li class="nav-bottom__drop-item">
                                             <a href="#">Лизинг оргтехники</a>
@@ -113,13 +128,24 @@
                                     </ul>
                                 </div>
                                 <div class="nav-bottom__item">
-                                    <a class="nav-bottom__link fsz-md" href="#">Магазин</a>
+                                    <a class="nav-bottom__link js-nav-bottom-link fsz-md" href="#">
+                                        <span>Магазин</span>
+                                    </a>
                                 </div>
+                                <div class="nav-bottom__item d-md-none">
+                                    <a class="user-control fsz-md" href="#">
+                                        <span class="user-control__i">
+                                            <img src="/build/img/key.png" alt="login to b2b">
+                                        </span>
+                                        <span class="text--red">Войти в B2B</span>
+                                    </a>
+                                </div>
+
                             </div>
                         </div>
-                        <div class="col-xl-3 col-xxl-2">
-                            <a class="user-control d-flex justify-content-end align-items-center py-md-4 fw-5 fsz-md lh-1" href="#">
-                                <span class="user-control__i d-block mr-md-2">
+                        <div class="d-none d-xl-block col-xl-3 col-xxl-2">
+                            <a class="user-control justify-content-end py-md-4 fsz-md" href="#">
+                                <span class="user-control__i">
                                     <img src="/build/img/key.png" alt="login to b2b">
                                 </span>
                                 <span>Войти в B2B</span>
@@ -130,16 +156,6 @@
 
             </div>
         </div>
-        <!--<div class="header__top">
-        </div>
-        <div class="d-md-flex pt-md-3">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-2 dummy"></div>
-                </div>
-            </div>
-        </div>-->
     </header>
 
 <!--old-->

@@ -2,7 +2,7 @@ html,
 body {
 	font-weight: normal;
 	font-style: normal;
-	font-size: 16px;
+	font-size: 16px; // большинство значений в проекте заданы в "rem"
 	line-height: 1.4;
 }
 body {
@@ -733,6 +733,22 @@ body {
 	font-weight: 400;
 	line-height: inherit;
 }
+@media (max-width: 575.98px) {
+	.h1, h1 {
+		font-size: 1.25rem;
+	}
+	.h2, h2 {
+		font-size: 1rem;
+	}
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.h1, h1 {
+		font-size: 2rem;
+	}
+	.h2, h2 {
+		font-size: 1.25rem;
+	}
+}
 @media (min-width: 768px) and (max-width: 1199.98px) {
 	.h1, h1 {
 		font-size: 2.5rem;
@@ -827,7 +843,29 @@ svg {
 	font-weight: 100;
 }
 
-@media (min-width: 768px) and (max-width: 1199.98px) {
+@media (max-width: 575.98px) {
+	.fsz-lg {
+		font-size: 1rem;
+	}
+	.fsz-md {
+		font-size: 0.875rem;
+	}
+	.fsz-sm {
+		font-size: 0.75rem;
+	}
+}
+@media (min-width: 576px) and (max-width: 991.98px) {
+	.fsz-lg {
+		font-size: 1.1375rem;
+	}
+	.fsz-md {
+		font-size: 1.125rem;
+	}
+	.fsz-sm {
+		font-size: 0.875rem;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
 	.fsz-lg {
 		font-size: 1.5rem;
 	}
@@ -867,6 +905,7 @@ svg {
 }
 .btn {
 	width: 100%;
+	border-radius: 1rem;
 	box-shadow: 5px 5px 15px 0.5px rgba(37, 37, 37, 0.6);
 	@extend %fontFamily;
 	font-weight: 400;
@@ -962,10 +1001,14 @@ svg {
 	text-decoration: none;
 	cursor: pointer;
 }
+@media (max-width: 767.98px) {
+	.btn {
+		padding: 1.25rem 0;
+	}
+}
 @media (min-width: 768px) {
 	.btn {
 		padding: 1.5rem 0;
-		border-radius: 1rem;
 	}
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1043,12 +1086,24 @@ svg {
 .logo-i {
 	display: block;
 }
-/*@media (min-width: 992px) {
+@media (max-width: 575.98px) {
 	.logo {
-		max-width: 190px;
-		max-height: 55px;
+		max-width: 70px;
+		max-height: 20px;
 	}
-}*/
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.logo {
+		max-width: 105px;
+		max-height: 30px;
+	}
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+	.logo {
+		max-width: 130px;
+		max-height: 38px;
+	}
+}
 @media (min-width: 1200px) {
 	.logo {
 		max-width: 190px;

@@ -12,6 +12,9 @@ application.prototype.init = function () {
     this.initTouch();
     this.checkNavBottomDropmenu();
     this.initSliders();
+    this.changeImageUser();
+    this.toggleClassBurger();
+    this.toggleClassDropMenu();
 
     /*this.topMenu();
     this.addMaskedInput();*/
@@ -35,10 +38,10 @@ application.prototype.checkNavBottomDropmenu = function () {
 application.prototype.initSliders = function () {
     // Partners
     if ($('.js-partners').length) {
-        var swiperPartners = new Swiper(".js-partners", {
-            slidesPerView: 3,
-            slidesPerColumn: 2,
-            spaceBetween: 24,
+        new Swiper(".js-partners", {
+            slidesPerView: 1,
+            slidesPerColumn: 3,
+            spaceBetween: 16,
             grabCursor: true,
             mousewheel: true,
             scrollbar: {
@@ -47,15 +50,20 @@ application.prototype.initSliders = function () {
             breakpoints: {
                 // when window width is >= {value}px
                 768: {
+                    slidesPerView: 3,
+                    slidesPerColumn: 2,
+                    spaceBetween: 24,
                 },
             },
         });
     }
 
-    // Vendors
-    if ($('.js-vendors').length) {
-        var swiperPartners = new Swiper(".js-vendors", {
-            slidesPerView: 5,
+    // Awards
+    /*if ($('.js-awards').length) {
+        var swiperAwards = new Swiper(".js-partners", {
+            slidesPerView: 1,
+            slidesPerColumn: 3,
+            spaceBetween: 16,
             grabCursor: true,
             mousewheel: true,
             scrollbar: {
@@ -64,10 +72,102 @@ application.prototype.initSliders = function () {
             breakpoints: {
                 // when window width is >= {value}px
                 768: {
+                    slidesPerView: "auto",
+                    slidesPerColumn: "auto",
+                    spaceBetween: 0,
+                },
+            },
+        });
+    }*/
+
+    /*if ($('.js-awards').length) {
+        let swiperAwards = null;
+
+        function reinitSwiperAwards() {
+            if (window.matchMedia("(min-width:768px)").matches) {
+                swiperAwards.destroy().update(1,1);
+                swiperAwards = null;
+                console.log('first if destr');
+            } else if (window.matchMedia("(max-width:767.98px)").matches && swiperAwards === null) {
+                swiperAwards = new Swiper('.js-awards', {
+                    slidesPerView: 1,
+                    slidesPerColumn: 3,
+                    spaceBetween: 16,
+                    grabCursor: true,
+                    mousewheel: true,
+                    scrollbar: {
+                        el: ".swiper-scrollbar",
+                    },
+                    breakpoints: {
+                        // when window width is >= {value}px
+                        768: {
+                            slidesPerView: "auto",
+                            slidesPerColumn: "auto",
+                            spaceBetween: 0,
+                        },
+                    },
+                });
+                swiperAwards.update(1,1);
+                console.log('second if init');
+            }
+        }
+
+        reinitSwiperAwards();
+        $(window).on('resize', reinitSwiperAwards).trigger('resize');
+    }*/
+
+    // Vendors
+    if ($('.js-vendors').length) {
+        new Swiper(".js-vendors", {
+            slidesPerView: 2,
+            grabCursor: true,
+            mousewheel: true,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+            },
+            breakpoints: {
+                // when window width is >= {value}px
+                768: {
+                    slidesPerView: 5,
                 },
             },
         });
     }
+}
+// Сhange the image of the entrance to personal account
+application.prototype.changeImageUser = function () {
+    var srcImgKey = "/build/img/key.png",
+        srcImgUser = "/build/img/user.png",
+        srcImgCallBlack = "/build/img/call-black.png",
+        srcImgCallRed = "/build/img/call.png";
+
+    $(window).on("resize", function () {
+        if (window.matchMedia("(min-width:768px)").matches) {
+            $('.js-user img').attr("src", srcImgKey);
+            $('.js-call img').attr("src", srcImgCallRed);
+        }
+        else if (window.matchMedia("(max-width:767.98px)").matches) {
+            $('.js-user img').attr("src", srcImgUser);
+            $('.js-call img').attr("src", srcImgCallBlack);
+        }
+    }).trigger('resize');
+}
+// Menu-burger button
+application.prototype.toggleClassBurger = function () {
+    $(".menu-btn").on("click", function () {
+        $(this).toggleClass("active");
+    });
+}
+// Menu top "nav-bottom__drop"
+application.prototype.toggleClassDropMenu = function () {
+    $('.nav-bottom__item--contains .nav-bottom__drop').hide();
+
+    $(".js-nav-bottom-link").on("click", function () {
+        $(this).closest(".nav-bottom__item--contains").toggleClass("active");
+
+        if ($(this).closest('.nav-bottom__item--contains').hasClass('active')) {  $(this).closest('.nav-bottom__item--contains').find('.nav-bottom__drop').slideDown(300);  }
+        else {  $(this).closest('.nav-bottom__item--contains').find('.nav-bottom__drop').slideUp(300);  }
+    });
 }
 
 
