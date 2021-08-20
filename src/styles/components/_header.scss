@@ -53,10 +53,10 @@
 		line-height: 1;
 		transition: all 0.3s ease;
 	}
-	.nav-bottom__link {
+	&__link {
 		display: block;
 	}
-	.nav-bottom__item:hover .nav-bottom__link {
+	&__item:hover &__link {
 		color: $white;
 		text-shadow: -2px 0px #333333;
 	}
@@ -346,9 +346,6 @@
 		&__item:hover {
 			background-color: $greyBg;
 		}
-		&__item:not(:last-of-type) {
-			margin-right: 0.75rem;
-		}
 		&__item--contains::before,
 		&__item--contains::after {
 			content: "";
@@ -445,6 +442,9 @@
 	}
 
 	.nav-bottom {
+		&__item:not(:last-of-type) {
+			margin-right: 0.75rem;
+		}
 		&__item--contains::before,
 		&__item--contains::after {
 			width: 8px;
@@ -484,6 +484,7 @@
 	.nav-bottom {
 		&__link {
 			padding: 1.5rem 1.125rem;
+			font-size: 1.125rem;
 		}
 	}
 }
@@ -522,7 +523,6 @@
 		}
 		&__link {
 			padding: 1.5rem;
-			font-size: 1.25rem;
 		}
 		&__drop {
 			width: 26.75rem;
@@ -535,6 +535,23 @@
 		&__drop-item::before {
 			width: 36px;
 			height: 36px;
+		}
+	}
+}
+@media (min-width: 1200px) and (max-width: 1439.98px) {
+	.nav-bottom {
+		&__item:not(:last-of-type) {
+			margin-right: 0.25rem;
+		}
+		&__link {
+			font-size: 1rem;
+		}
+	}
+}
+@media (min-width: 1440px) {
+	.nav-bottom {
+		&__link {
+			font-size: 1.25rem;
 		}
 	}
 }

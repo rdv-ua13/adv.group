@@ -45,7 +45,7 @@ application.prototype.initSliders = function () {
             grabCursor: true,
             mousewheel: true,
             scrollbar: {
-                el: ".swiper-scrollbar",
+                el: ".js-partners .swiper-scrollbar",
             },
             breakpoints: {
                 // when window width is >= {value}px
@@ -59,62 +59,38 @@ application.prototype.initSliders = function () {
     }
 
     // Awards
-    /*if ($('.js-awards').length) {
-        var swiperAwards = new Swiper(".js-partners", {
-            slidesPerView: 1,
-            slidesPerColumn: 3,
-            spaceBetween: 16,
-            grabCursor: true,
-            mousewheel: true,
-            scrollbar: {
-                el: ".swiper-scrollbar",
-            },
-            breakpoints: {
-                // when window width is >= {value}px
-                768: {
-                    slidesPerView: "auto",
-                    slidesPerColumn: "auto",
-                    spaceBetween: 0,
-                },
-            },
-        });
-    }*/
+    if ($('.js-awards').length) {
+        var swiperAwards = null;
 
-    /*if ($('.js-awards').length) {
-        let swiperAwards = null;
+        function initSwiperAwards () {
+            swiperAwards = new Swiper('.js-awards', {
+                slidesPerView: 1,
+                slidesPerColumn: 3,
+                spaceBetween: 16,
+                grabCursor: true,
+                mousewheel: true,
+                scrollbar: {
+                    el: ".js-awards .swiper-scrollbar",
+                },
+            });
+        }
+        initSwiperAwards();
 
         function reinitSwiperAwards() {
             if (window.matchMedia("(min-width:768px)").matches) {
-                swiperAwards.destroy().update(1,1);
-                swiperAwards = null;
-                console.log('first if destr');
-            } else if (window.matchMedia("(max-width:767.98px)").matches && swiperAwards === null) {
-                swiperAwards = new Swiper('.js-awards', {
-                    slidesPerView: 1,
-                    slidesPerColumn: 3,
-                    spaceBetween: 16,
-                    grabCursor: true,
-                    mousewheel: true,
-                    scrollbar: {
-                        el: ".swiper-scrollbar",
-                    },
-                    breakpoints: {
-                        // when window width is >= {value}px
-                        768: {
-                            slidesPerView: "auto",
-                            slidesPerColumn: "auto",
-                            spaceBetween: 0,
-                        },
-                    },
-                });
-                swiperAwards.update(1,1);
-                console.log('second if init');
+                swiperAwards.disable();
+                swiperAwards.update();
+                $(".js-awards").addClass("disabled");
+
+            } else if (window.matchMedia("(max-width:767.98px)").matches) {
+                swiperAwards.enable();
+                swiperAwards.update();
+                $(".js-awards").removeClass("disabled");
             }
         }
 
-        reinitSwiperAwards();
         $(window).on('resize', reinitSwiperAwards).trigger('resize');
-    }*/
+    }
 
     // Vendors
     if ($('.js-vendors').length) {
@@ -123,11 +99,17 @@ application.prototype.initSliders = function () {
             grabCursor: true,
             mousewheel: true,
             scrollbar: {
-                el: ".swiper-scrollbar",
+                el: ".js-vendors .swiper-scrollbar",
             },
             breakpoints: {
                 // when window width is >= {value}px
                 768: {
+                    slidesPerView: 3,
+                },
+                992: {
+                    slidesPerView: 4,
+                },
+                1200: {
                     slidesPerView: 5,
                 },
             },
@@ -160,14 +142,19 @@ application.prototype.toggleClassBurger = function () {
 }
 // Menu top "nav-bottom__drop"
 application.prototype.toggleClassDropMenu = function () {
-    $('.nav-bottom__item--contains .nav-bottom__drop').hide();
+    if (window.matchMedia("(max-width:767.98px)").matches) {
+        $('.nav-bottom__item--contains .nav-bottom__drop').hide();
 
-    $(".js-nav-bottom-link").on("click", function () {
-        $(this).closest(".nav-bottom__item--contains").toggleClass("active");
+        $(".js-nav-bottom-link").on("click", function () {
+            $(this).closest(".nav-bottom__item--contains").toggleClass("active");
 
-        if ($(this).closest('.nav-bottom__item--contains').hasClass('active')) {  $(this).closest('.nav-bottom__item--contains').find('.nav-bottom__drop').slideDown(300);  }
-        else {  $(this).closest('.nav-bottom__item--contains').find('.nav-bottom__drop').slideUp(300);  }
-    });
+            if ($(this).closest('.nav-bottom__item--contains').hasClass('active')) {
+                $(this).closest('.nav-bottom__item--contains').find('.nav-bottom__drop').slideDown(300);
+            } else {
+                $(this).closest('.nav-bottom__item--contains').find('.nav-bottom__drop').slideUp(300);
+            }
+        });
+    } else { return }
 }
 
 

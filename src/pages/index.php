@@ -199,7 +199,7 @@
                     <div class="ask__design right"></div>
                     <div class="ask__design left"></div>
                     <div class="container">
-                        <div class="position-relative pt-3 pb-5 pt-md-5 pb-md-8">
+                        <div class="position-relative py-5 pt-md-5 pb-md-8">
                             <div class="h2 mb-1 mb-md-3 text--red fw-5">Есть вопросы?</div>
                             <div class="mb-4 mb-lg-5 mb-lg-7 fw-5 fsz-lg">Оставьте свой номер телефона, мы обязательно перезвоним вам!</div>
                             <form class="ask-form px-lg-5 px-xl-7" method="post">
@@ -228,171 +228,48 @@
                 <div class="col-md-12 awards">
                     <div class="row">
                         <div class="col-md-11 mx-md-auto">
-                            <div class="awards__wrapper">
-                                <div class="awards__item">
-                                    <img src="/build/img/award-1.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-2.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-3.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-4.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-5.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-6.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-3.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-5.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-6.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-4.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-2.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-1.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-2.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-4.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-6.png" alt="award">
-                                </div>
-                                <div class="awards__item">
-                                    <img src="/build/img/award-1.png" alt="award">
-                                </div>
-                            </div>
-
-							<?/*<div class="swiper-scroll-x js-awards swiper-container">
+                            <div class="swiper-scroll-x js-awards swiper-container">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
+                                    <a class="swiper-slide" href="https://arv.group/build/img/award-1.png" data-fancybox="galery">
                                         <img src="/build/img/award-1.png" alt="award">
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </a>
+                                    <a class="swiper-slide" href="https://arv.group/build/img/award-2.png" data-fancybox="galery">
                                         <img src="/build/img/award-2.png" alt="award">
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </a>
+                                    <a class="swiper-slide" href="https://arv.group/build/img/award-3.png" data-fancybox="galery">
                                         <img src="/build/img/award-3.png" alt="award">
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </a>
+                                    <a class="swiper-slide" href="https://arv.group/build/img/award-4.png" data-fancybox="galery">
                                         <img src="/build/img/award-4.png" alt="award">
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </a>
+                                    <a class="swiper-slide" href="https://arv.group/build/img/award-5.png" data-fancybox="galery">
                                         <img src="/build/img/award-5.png" alt="award">
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </a>
+                                    <a class="swiper-slide" href="https://arv.group/build/img/award-6.png" data-fancybox="galery">
                                         <img src="/build/img/award-6.png" alt="award">
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </a>
+                                    <a class="swiper-slide" href="https://arv.group/build/img/award-3.png" data-fancybox="galery">
                                         <img src="/build/img/award-3.png" alt="award">
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </a>
+                                    <a class="swiper-slide" href="https://arv.group/build/img/award-5.png" data-fancybox="galery">
                                         <img src="/build/img/award-5.png" alt="award">
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </a>
+                                    <a class="swiper-slide" href="https://arv.group/build/img/award-2.png" data-fancybox="galery">
                                         <img src="/build/img/award-2.png" alt="award">
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </a>
+                                    <a class="swiper-slide" href="https://arv.group/build/img/award-4.png" data-fancybox="galery">
                                         <img src="/build/img/award-4.png" alt="award">
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </a>
+                                    <a class="swiper-slide" href="https://arv.group/build/img/award-1.png" data-fancybox="galery">
                                         <img src="/build/img/award-1.png" alt="award">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="/build/img/award-1.png" alt="award">6
-                                    </div>
+                                    </a>
+                                    <a class="swiper-slide" href="https://arv.group/build/img/award-6.png" data-fancybox="galery">
+                                        <img src="/build/img/award-6.png" alt="award">
+                                    </a>
                                 </div>
                                 <div class="swiper-scrollbar"></div>
-                            </div>*/?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-12 mb-4 mb-md-6 mb-lg-7 mb-xl-8">
-            <div class="h2 mb-3 mb-md-5 mb-lg-6 mb-xl-7">Вендоры</div>
-            <div class="row">
-                <div class="col-md-12 vendors">
-                    <div class="row">
-                        <div class="col-md-11 mx-md-auto">
-                            <div class="row">
-                                <div class="swiper-scroll-x js-vendors swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="vendors__item">
-                                                <img src="/build/img/Braun.png" alt="vendor's logo">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="vendors__item">
-                                                <img src="/build/img/Aetna.png" alt="vendor's logo">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="vendors__item">
-                                                <img src="/build/img/Cartier.png" alt="vendor's logo">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="vendors__item">
-                                                <img src="/build/img/NASA.png" alt="vendor's logo">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="vendors__item">
-                                                <img src="/build/img/Stripe.png" alt="vendor's logo">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="vendors__item">
-                                                <img src="/build/img/Braun.png" alt="vendor's logo">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="vendors__item">
-                                                <img src="/build/img/Aetna.png" alt="vendor's logo">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="vendors__item">
-                                                <img src="/build/img/Cartier.png" alt="vendor's logo">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="vendors__item">
-                                                <img src="/build/img/NASA.png" alt="vendor's logo">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="vendors__item">
-                                                <img src="/build/img/Stripe.png" alt="vendor's logo">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-scrollbar"></div>
-                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -401,4 +278,10 @@
     </div>
 </div>
 
-<? include($_SERVER["DOCUMENT_ROOT"].'/build/components/footer.php');?>
+<? $title = "Вендоры";
+include($_SERVER["DOCUMENT_ROOT"].'/build/components/vendors-block.php');?>
+
+<?
+$footerModification = "footer__top--main";
+
+include($_SERVER["DOCUMENT_ROOT"].'/build/components/footer.php');?>

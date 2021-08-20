@@ -22,10 +22,6 @@
 		font-weight: 500;
 		transition: all 0.3s ease;
 	}
-	&__title,
-	&__subtitle {
-		text-transform: uppercase;
-	}
 	&__subtitle {
 		line-height: 1.2;
 	}
@@ -59,6 +55,12 @@
 		content: "";
 		position: absolute;
 		background-color: $mainRed;
+	}
+}
+.intro--main {
+	& .intro__title,
+	& .intro__subtitle {
+		text-transform: uppercase;
 	}
 }
 
@@ -246,25 +248,7 @@
 		}
 	}
 }
-/*@todo*/
-.awards {
-	&__wrapper {
-		display: flex;
-		flex-wrap: wrap;
-		margin-right: -0.5rem;
-		margin-left: -0.5rem;
-	}
-	&__item {
-		height: 200px;
-		margin: 0.5rem;
-	}
-	&__item img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
-	}
-}
-/*@todo*/
+
 .vendors {
 	& .swiper-container {
 		display: flex;
@@ -292,15 +276,28 @@
 
 @media (max-width: 575.98px) {
 	.intro {
-		&__content {
-			padding-top: 5rem;
-		}
 		&__title {
 			padding-right: 20%;
 		}
 		&__service {
 			padding: 1.5rem;
 			font-size: 0.875rem;
+		}
+	}
+	.intro--main {
+		& .intro__content {
+			padding-top: 5rem;
+		}
+	}
+	.intro--inner {
+		min-height: 180px;
+		height: 180px;
+
+		& .intro__wrapper {
+			background-size: cover;
+		}
+		& .intro__content {
+			padding-top: 8rem;
 		}
 	}
 	.intro__wrapper {
@@ -337,12 +334,25 @@
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
 	.intro {
-		&__content {
-			padding-top: 9rem;
-		}
 		&__service {
 			padding: 2rem;
 			font-size: 1rem;
+		}
+	}
+	.intro--main {
+		& .intro__content {
+			padding-top: 9rem;
+		}
+	}
+	.intro--inner {
+		min-height: 240px;
+		height: 240px;
+
+		& .intro__wrapper {
+			background-size: cover;
+		}
+		& .intro__content {
+			padding-top: 10rem;
 		}
 	}
 	.intro__wrapper {
@@ -381,9 +391,6 @@
 }
 @media (max-width: 767.98px) {
 	.intro {
-		&__content {
-			padding-top: 23rem;
-		}
 		&__subtitle {
 			margin-bottom: 1rem;
 		}
@@ -407,10 +414,6 @@
 		&__service-view {
 			display: none;
 		}
-	}
-	.intro__wrapper {
-		background-position: top center;
-		background-size: 100% 900px;
 	}
 
 	.benefit {
@@ -472,6 +475,9 @@
 	}
 
 	.ask {
+		& h2 {
+			font-size: 1.5rem;
+		}
 		&__design.right::before {
 			top: 30px;
 			right: -15px;
@@ -488,7 +494,7 @@
 			background-size: 45px;
 		}
 		&__design.left::after {
-			top: 55px;
+			top: 80px;
 			left: -55px;
 			background-size: 70px;
 		}
@@ -515,17 +521,35 @@
 		}
 	}
 
+	.awards {
+		& .swiper-container {
+			display: flex;
+			flex-wrap: wrap;
+			height: 530px;
+			margin-right: -0.5rem;
+			margin-left: -0.5rem;
+		}
+		& .swiper-slide {
+			height: 150px;
+			text-align: center;
+		}
+		& .swiper-slide img {
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
 	.vendors {
 		& .swiper-container  {
-			height: 150px;
+			height: 180px;
 		}
 		& .swiper-slide  {
-			height: calc(100% - 3.125rem);
+			height: calc(100% - 2.5rem);
 		}
 		&__item  {
-			height: calc(100% - 1.25rem);
+			height: calc(100% - 1rem);
 			margin: 0.5rem 0.75rem 0.75rem;
-			padding: 1rem 0.5rem;
+			padding: 1rem;
 			border-radius: 1.25rem;
 		}
 	}
@@ -674,17 +698,27 @@
 		}
 	}
 
+	.awards {
+		& .swiper-container.disabled .swiper-scrollbar {
+			display: none;
+		}
+		& .swiper-wrapper {
+			width: 100%!important;
+			flex-direction: row!important;
+		}
+		& .swiper-slide {
+			width: auto!important;
+			margin: 0.5rem!important;
+		}
+		& .swiper-slide img {
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
 	.vendors {
-		& .swiper-container  {
-			height: 270px;
-		}
-		& .swiper-slide  {
-			height: calc(100% - 4.875rem);
-		}
 		&__item  {
-			height: calc(100% - 1.75rem);
 			margin: 0.75rem 1rem 1rem;
-			padding: 2rem 1rem;
 			border-radius: 2rem;
 		}
 	}
@@ -742,7 +776,7 @@
 		}
 		&__design.right::after {
 			top: -15px;
-			right: -60px;
+			right: -35px;
 		}
 		&__design.left::before {
 			bottom: 25px;
@@ -753,11 +787,25 @@
 			left: 400px;
 		}
 	}
+
+	.awards {
+		& .swiper-slide {
+			height: 150px;
+		}
+	}
 }
 @media (min-width: 768px) and (max-width: 1199.98px) {
-	.intro {
-		&__content {
+	.intro--main {
+		& .intro__content {
 			padding-top: 23rem;
+		}
+	}
+	.intro--inner {
+		min-height: 480px;
+		height: 480px;
+
+		& .intro__content {
+			padding-top: 21rem;
 		}
 	}
 
@@ -777,6 +825,19 @@
 		&__design.left::after {
 			top: 20px;
 			left: 470px;
+		}
+	}
+
+	.vendors {
+		& .swiper-container  {
+			height: 220px;
+		}
+		& .swiper-slide  {
+			height: calc(100% - 3.375rem);
+		}
+		&__item  {
+			height: calc(100% - 2.25rem);
+			padding: 1.5rem 1rem;
 		}
 	}
 }
@@ -819,6 +880,12 @@
 	.activity {
 		&__item {
 			font-size: 1.375rem;
+		}
+	}
+
+	.awards {
+		& .swiper-slide {
+			height: 180px;
 		}
 	}
 }
@@ -866,6 +933,21 @@
 			left: 670px;
 		}
 	}
+
+	.awards {
+		& .swiper-slide {
+			height: 200px;
+		}
+	}
+
+	.vendors {
+		& .swiper-container  {
+			height: 270px;
+		}
+		& .swiper-slide  {
+			height: calc(100% - 4.875rem);
+		}
+	}
 }
 @media (min-width: 1200px) and (max-width: 1439.98px) {
 	.intro {
@@ -877,6 +959,10 @@
 		min-height: 1060px;
 		height: 1060px;
 	}
+	.intro--inner {
+		min-height: 580px;
+		height: 580px;
+	}
 
 	.benefit {
 		&__item {
@@ -889,12 +975,16 @@
 			font-size: 1.5rem;
 		}
 	}
+
+	.vendors {
+		&__item  {
+			height: calc(100% - 2.25rem);
+			padding: 1.5rem 1rem;
+		}
+	}
 }
 @media (min-width: 1200px) and (max-width: 1599.98px) {
 	.intro {
-		&__content {
-			padding-top: 25rem;
-		}
 		&__service {
 			padding: 0.75rem 0.75rem 2rem;
 			font-size: 1.1875rem;
@@ -905,11 +995,29 @@
 			height: 130px;
 		}
 	}
+	.intro--main {
+		& .intro__content {
+			padding-top: 25rem;
+		}
+	}
+	.intro--inner {
+		& .intro__content {
+			padding-top: 25rem;
+		}
+	}
 }
 @media (min-width: 1440px) {
 	.intro {
 		&__title {
 			margin-bottom: 2rem;
+		}
+	}
+	.intro--inner {
+		min-height: 650px;
+		height: 650px;
+
+		& .intro__content {
+			padding-top: 27rem;
 		}
 	}
 
@@ -922,6 +1030,12 @@
 	.activity {
 		&__item {
 			font-size: 1.6875rem;
+		}
+	}
+	.vendors {
+		&__item  {
+			height: calc(100% - 1.75rem);
+			padding: 2rem 1rem;
 		}
 	}
 }
@@ -938,9 +1052,6 @@
 }
 @media (min-width: 1600px) {
 	.intro {
-		&__content {
-			padding-top: 28rem;
-		}
 		&__subtitle {
 			margin-bottom: 8.75rem;
 		}
@@ -961,6 +1072,10 @@
 	.intro--main {
 		min-height: 1296px;
 		height: 1296px;
+
+		& .intro__content {
+			padding-top: 28rem;
+		}
 	}
 
 	.ask {

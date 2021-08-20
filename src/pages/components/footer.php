@@ -1,9 +1,9 @@
     </main>
 
     <footer class="footer">
-        <div class="footer__top" style="background-image: url('/build/img/mimi-thian-ZKBzlifgkgw-unsplash.jpg')">
+        <div class="footer__top <?=$footerModification;?>">
             <div class="container">
-                <div class="footer__form-box rounded-4_5 text-center">
+                <div class="footer__form-box text-center">
                     <div class="footer__form-design right"></div>
                     <div class="footer__form-design left"></div>
                     <div class="footer__form-title h2">Оставьте заявку!</div>
@@ -25,7 +25,7 @@
                             <label>
                                 <input type="checkbox" value="">
                                 <span class="footer__form-note-marker"></span>
-                                <span>Согласен на обработку персональных данных</span>
+                                <span class="text-left">Согласен на обработку персональных данных</span>
                             </label>
                         </div>
                     </form>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="row align-items-center">
                             <div class="col-md-4">
-                                <div class="d-md-flex justify-content-md-center align-content-md-center text-uppercase fsz-md">
+                                <div class="mb-2 mb-md-0 d-md-flex justify-content-md-center align-content-md-center text-uppercase fsz-md text-center text-md-left">
                                     <div class="footer__link-i">
                                         <img src="/build/img/placeholder.png" alt="location mark">
                                     </div>
@@ -63,7 +63,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="d-md-flex justify-content-md-center align-content-md-center fsz-md">
+                                <div class="mb-2 mb-md-0 d-md-flex justify-content-md-center align-content-md-center fsz-md text-center text-md-left">
                                     <div class="footer__link-i">
                                         <img src="/build/img/call.png" alt="phone number">
                                     </div>
@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="d-md-flex justify-content-md-center align-content-md-center fsz-md">
+                                <div class="mb-2 mb-md-0 d-md-flex justify-content-md-center align-content-md-center fsz-md text-center text-md-left">
                                     <div class="footer__link-i">
                                         <img src="/build/img/mail.png" alt="e-mail">
                                     </div>
@@ -100,7 +100,7 @@
                     </div>
                     <div class="col-12 footer__info fsz-sm">
                         <div class="mb-md-2 text-center">АРВ трейдинг 2021</div>
-                        <div class="mb-md-3 text-center">
+                        <div class="mb-1 mb-md-3 text-center">
                             <a href="#">Политика конфиденциальности/Использование файлов cookies</a>
                         </div>
                     </div>
