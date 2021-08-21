@@ -1,6 +1,6 @@
 <?php include($_SERVER["DOCUMENT_ROOT"].'/build/components/header.php');?>
 
-<div class="intro intro--main mb-4 mb-md-6 mb-lg-7 mb-xl-8">
+<div class="intro intro--main mb-5 mb-md-6 mb-lg-7 mb-xl-8">
     <div class="intro__wrapper" style="background-image: url('/build/img/nordwood-themes-kRNZiGKtz48-unsplash.jpg')">
         <div class="container intro__content">
             <h1 class="intro__title">
@@ -60,10 +60,11 @@
         </div>
     </div>
 </div>
+
 <div class="container">
     <div class="row">
-        <div class="col-12 mb-4 mb-md-6 mb-lg-7 mb-xl-8">
-            <div class="h2 mb-3 mb-md-5 mb-lg-6 mb-xl-7">Преимущества</div>
+        <div class="col-12 mb-5 mb-md-6 mb-lg-7 mb-xl-8">
+            <div class="h2 mb-4 mb-lg-5">Преимущества</div>
             <div class="row">
                 <div class="col-12 col-md-4 benefit mb-md-5 mb-lg-6 mb-xl-8">
                     <div class="benefit__item">
@@ -98,32 +99,33 @@
         </div>
     </div>
 </div>
+
 <div class="container">
     <div class="row">
-        <div class="col-12 mb-4 mb-md-6 mb-lg-7 mb-xl-8">
-            <div class="h2 mb-3 mb-md-5 mb-lg-6 mb-xl-7">Деятельность <span class="text--red">«АРВ Трейдинг»</span></div>
+        <div class="col-12 mb-5 mb-md-6 mb-lg-7 mb-xl-8">
+            <div class="h2 mb-4 mb-lg-5">Деятельность <span class="text--red">«АРВ Трейдинг»</span></div>
             <div class="row">
-                <div class="col-md-12 activity">
+                <div class="col-md-12 framed framed--main">
                     <div class="row">
-                        <div class="col-md-11 mx-md-auto mb-4 mb-sm-5 mb-lg-7 pt-4 pt-sm-5 pt-lg-7">
+                        <div class="col-md-11 mx-md-auto mb-4 pt-5 mb-xl-5 pt-xl-7">
                             <div class="row">
-                                <div class="col-md-4 mb-3 mb-md-4">
-                                    <div class="activity__item">Оргтехника и расходные материалы</div>
+                                <div class="framed__col col-md-4">
+                                    <div class="framed__item">Оргтехника и расходные материалы</div>
                                 </div>
-                                <div class="col-md-4 mb-3 mb-md-4">
-                                    <div class="activity__item">Обслуживание офисной и компьютерной оргтехники</div>
+                                <div class="framed__col col-md-4">
+                                    <div class="framed__item">Обслуживание офисной и компьютерной оргтехники</div>
                                 </div>
-                                <div class="col-md-4 mb-3 mb-md-4">
-                                    <div class="activity__item">Аутсорсинг печати</div>
+                                <div class="framed__col col-md-4">
+                                    <div class="framed__item">Аутсорсинг печати</div>
                                 </div>
-                                <div class="col-md-4 mb-3 mb-md-0">
-                                    <div class="activity__item">Профессиональное постпечатное оборудование</div>
+                                <div class="framed__col col-md-4">
+                                    <div class="framed__item">Профессиональное постпечатное оборудование</div>
                                 </div>
-                                <div class="col-md-4 mb-3 mb-md-0">
-                                    <div class="activity__item">Компьютерная техника</div>
+                                <div class="framed__col col-md-4">
+                                    <div class="framed__item">Компьютерная техника</div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="activity__item">Гарантийный ремонт копировальной и печатной техники</div>
+                                <div class="framed__col col-md-4">
+                                    <div class="framed__item">Гарантийный ремонт копировальной и печатной техники</div>
                                 </div>
                             </div>
                         </div>
@@ -133,10 +135,11 @@
         </div>
     </div>
 </div>
+
 <div class="container">
     <div class="row">
-        <div class="col-12 mb-4 mb-md-6 mb-lg-7 mb-xl-8">
-            <div class="h2 mb-3 mb-md-5 mb-lg-6 mb-xl-7">Наши <span class="text--red">партнеры</span></div>
+        <div class="col-12 mb-5 mb-md-6 mb-lg-7 mb-xl-8">
+            <div class="h2 mb-4 mb-lg-5">Наши <span class="text--red">партнеры</span></div>
             <div class="row">
                 <div class="col-md-12 partners">
                     <div class="row">
@@ -191,39 +194,13 @@
         </div>
     </div>
 </div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 mb-4 mb-md-6 mb-lg-7 mb-xl-8">
-            <div class="ask">
-                <div class="ask__wrapper" style="background-image: url('/build/img/30258560048197094_aacd.jpeg')">
-                    <div class="ask__design right"></div>
-                    <div class="ask__design left"></div>
-                    <div class="container">
-                        <div class="position-relative py-5 pt-md-5 pb-md-8">
-                            <div class="h2 mb-1 mb-md-3 text--red fw-5">Есть вопросы?</div>
-                            <div class="mb-4 mb-lg-5 mb-lg-7 fw-5 fsz-lg">Оставьте свой номер телефона, мы обязательно перезвоним вам!</div>
-                            <form class="ask-form px-lg-5 px-xl-7" method="post">
-                                <div class="ask-form__item">
-                                    <input type="text" name="NAME" required="" placeholder="Ваше имя">
-                                </div>
-                                <div class="ask-form__item">
-                                    <input type="tel" name="PHONE" required="" placeholder="Номер телефона">
-                                </div>
-                                <div class="ask-form__item">
-                                    <button class="btn btn-primary fsz-md" type="submit">Заказать звонок</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+<? include($_SERVER["DOCUMENT_ROOT"].'/build/components/ask-form.php');?>
+
 <div class="container">
     <div class="row">
-        <div class="col-12 mb-4 mb-md-6 mb-lg-7 mb-xl-8">
-            <div class="h2 mb-3 mb-md-5 mb-lg-6 mb-xl-7">Сертификаты <span class="text--red">и награды</span></div>
+        <div class="col-12 mb-5 mb-md-6 mb-lg-7 mb-xl-8">
+            <div class="h2 mb-4 mb-lg-5">Сертификаты <span class="text--red">и награды</span></div>
             <div class="row">
                 <div class="col-md-12 awards">
                     <div class="row">

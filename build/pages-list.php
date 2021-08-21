@@ -83,6 +83,7 @@
     <ul>
         <li><a href="./vendors.php" target="_blank">Вендоры (!адаптив 100%)</a></li>
         <li><a href="./index.php" target="_blank">Главная (!адаптив 100%)</a></li>
+        <li><a href="./contracts.php" target="_blank">Договоры (!адаптив 100%)</a></li>
     </ul>
   </div>
 </body>

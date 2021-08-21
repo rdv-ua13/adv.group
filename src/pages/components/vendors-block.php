@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
-		<div class="col-12 mb-4 mb-md-6 mb-lg-7 mb-xl-8">
-			<div class="h2 mb-3 mb-md-5 mb-lg-6 mb-xl-7"><?=$title;?></div>
+		<div class="col-12 mb-5 mb-md-6 mb-lg-7 mb-xl-8">
+			<div class="h2 mb-4 mb-lg-5"><?=$title;?></div>
 			<div class="row">
 				<div class="col-md-12 vendors">
 					<div class="row">

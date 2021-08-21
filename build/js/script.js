@@ -109,7 +109,7 @@ application.prototype.initSliders = function () {
                 992: {
                     slidesPerView: 4,
                 },
-                1200: {
+                1440: {
                     slidesPerView: 5,
                 },
             },
