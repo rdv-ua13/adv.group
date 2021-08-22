@@ -1,17 +1,12 @@
 <?php include($_SERVER["DOCUMENT_ROOT"].'/build/components/header.php'); ?>
 
-<div class="intro intro--inner mb-5 mb-md-6 mb-lg-7 mb-xl-8">
+<div class="intro intro--inner intro--inner-empty mb-5 mb-md-6 mb-lg-7 mb-xl-8">
 	<div class="intro__wrapper" style="background-image: url('/build/img/georgie-cobbs-bKjHgo_Lbpo-unsplash.jpg')">
 		<div class="container intro__content">
-			<h1 class="intro__title">Вендоры</h1>
+			<h1 class="visually-hidden">Сотрудничество</h1>
 		</div>
 	</div>
 </div>
-
-<?
-$title = "Вендоры <span class='text--red'>дистрибуции</span>";
-
-include($_SERVER["DOCUMENT_ROOT"].'/build/components/vendors-block.php');?>
 
 <div class="container">
 	<div class="row">
@@ -26,19 +21,23 @@ include($_SERVER["DOCUMENT_ROOT"].'/build/components/vendors-block.php');?>
 				результаты рекламной кампании, недостижимо. Согласно предыдущему, стратегический рыночный план тормозит коллективный
 				рекламоноситель. К тому же повторный контакт изящно восстанавливает бренд.
 			</p>
-			<p class="mb-0 fsz-md lh-1_5">Тем не менее, перераспределение бюджета раскручивает традиционный канал, используя опыт предыдущих кампаний.
+			<p class="mb-4 fsz-md lh-1_5">Тем не менее, перераспределение бюджета раскручивает традиционный канал, используя опыт предыдущих кампаний.
 				Привлечение аудитории, согласно Ф.Котлеру, уравновешивает жизненный цикл продукции, используя опыт предыдущих кампаний.
 				До недавнего времени считалось, что рейтинг конкурентоспособен.
 			</p>
+
+            <div class="inner-btn">
+                <button class="btn btn-primary fsz-md" type="submit">Вход/Регистрация</button>
+            </div>
 
 		</div>
 	</div>
 </div>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="pre-footer pre-footer--inner"></div>
-    </div>
+	<div class="row">
+		<div class="pre-footer pre-footer--inner"></div>
+	</div>
 </div>
 
 <? include($_SERVER["DOCUMENT_ROOT"].'/build/components/footer.php'); ?>

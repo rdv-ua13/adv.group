@@ -1,4 +1,4 @@
-<?php include($_SERVER["DOCUMENT_ROOT"].'/build/components/header.php');?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/build/components/header.php'); ?>
 
 <div class="intro intro--inner mb-5 mb-md-6 mb-lg-7 mb-xl-8">
 	<div class="intro__wrapper" style="background-image: url('/build/img/georgie-cobbs-bKjHgo_Lbpo-unsplash.jpg')">
@@ -33,14 +33,19 @@
 	</div>
 </div>
 
-<? include($_SERVER["DOCUMENT_ROOT"].'/build/components/framed-block.php');?>
+<? include($_SERVER["DOCUMENT_ROOT"].'/build/components/framed-block.php'); ?>
 
 <?
 $title = "Вендоры <span class='text--red'>дистрибуции</span>";
 
-include($_SERVER["DOCUMENT_ROOT"].'/build/components/vendors-block.php');?>
+include($_SERVER["DOCUMENT_ROOT"].'/build/components/vendors-block.php'); ?>
 
-<?
-$footerModification = "footer__top--inner";
+<div class="container-fluid">
+    <div class="row">
+        <div class="pre-footer pre-footer--main">
+			<?php include($_SERVER["DOCUMENT_ROOT"].'/build/components/request-form.php');?>
+        </div>
+    </div>
+</div>
 
-include($_SERVER["DOCUMENT_ROOT"].'/build/components/footer.php');?>
+<? include($_SERVER["DOCUMENT_ROOT"].'/build/components/footer.php'); ?>

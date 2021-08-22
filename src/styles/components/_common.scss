@@ -794,6 +794,14 @@ svg {
 	pointer-events: none;
 }
 
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
 .dummy {
 	z-index: -1000;
 }
@@ -957,28 +965,31 @@ svg {
 	box-shadow: none;
 }
 .btn-secondary {
-	/*border-color: ;
-	background-color: ;
-	color: ;*/
+	border-color: $white;
+	background-color: $white;
+	color: $mainTxtDark;
+}
+.btn-secondary span {
+	position: relative;
 }
 .btn-secondary:hover {
-	/*border-color: ;
-	background-color: ;
-	color: ;*/
+	border-color: $mainRed;
+	background-color: $mainRed;
+	color: $white;
 }
 .btn-secondary:focus,
 .btn-secondary.focus {
-	/*border-color: ;
-	background-color: ;
-	color: ;*/
 	box-shadow: none;
+	border-color: $mainRed;
+	background-color: $mainRed;
+	color: $white;
 }
 .btn-secondary:not(:disabled):not(.disabled):active,
 .btn-secondary:not(:disabled):not(.disabled).active,
 .show > .btn-secondary.dropdown-toggle {
-	/*border-color: ;
-	background-color: ;
-	color: ;*/
+	border-color: $mainRed;
+	background-color: $mainRed;
+	color: $white;
 }
 .btn-secondary:not(:disabled):not(.disabled):active:focus,
 .btn-secondary:not(:disabled):not(.disabled).active:focus,
@@ -1012,6 +1023,22 @@ svg {
 @media (min-width: 768px) {
 	.btn {
 		padding: 1.5rem 0;
+	}
+	.btn--high {
+		padding: 3rem 0;
+	}
+	.btn-secondary span::before {
+		content: "";
+		position: absolute;
+		right: -4px;
+		bottom: -4px;
+		left: -4px;
+		height: 2px;
+		background-color: $mainRed;
+		transition: all 0.3s ease;
+	}
+	.btn-secondary:hover span::before {
+		background-color: transparent;
 	}
 }
 @media (prefers-reduced-motion: reduce) {

@@ -1,24 +1,22 @@
-<?php include($_SERVER["DOCUMENT_ROOT"].'/build/components/header.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"] . '/build/components/header.php'); ?>
 
 <div class="intro intro--inner mb-5 mb-md-6 mb-lg-7 mb-xl-8">
 	<div class="intro__wrapper" style="background-image: url('/build/img/georgie-cobbs-bKjHgo_Lbpo-unsplash.jpg')">
 		<div class="container intro__content">
-			<h1 class="intro__title">Вендоры</h1>
+			<h1 class="intro__title">Покопийный&nbsp;<span class="text--red">контракт</span></h1>
+			<div class="intro__btn">
+				<button class="btn btn-primary fsz-md" type="submit">Оставить заявку</button>
+			</div>
 		</div>
 	</div>
 </div>
 
-<?
-$title = "Вендоры <span class='text--red'>дистрибуции</span>";
-
-include($_SERVER["DOCUMENT_ROOT"].'/build/components/vendors-block.php');?>
-
 <div class="container">
 	<div class="row">
 		<div class="col-12 mb-5 mb-md-6 mb-lg-7 mb-xl-8">
-			<div class="h2 mb-3 mb-lg-5">
+			<div class="h2 mb-4 mb-lg-5">
 				<span>Показ баннера</span>
-				<span class="text--red">глазами современников</span>
+				<span class="text--red">глазами&nbsp;современников</span>
 			</div>
 
 			<p class="fsz-md lh-1_5">Партисипативное планирование переворачивает медиамикс. Такое понимание ситуации восходит к Эл Райс, при этом маркетинг
@@ -35,10 +33,17 @@ include($_SERVER["DOCUMENT_ROOT"].'/build/components/vendors-block.php');?>
 	</div>
 </div>
 
+<?
+$title = "Вендоры <span class='text--red'>дистрибуции</span>";
+
+include($_SERVER["DOCUMENT_ROOT"] . '/build/components/vendors-block.php'); ?>
+
 <div class="container-fluid">
-    <div class="row">
-        <div class="pre-footer pre-footer--inner"></div>
-    </div>
+	<div class="row">
+		<div class="pre-footer pre-footer--main">
+			<?php include($_SERVER["DOCUMENT_ROOT"] . '/build/components/request-form.php');?>
+		</div>
+	</div>
 </div>
 
-<? include($_SERVER["DOCUMENT_ROOT"].'/build/components/footer.php'); ?>
+<? include($_SERVER["DOCUMENT_ROOT"] . '/build/components/footer.php'); ?>

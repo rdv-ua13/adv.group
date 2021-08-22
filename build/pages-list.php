@@ -84,6 +84,14 @@
         <li><a href="./vendors.php" target="_blank">Вендоры (!адаптив 100%)</a></li>
         <li><a href="./index.php" target="_blank">Главная (!адаптив 100%)</a></li>
         <li><a href="./contracts.php" target="_blank">Договоры (!адаптив 100%)</a></li>
+        <li><a href="./cooperation.php" target="_blank">Коопирейшн (!адаптив 100%)</a></li>
+        <li><a href="./leasing.php" target="_blank">Лизинг оргтехники (!адаптив 100%)</a></li>
+        <li><a href="./about.php" target="_blank">О компании (!адаптив 100%)</a></li>
+        <li><a href="./wholesale.php" target="_blank">Оптовые продажи (!адаптив 100%)</a></li>
+        <li><a href="./copy-contract.php" target="_blank">Покопийный контракт (!адаптив 100%)</a></li>
+        <li><a href="./service-repair.php" target="_blank">Сервис и ремонт (!адаптив 100%)</a></li>
+        <li><a href="./write-off.php" target="_blank">Списание оргтехники (!адаптив 100%)</a></li>
+        <li><a href="./trade-in.php" target="_blank">Трейд-ин оргтехники (!адаптив 100%)</a></li>
     </ul>
   </div>
 </body>

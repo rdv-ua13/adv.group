@@ -4,156 +4,13 @@
 	flex-direction: column;
 	flex: 0 0 auto;
 	min-width: 320px;
+	background-color: $white;
 
-	&__top,
-	&__bottom {
-		position: relative;
-	}
-	&__top {
-		z-index: 2;
-		width: 100%;
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
-	}
-	&__top--main {
-		background-image: url('/build/img/mimi-thian-ZKBzlifgkgw-unsplash.jpg');
-	}
-	&__top--inner {
-		background-image: url('/build/img/avel-chuklanov-DUmFLtMeAbQ-unsplash.jpg');
-	}
-	&__top--inner &__form-box{
-		display: none;
-	}
-	&__form-box {
-		position: relative;
-		margin: 0 auto;
-		border-radius: 2rem;
-		box-shadow: 5px 5px 15px 5px rgba(37, 37, 37, 0.4);
-		opacity: 0.9;
-		background-color: $lightGrey;
-	}
-	&__form-design {
-		position: absolute;
-		z-index: -1;
-		width: 100%;
-		height: 100%;
-	}
-	&__form-design.right,
-	&__form-design.left {
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		overflow: hidden;
-	}
-	&__form-design::before,
-	&__form-design::after {
-		content: "";
-		position: absolute;
-		width: 50px;
-		height: 50px;
-		background-image: url("/build/img/ellipse-design.png");
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	&__form-title,
-	&__form-subtitle {
-		font-weight: 500;
-	}
-	&__form-title {
-		color: $mainRed;
-	}
-	&__form-subtitle {
-		color: $mainTxtDark;
-	}
-	&__form-note label {
-		position: relative;
-		display: flex;;
-		margin-bottom: 0;
-		color: $black;
-		cursor: pointer;
-	}
-	&__form-note input {
-		position: absolute;
-		z-index: -1;
-		top: 0;
-		left: 0;
-		opacity: 0;
-	}
-	&__form-note-marker {
-		position: relative;
-		display: inline-block;
-		min-width: 18px;
-		width: 18px;
-		height: 18px;
-		margin-top: 2px;
-		margin-right: 12px;
-		border: 1px solid $black;
-		border-radius: 4px;
-	}
-	&__form-note input:checked + &__form-note-marker {
-		background-color: $textShadow;
-	}
-	&__form-note input:hover:checked + &__form-note-marker {
-		background-color: $black;
-	}
-	&__form-note input:checked + &__form-note-marker::before,
-	&__form-note input:checked + &__form-note-marker::after {
-		content: "";
-		position: absolute;
-		display: block;
-		border-radius: 2px;
-		background-color: $white;
-	}
-	&__form-note input:checked + &__form-note-marker::before {
-		top: 7px;
-		left: 6px;
-		width: 7px;
-		height: 2px;
-		transform: rotate(-45deg);
-	}
-	&__form-note input:checked + &__form-note-marker::after {
-		top: 6px;
-		left: 5px;
-		width: 2px;
-		height: 5px;
-		transform: rotate(-45deg);
-	}
-	&__form-note label.disabled &__form-note-marker {
-		border-color: $textShadow;
-		background-color: $lightGrey;
-	}
-	&__form-note label.disabled &__form-note input:checked + &__form-note-marker {
-		background-color: $textShadow;
-	}
-	&__form-note label span:not(.footer__form-note-marker) {
-		color: $txtGrey;
-	}
-	&__form-item input,
-	&__form-item input:focus {
-		background-color: $greyBg;
-	}
-	&__form-item input,
-	&__form-item input:focus,
-	&__form-item input::placeholder,
-	&__form-item input:-webkit-autofill,
-	&__form-item input:-webkit-autofill::first-line,
-	&__form-item input:-webkit-autofill:hover,
-	&__form-item input:-webkit-autofill:focus,
-	&__form-item input:-webkit-autofill:active {
-		color: $white;
-	}
-	&__form-item input:focus {
-		outline: none;
-	}
-	&__bottom,
-	&__board {
-		background-color: $white;
-	}
 	&__board {
 		z-index: 5;
+		border-radius: 3rem;
 		box-shadow: 5px 5px 35px 0 rgba(52, 34, 34, 0.15);
+		background-color: $white;
 	}
 	&__link {
 		display: inline-block;
@@ -169,13 +26,16 @@
 		width: 100%;
 		text-transform: uppercase;
 	}
-	&__link-i {
+	&__board-i {
 		display: flex;
 		align-self: center;
 		min-width: 24px;
 		min-height: 24px;
 		width: 24px;
 		height: 24px;
+	}
+	&__board-bottom {
+		align-items: center;
 	}
 	&__info,
 	&__info a {
@@ -188,85 +48,7 @@
 
 @media (max-width: 767.98px) {
 	.footer {
-		&__top {
-			margin-bottom: -100px;
-		}
-		&__top--main {
-			min-height: 680px;
-			height: 680px;
-			padding-top: 3rem;
-		}
-		&__top--inner {
-			min-height: 320px;
-			height: 320px;
-		}
-		&__form-box {
-			width: calc(100% + 30px);
-			margin-right: -15px;
-			margin-left: -15px;
-			padding: 1.5rem 1.5em 3rem;
-		}
-		&__form-design.right::before {
-			top: 25px;
-			right: 115px;
-			background-size: 45px;
-		}
-		&__form-design.right::after {
-			top: 905px;
-			right: 30px;
-			background-size: 75px;
-		}
-		&__form-design.left::before {
-			bottom: 55px;
-			left: 65px;
-			background-size: 40px;
-		}
-		&__form-design.left::after {
-			bottom: -15px;
-			left: 335px;
-			background-size: 70px;
-		}
-		&__form-title {
-			margin-bottom: 0.25rem;
-		}
-		&__form-subtitle {
-			margin-bottom: 1.5rem;
-		}
-		&__form-item {
-			width: 100%;
-			margin-bottom: 1.25rem;
-		}
-		&__form-item input {
-			width: 100%;
-			padding: 1.25rem;
-			border: none;
-			border-radius: 1rem;
-			font-size: 0.875rem;
-			line-height: 1;
-		}
-		&__form-item input:-webkit-autofill,
-		&__form-item input:-webkit-autofill::first-line,
-		&__form-item input:-webkit-autofill:hover,
-		&__form-item input:-webkit-autofill:focus,
-		&__form-item input:-webkit-autofill:active {
-			-webkit-box-shadow: 0 0 0 35px $greyBg inset !important;
-			font-size: 0.875rem;
-		}
-		&__form-note label {
-			padding-left: 1.25rem;
-		}
-		&__board {
-			margin-bottom: 2.5rem;
-			padding-top: 2rem;
-			padding-bottom: 2rem;
-		}
-		&__link {
-			margin-bottom: 1rem;
-		}
-		&__link-i {
-			margin: 0 auto 0.5rem;
-		}
-		&__bottom::before {
+		&::before {
 			content: "";
 			position: absolute;
 			right: 0;
@@ -275,78 +57,36 @@
 			height: 1px;
 			background-color: $lightGreyBg;
 		}
+		&__board {
+			margin-top: -120px;
+			margin-bottom: 2.5rem;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
+		&__link {
+			margin-bottom: 1rem;
+		}
+		&__board-item {
+			margin-bottom: 0.5rem;
+			text-align: center;
+		}
+		&__board-i {
+			margin: 0 auto 0.5rem;
+		}
 	}
 }
 @media (min-width: 768px) {
 	.footer {
-		&__top {
-			margin-bottom: -160px;
-		}
-		&__top--main {
-			min-height: 888px;
-			height: 888px;
-		}
-		&__top--inner {
-			min-height: 415px;
-			height: 415px;
-		}
-		&__form {
-			display: flex;
-			flex-wrap: wrap;
-			width: 100%;
-		}
-		&__form-design.right::before {
-			background-size: 65px;
-		}
-		&__form-design.right::after {
-			background-size: 95px;
-		}
-		&__form-design.left::before {
-			background-size: 55px;
-		}
-		&__form-design.left::after {
-			background-size: 105px;
-		}
-		&__form-title {
-			margin-bottom: 1.5rem;
-			line-height: 1;
-		}
-		&__form-subtitle {
-			max-width: 700px;
-			margin: 0 auto 3rem;
-			line-height: 1.3;
-		}
-		&__form-item input {
-			width: 100%;
-			padding: 1.5rem;
-			border: none;
-			border-radius: 1rem;
-			font-size: 1.125rem;
-			line-height: 1;
-		}
-		&__form-item input:-webkit-autofill,
-		&__form-item input:-webkit-autofill::first-line,
-		&__form-item input:-webkit-autofill:hover,
-		&__form-item input:-webkit-autofill:focus,
-		&__form-item input:-webkit-autofill:active {
-			-webkit-box-shadow: 0 0 0 35px $greyBg inset !important;
-			font-size: 1.125rem;
-		}
-		&__form-note label {
-			padding-left: 1.5rem;
-		}
 		&__board {
+			margin-top: -160px;
 			margin-bottom: 3rem;
-			padding-top: 4rem;
-			padding-bottom: 3rem;
 		}
-		&__board-top &__link:not(:last-of-type) {
-			margin-bottom: 2rem;
+		&__board-item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
-		&__board-top &__link:last-of-type {
-			margin-bottom: 4rem;
-		}
-		&__link-i {
+		&__board-i {
 			margin-right: 10px;
 		}
 		&__logo {
@@ -356,80 +96,54 @@
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
 	.footer {
-		&__top--main {
-			padding-top: 60px;
+		&__board {
+			padding-top: 3rem;
+			padding-bottom: 2rem;
 		}
-		&__form-item {
-			width: 100%;
-			margin-bottom: 1rem;
+		&__board &__link,
+		&__board &__link + span {
+			font-size: 0.875rem;
 		}
 	}
 }
 @media (min-width: 768px) and (max-width: 1199.98px) {
 	.footer {
-		&__form-box {
-			width: calc(100% - 80px);
-			padding: 2rem 1.5rem 3rem;
+		&__board-top &__link:not(:last-of-type) {
+			margin-bottom: 1rem;
 		}
-		&__form-design.right::before {
-			top: 40px;
-			right: 100px;
+		&__board-top &__link:last-of-type {
+			margin-bottom: 3rem;
 		}
-		&__form-design.right::after {
-			top: 125px;
-			right: 25px;
+		&__board-bottom {
+			flex-direction: column;
 		}
-		&__form-design.left::before {
-			bottom: 55px;
-			left: 65px;
-		}
-		&__form-design.left::after {
-			bottom: -15px;
-			left: 335px;
+		&__board-col {
+			margin-bottom: 1rem;
 		}
 	}
 }
 @media (min-width: 992px) {
 	.footer {
-		&__top--main {
-			padding-top: 90px;
-		}
 		&__title {
 			margin-bottom: 1rem;
 		}
-		&__form-item {
-			width: calc((100% - 2rem) / 2);
-			margin-bottom: 2rem;
-		}
-		&__form-item:nth-child(odd) {
-			margin-right: 2rem;
-		}
-		&__form-note {
-			margin-left: 50%;
+		&__board {
+			padding-top: 4rem;
+			padding-bottom: 3rem;
 		}
 	}
 }
 @media (min-width: 1200px) {
 	.footer {
-		&__form-box {
-			width: calc(100% - 220px);
-			padding: 3rem 2rem 5rem;
+		&__board-top &__link:not(:last-of-type) {
+			margin-bottom: 2rem;
 		}
-		&__form-design.right::before {
-			top: 40px;
-			right: 100px;
+		&__board-top &__link:last-of-type {
+			margin-bottom: 4rem;
 		}
-		&__form-design.right::after {
-			top: 125px;
-			right: 25px;
-		}
-		&__form-design.left::before {
-			bottom: 55px;
-			left: 65px;
-		}
-		&__form-design.left::after {
-			bottom: -15px;
-			left: 335px;
+		&__board &__link,
+		&__board &__link + span {
+			font-size: 1.25rem;
 		}
 	}
 }

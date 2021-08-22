@@ -15,9 +15,9 @@ application.prototype.init = function () {
     this.changeImageUser();
     this.toggleClassBurger();
     this.toggleClassDropMenu();
+    this.addMaskedInput();
 
-    /*this.topMenu();
-    this.addMaskedInput();*/
+    /*this.topMenu();*/
 }
 
 // Mobile device сheck
