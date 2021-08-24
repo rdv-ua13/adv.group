@@ -94,6 +94,7 @@ gulp.task("libsJs:build", function () {
     "node_modules/swiper/swiper-bundle.js",
     "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
     "node_modules/jquery.maskedinput/src/jquery.maskedinput.js",
+    "node_modules/jquery-validation/dist/jquery.validate.js",
   ])
     .pipe(concat("libs.min.js"))
     .pipe(sourcemaps.init())

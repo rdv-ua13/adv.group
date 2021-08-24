@@ -113,40 +113,40 @@
                         <div class="col-md-11 mx-md-auto">
                             <div class="swiper-scroll-x js-awards swiper-container">
                                 <div class="swiper-wrapper">
-                                    <a class="swiper-slide" href="https://arv.group/build/img/award-1.png" data-fancybox="galery">
+                                    <a class="swiper-slide" href="/build/img/award-1.png" data-fancybox="galery">
                                         <img src="/build/img/award-1.png" alt="award">
                                     </a>
-                                    <a class="swiper-slide" href="https://arv.group/build/img/award-2.png" data-fancybox="galery">
+                                    <a class="swiper-slide" href="/build/img/award-2.png" data-fancybox="galery">
                                         <img src="/build/img/award-2.png" alt="award">
                                     </a>
-                                    <a class="swiper-slide" href="https://arv.group/build/img/award-3.png" data-fancybox="galery">
+                                    <a class="swiper-slide" href="/build/img/award-3.png" data-fancybox="galery">
                                         <img src="/build/img/award-3.png" alt="award">
                                     </a>
-                                    <a class="swiper-slide" href="https://arv.group/build/img/award-4.png" data-fancybox="galery">
+                                    <a class="swiper-slide" href="/build/img/award-4.png" data-fancybox="galery">
                                         <img src="/build/img/award-4.png" alt="award">
                                     </a>
-                                    <a class="swiper-slide" href="https://arv.group/build/img/award-5.png" data-fancybox="galery">
+                                    <a class="swiper-slide" href="/build/img/award-5.png" data-fancybox="galery">
                                         <img src="/build/img/award-5.png" alt="award">
                                     </a>
-                                    <a class="swiper-slide" href="https://arv.group/build/img/award-6.png" data-fancybox="galery">
+                                    <a class="swiper-slide" href="/build/img/award-6.png" data-fancybox="galery">
                                         <img src="/build/img/award-6.png" alt="award">
                                     </a>
-                                    <a class="swiper-slide" href="https://arv.group/build/img/award-3.png" data-fancybox="galery">
+                                    <a class="swiper-slide" href="/build/img/award-3.png" data-fancybox="galery">
                                         <img src="/build/img/award-3.png" alt="award">
                                     </a>
-                                    <a class="swiper-slide" href="https://arv.group/build/img/award-5.png" data-fancybox="galery">
+                                    <a class="swiper-slide" href="/build/img/award-5.png" data-fancybox="galery">
                                         <img src="/build/img/award-5.png" alt="award">
                                     </a>
-                                    <a class="swiper-slide" href="https://arv.group/build/img/award-2.png" data-fancybox="galery">
+                                    <a class="swiper-slide" href="/build/img/award-2.png" data-fancybox="galery">
                                         <img src="/build/img/award-2.png" alt="award">
                                     </a>
-                                    <a class="swiper-slide" href="https://arv.group/build/img/award-4.png" data-fancybox="galery">
+                                    <a class="swiper-slide" href="/build/img/award-4.png" data-fancybox="galery">
                                         <img src="/build/img/award-4.png" alt="award">
                                     </a>
-                                    <a class="swiper-slide" href="https://arv.group/build/img/award-1.png" data-fancybox="galery">
+                                    <a class="swiper-slide" href="/build/img/award-1.png" data-fancybox="galery">
                                         <img src="/build/img/award-1.png" alt="award">
                                     </a>
-                                    <a class="swiper-slide" href="https://arv.group/build/img/award-6.png" data-fancybox="galery">
+                                    <a class="swiper-slide" href="/build/img/award-6.png" data-fancybox="galery">
                                         <img src="/build/img/award-6.png" alt="award">
                                     </a>
                                 </div>

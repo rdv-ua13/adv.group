@@ -16,6 +16,7 @@ application.prototype.init = function () {
     this.toggleClassBurger();
     this.toggleClassDropMenu();
     this.addMaskedInput();
+    this.initRegValidation();
 
     /*this.topMenu();*/
 }
@@ -145,16 +146,57 @@ application.prototype.toggleClassDropMenu = function () {
     if (window.matchMedia("(max-width:767.98px)").matches) {
         $('.nav-bottom__item--contains .nav-bottom__drop').hide();
 
-        $(".js-nav-bottom-link").on("click", function () {
-            $(this).closest(".nav-bottom__item--contains").toggleClass("active");
-
-            if ($(this).closest('.nav-bottom__item--contains').hasClass('active')) {
-                $(this).closest('.nav-bottom__item--contains').find('.nav-bottom__drop').slideDown(300);
-            } else {
-                $(this).closest('.nav-bottom__item--contains').find('.nav-bottom__drop').slideUp(300);
+        $('.js-nav-bottom-link').on('click', function () {
+            if (!$(this).closest('.nav-bottom__item--contains').hasClass('active')) {
+                $(".nav-bottom__item--contains").removeClass("active");
+                $(".nav-bottom__drop").slideUp(300);
+                $(this).closest(".nav-bottom__item--contains").addClass("active");
+                $(this).closest(".nav-bottom__item--contains").find('.nav-bottom__drop').slideDown(300);
+            }
+            else if ($(this).closest('.nav-bottom__item--contains').hasClass('active')) {
+                $(this).closest('.nav-bottom__item--contains').removeClass('active');
             }
         });
     } else { return }
+}
+// Validation of registration form
+application.prototype.initRegValidation = function () {
+    $(function() {
+        $("form.registration").validate({
+            // Specify validation rules
+            rules: {
+                SURNAME: "required",
+                NAME: "required",
+                MIDDLENAME: "required",
+                PHONE: "required",
+                EMAIL: {
+                    required: true,
+                    email: true
+                },
+                TAXPAYERID: "required",
+                LEGALNAME: "required",
+                BRANDNAME: "required",
+                SITE: "required",
+            },
+            // Specify validation error messages
+            messages: {
+                SURNAME: "Поле не заполнено",
+                NAME: "Поле не заполнено",
+                MIDDLENAME: "Поле не заполнено",
+                PHONE: "Поле не заполнено",
+                EMAIL: "Поле не заполнено",
+                TAXPAYERID: "Поле не заполнено",
+                LEGALNAME: "Поле не заполнено",
+                BRANDNAME: "Поле не заполнено",
+                SITE: "Поле не заполнено",
+            },
+            // Make sure the form is submitted to the destination defined
+            // in the "action" attribute of the form when valid
+            submitHandler: function(form) {
+                form.submit();
+            }
+        });
+    });
 }
 
 

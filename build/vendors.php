@@ -1,6 +1,6 @@
 <?php include($_SERVER["DOCUMENT_ROOT"].'/build/components/header.php'); ?>
 
-<div class="intro intro--inner mb-5 mb-md-6 mb-lg-7 mb-xl-8">
+<div class="intro intro--inner intro--inner-empty mb-5 mb-md-6 mb-lg-7 mb-xl-8">
 	<div class="intro__wrapper" style="background-image: url('/build/img/georgie-cobbs-bKjHgo_Lbpo-unsplash.jpg')">
 		<div class="container intro__content">
 			<h1 class="intro__title">Вендоры</h1>
@@ -16,7 +16,7 @@ include($_SERVER["DOCUMENT_ROOT"].'/build/components/vendors-block.php');?>
 <div class="container">
 	<div class="row">
 		<div class="col-12 mb-5 mb-md-6 mb-lg-7 mb-xl-8">
-			<div class="h2 mb-3 mb-lg-5">
+			<div class="h2 mb-4 mb-lg-5">
 				<span>Показ баннера</span>
 				<span class="text--red">глазами современников</span>
 			</div>

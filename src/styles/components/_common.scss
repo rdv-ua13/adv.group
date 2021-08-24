@@ -801,6 +801,15 @@ svg {
 	height: 1px;
 	margin: -1px;
 }
+@media (min-width: 768px) {
+	.visually-hidden-md {
+		position: absolute;
+		clip: rect(0 0 0 0);
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+	}
+}
 
 .dummy {
 	z-index: -1000;
@@ -1075,13 +1084,9 @@ svg {
 		max-height: 30px;
 	}
 }
-@media (max-width: 767.98px) {
-	.logo {
-		margin: 0 auto 1rem;
-	}
-}
 @media (min-width: 768px) and (max-width: 1199.98px) {
 	.logo {
+		min-height: 28px;
 		max-width: 130px;
 		max-height: 38px;
 	}
@@ -1090,5 +1095,102 @@ svg {
 	.logo {
 		max-width: 190px;
 		max-height: 55px;
+	}
+}
+
+.breadcrumb {
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 0;
+	list-style: none;
+	background-color: transparent;
+
+	&,
+	& a,
+	& a:hover {
+		color: $txtDarkGrey;
+	}
+	& li,
+	& a {
+		position: relative;
+	}
+	& li:not(:last-of-type) {
+		padding-right: 2.5rem;
+	}
+	& li::before,
+	& li:not(:last-of-type)::after {
+		content: "";
+		position: absolute;
+	}
+	& li:not(:last-of-type)::before,
+	& li:not(:last-of-type)::after {
+		height: 1px;
+		background-color: $txtDarkGrey;
+	}
+	& li:not(:last-of-type)::before {
+		transform: rotate(45deg);
+	}
+	& li:not(:last-of-type)::after {
+		transform: rotate(-45deg);
+	}
+}
+@media (max-width: 767.98px) {
+	.breadcrumb {
+		display: none;
+	}
+}
+@media (min-width: 768px) {
+	.breadcrumb {
+		& li:not(:last-of-type)::before,
+		& li:not(:last-of-type)::after {
+			right: 1rem;
+			width: 9px;
+		}
+		& li:last-of-type::before {
+			right: -4px;
+			bottom: 0px;
+			left: -4px;
+			height: 1px;
+			background-color: $mainRed;
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.breadcrumb {
+		margin-bottom: 4rem;
+		padding: 2rem 0 0;
+
+		& li:not(:last-of-type)::before {
+			top: 9px;
+		}
+		& li:not(:last-of-type)::after {
+			bottom: 9px;
+		}
+	}
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.breadcrumb {
+		margin-bottom: 5rem;
+		padding: 3rem 0 0;
+
+		& li:not(:last-of-type)::before {
+			top: 10px;
+		}
+		& li:not(:last-of-type)::after {
+			bottom: 10px;
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.breadcrumb {
+		margin-bottom: 6.25rem;
+		padding: 4rem 0 0;
+
+		& li:not(:last-of-type)::before {
+			top: 11px;
+		}
+		& li:not(:last-of-type)::after {
+			bottom: 11px;
+		}
 	}
 }

@@ -38,6 +38,7 @@
     "bootstrap": "^4.6.0",
     "imagemin": "^7.0.1",
     "jquery": "^3.6.0",
+    "jquery-validation": "^1.19.3",
     "jquery.maskedinput": "^1.4.1",
     "trim-newlines": "^4.0.2"
   }

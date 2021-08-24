@@ -9,22 +9,60 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
+    <?/* if (strstr($APPLICATION->GetCurDir(), "/path")) */
+    if (strpos($_SERVER["REQUEST_URI"], "index.php")
+        || strpos($_SERVER["REQUEST_URI"], "vendors.php")
+        || strpos($_SERVER["REQUEST_URI"], "contracts.php")
+        || strpos($_SERVER["REQUEST_URI"], "cooperation.php")
+        || strpos($_SERVER["REQUEST_URI"], "leasing.php")
+        || strpos($_SERVER["REQUEST_URI"], "about.php")
+        || strpos($_SERVER["REQUEST_URI"], "wholesale.php")
+        || strpos($_SERVER["REQUEST_URI"], "copy-contract.php")
+        || strpos($_SERVER["REQUEST_URI"], "service-repair.php")
+        || strpos($_SERVER["REQUEST_URI"], "write-off.php")
+        || strpos($_SERVER["REQUEST_URI"], "trade-in.php")
+        || strpos($_SERVER["REQUEST_URI"], "cooperation-form.php")) {
+        echo '<header class="header">';
+    }
+    else {
+		$isSubsection = 1;
+        echo '<header class="header header--inner">';
+    }?>
         <div class="container">
             <div class="row">
-                <div class="order-1 col-4 col-sm-3 mb-md-3 py-2 py-sm-3 py-md-0 d-flex align-items-center">
+				<? if($isSubsection) {
+					echo '<div class="order-1 col-4 col-sm-3 col-md-2 col-xl-3 mb-md-3 py-2 py-sm-3 py-md-0 d-flex align-items-center">';
+				}
+				else {
+					echo '<div class="order-1 col-4 col-sm-3 mb-md-3 py-2 py-sm-3 py-md-0 d-flex align-items-center">';
+				} ?>
                     <a class="logo" href="/">
                         <img class="logo-i" src="/build/img/logo.png" alt="logo">
                     </a>
                 </div>
-                <div class="order-3 order-md-2 col-4 col-sm-3 col-md-9 mb-md-3 py-2 py-sm-3 py-md-0">
+                <? if($isSubsection) {
+                    echo '<div class="order-3 order-md-2 col-4 col-sm-3 col-md-10 col-xl-9 mb-md-3 py-2 py-sm-3 py-md-0">';
+                }
+                else {
+                    echo '<div class="order-3 order-md-2 col-4 col-sm-3 col-md-9 mb-md-3 py-2 py-sm-3 py-md-0">';
+                } ?>
                     <div class="row h-100">
-                        <nav class="col-md-12 col-xl-8 col-xxxl-9 mb-md-3 mb-xl-0 d-none d-md-flex justify-content-end align-items-center fsz-md">
-                            <a class="nav-top-item" href="">О компании</a>
+						<? if($isSubsection) {
+						    echo '<nav class="nav-top col-md-7 col-xl-8 col-xxxl-9 d-none d-md-flex justify-content-end align-items-center fsz-md">';
+						}
+						else {
+						    echo '<nav class="nav-top col-md-12 col-xl-8 col-xxxl-9 mb-md-3 mb-xl-0 d-none d-md-flex justify-content-end align-items-center fsz-md">';
+						} ?>
+                            <a class="nav-top-item" href="">О&nbsp;компании</a>
                             <a class="nav-top-item" href="">Новости</a>
                             <a class="nav-top-item" href="">Контакты</a>
                         </nav>
-                        <div class="user-control-top col-md-12 col-xl-4 col-xxxl-3 fsz-md">
+						<? if($isSubsection) {
+						    echo '<div class="user-control-top col-md-5 col-xl-4 col-xxxl-3 fsz-md">';
+						}
+						else {
+						    echo '<div class="user-control-top col-md-12 col-xl-4 col-xxxl-3 fsz-md">';
+						} ?>
                             <a class="user-control js-call order-2 order-md-1" href="tel:+74955805556">
                                 <span class="user-control__i">
                                     <? /* src from js/script.js */ ?>
@@ -32,7 +70,12 @@
                                 </span>
                                 <span>+7 (495) 580-55-56</span>
                             </a>
-                            <a class="user-control js-user order-1 order-md-2 d-xl-none" href="#">
+                            <? if($isSubsection) {
+                                echo '<a class="user-control js-user order-1 order-md-2 d-md-none" href="#">';
+                            }
+                            else {
+                                echo '<a class="user-control js-user order-1 order-md-2 d-xl-none" href="#">';
+                            } ?>
                                 <span class="user-control__i">
                                     <? /* src from js/script.js */ ?>
                                     <img src="" alt="login to b2b">
@@ -158,4 +201,9 @@
         </div>
     </header>
 
-    <main class="main">
+	<? if($isSubsection) {
+		echo '<main class="main main--inner">';
+	}
+	else {
+		echo '<main class="main">';
+	} ?>

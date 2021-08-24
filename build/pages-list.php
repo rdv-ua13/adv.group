@@ -91,7 +91,9 @@
         <li><a href="./copy-contract.php" target="_blank">Покопийный контракт (!адаптив 100%)</a></li>
         <li><a href="./service-repair.php" target="_blank">Сервис и ремонт (!адаптив 100%)</a></li>
         <li><a href="./write-off.php" target="_blank">Списание оргтехники (!адаптив 100%)</a></li>
+        <li><a href="./vendors-page.php" target="_blank">Страница вендоров (!адаптив 100%)</a></li>
         <li><a href="./trade-in.php" target="_blank">Трейд-ин оргтехники (!адаптив 100%)</a></li>
+        <li><a href="./cooperation-form.php" target="_blank">Форма сотрудничества (!адаптив 100%)</a></li>
     </ul>
   </div>
 </body>

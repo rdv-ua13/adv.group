@@ -11,7 +11,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-12 mb-5 mb-md-6 mb-lg-7 mb-xl-8">
-			<div class="h2 mb-3 mb-lg-5">
+			<div class="h2 mb-4 mb-lg-5">
 				<span>Показ баннера</span>
 				<span class="text--red">глазами современников</span>
 			</div>
@@ -26,8 +26,11 @@
 				До недавнего времени считалось, что рейтинг конкурентоспособен.
 			</p>
 
-            <div class="inner-btn">
+            <?/*<div class="inner-btn">
                 <button class="btn btn-primary fsz-md" type="submit">Вход/Регистрация</button>
+            </div>*/?>
+            <div class="inner-btn">
+                <a class="btn btn-primary fsz-md" href="/cooperation-form.php">Вход/Регистрация</a>
             </div>
 
 		</div>
