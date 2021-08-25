@@ -8250,6 +8250,16 @@ svg {
   align-items: center;
 }
 
+.business-solution__wrapper {
+  position: relative;
+}
+
+.business-solution__img {
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
 /* ============= main .end/ ============= */
 
 /* ============= footer ============= */
@@ -11825,6 +11835,222 @@ body.compensate-for-scrollbar {
   .registration__checkbox label span:last-of-type {
     font-size: 1rem;
   }
+
+  .business-solution {
+    background-color: #b8b7b0;
+  }
+
+  .business-solution__item,
+  .business-solution__item-box,
+  .business-solution__mark {
+    position: absolute;
+  }
+
+  .business-solution__item-box {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .business-solution__mark {
+    width: 57px;
+    height: 57px;
+    padding: 1rem;
+    border-radius: 50%;
+    transform: scale(1);
+    opacity: 1;
+    background-color: #d90505;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .business-solution__mark.active,
+  .business-solution__mark.active {
+    transform: scale(1.7);
+    opacity: 0.85;
+    background-color: #4d4d4d;
+  }
+
+  .business-solution__mark--first {
+    top: 250px;
+    left: 105px;
+  }
+
+  .business-solution__mark::before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    background-image: url("/build/img/search-interface-symbol.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  .business-solution__item {
+    right: 4rem;
+    bottom: 4rem;
+  }
+
+  .business-solution__btn {
+    display: none;
+  }
+
+  .business-solution__drop {
+    z-index: -10;
+    display: flex;
+    flex-direction: column;
+    width: 520px;
+    height: 730px;
+    padding: 2.5rem 2rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    box-shadow: 0px 10px 20px 0 rgba(37, 37, 37, 0.3);
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .business-solution__item.active .business-solution__drop {
+    z-index: 1;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .business-solution__drop-view {
+    height: 140px;
+    margin-bottom: 2rem;
+    background-color: #242424;
+  }
+
+  .business-solution__drop-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .business-solution__drop-descr {
+    height: calc((730px - 5rem) - 140px - 2rem);
+    margin-right: -15px;
+    padding-right: 15px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .business-solution__drop-descr::-webkit-scrollbar {
+    width: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+
+  .business-solution__drop-descr::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #d90505;
+  }
+
+  .business-solution__drop-descr::-webkit-scrollbar-track {
+    width: 30px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 5px 15px 0 rgba(23, 19, 15, 0.2);
+    background-color: #ffffff;
+  }
+
+  .business-solution__drop-item:not(:last-of-type) {
+    margin-bottom: 1.5rem;
+  }
+
+  .business-solution__drop-item a {
+    display: block;
+    font-weight: 500;
+  }
+
+  .business-solution__drop-item a:not(:last-of-type) {
+    margin-bottom: 0.5rem;
+  }
+
+  /*.business-solution {
+  	background-color: $businessBg;
+
+  	&__item,
+  	&__item-box,
+  	&__mark {
+  		position: absolute;
+  	}
+  	&__item-box {
+  		top: 0;
+  		right: 0;
+  		bottom: 0;
+  		left: 0;
+  	}
+  	&__mark {
+  		width: 57px;
+  		height: 57px;
+  		padding: 1rem;
+  		border-radius: 50%;
+  		transform: scale(1);
+  		opacity: 1;
+  		background-color: $mainRed;
+  		transition: all 0.3s ease;
+  	}
+  	&__mark.active,
+  	&__mark.active {
+  		transform: scale(1.7);
+  		opacity: 0.85;
+  		background-color: $zoomActiveBg;
+  	}
+  	&__mark--first {
+  		top: 250px;
+  		left: 105px;
+  	}
+  	&__mark::before {
+  		content: "";
+  		position: absolute;
+  		top: 1rem;
+  		right: 1rem;
+  		bottom: 1rem;
+  		left: 1rem;
+  		background-image: url("/build/img/search-interface-symbol.png");
+  		background-repeat: no-repeat;
+  		background-position: center center;
+  		background-size: contain;
+  	}
+  	&__btn,
+  	&__drop {
+  		display: none;
+  	}
+  	&__item input {
+  		clip: rect(0 0 0 0);
+  		width: 1px;
+  		height: 1px;
+  		margin: -1px;
+  	}
+  	&__item.active {
+  		right: 4rem;
+  		bottom: 4rem;
+  		display: none;
+  	}
+  	&__item.active {
+  		display: block;
+  	}
+  	&__item &__drop {
+  		width: 520px;
+  		height: 730px;
+  		padding: 2.5rem 2rem;
+  		background-color: white;
+  		border-radius: 1.5rem;
+  		box-shadow: 0px 10px 20px 0 rgb(37,37,37,0.3)
+  	}
+
+  	!*&__mark--first.active {
+  		top: 250px;
+  		left: 105px;
+  	}*!
+  }*/
 
   .footer__board {
     margin-top: -160px;

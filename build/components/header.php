@@ -18,6 +18,7 @@
         || strpos($_SERVER["REQUEST_URI"], "about.php")
         || strpos($_SERVER["REQUEST_URI"], "wholesale.php")
         || strpos($_SERVER["REQUEST_URI"], "copy-contract.php")
+        || strpos($_SERVER["REQUEST_URI"], "business-solutions.php")
         || strpos($_SERVER["REQUEST_URI"], "service-repair.php")
         || strpos($_SERVER["REQUEST_URI"], "write-off.php")
         || strpos($_SERVER["REQUEST_URI"], "trade-in.php")

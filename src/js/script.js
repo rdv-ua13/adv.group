@@ -17,6 +17,7 @@ application.prototype.init = function () {
     this.toggleClassDropMenu();
     this.addMaskedInput();
     this.initRegValidation();
+    this.toggleClassBusinessMark();
 
     /*this.topMenu();*/
 }
@@ -197,6 +198,31 @@ application.prototype.initRegValidation = function () {
             }
         });
     });
+}
+// Business-solutions marks behaviour
+application.prototype.toggleClassBusinessMark = function () {
+    if($(".business-solution .js-item-mark").length) {
+        $(".business-solution .js-item-mark").on("click", function () {
+            if (!$(this).hasClass("active")) {
+                $(this).addClass("active");
+                $(this).next(".business-solution__item").addClass("active");
+            } else {
+                $(this).removeClass("active");
+                $(this).next(".business-solution__item").removeClass("active");
+            }
+        });
+
+        // if() {} here stoped!!!
+       /* $(".business-solution .js-item-mark").on("click", function () {
+            if (!$(this).hasClass("active")) {
+                $(this).addClass("active");
+                $(this).next(".business-solution__item").addClass("active");
+            } else {
+                $(this).removeClass("active");
+                $(this).next(".business-solution__item").removeClass("active");
+            }
+        });*/
+    }
 }
 
 

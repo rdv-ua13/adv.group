@@ -89,6 +89,7 @@
         <li><a href="./about.php" target="_blank">О компании (!адаптив 100%)</a></li>
         <li><a href="./wholesale.php" target="_blank">Оптовые продажи (!адаптив 100%)</a></li>
         <li><a href="./copy-contract.php" target="_blank">Покопийный контракт (!адаптив 100%)</a></li>
+        <li><a href="./business-solutions.php" target="_blank">Решения для бизнеса (!адаптив 100%)</a></li>
         <li><a href="./service-repair.php" target="_blank">Сервис и ремонт (!адаптив 100%)</a></li>
         <li><a href="./write-off.php" target="_blank">Списание оргтехники (!адаптив 100%)</a></li>
         <li><a href="./vendors-page.php" target="_blank">Страница вендоров (!адаптив 100%)</a></li>

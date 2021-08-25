@@ -614,6 +614,16 @@
 	}
 }
 
+.business-solution {
+	&__wrapper {
+		position: relative;
+	}
+	&__img {
+		width: 100%;
+		object-fit: contain;
+	}
+}
+
 @media (max-width: 575.98px) {
 	.intro {
 		&__service {
@@ -1459,6 +1469,210 @@
 			font-size: 1rem;
 		}
 	}
+
+	.business-solution {
+		background-color: $businessBg;
+
+		&__item,
+		&__item-box,
+		&__mark {
+			position: absolute;
+		}
+		&__item-box {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		&__mark {
+			width: 57px;
+			height: 57px;
+			padding: 1rem;
+			border-radius: 50%;
+			transform: scale(1);
+			opacity: 1;
+			background-color: $mainRed;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		&__mark.active,
+		&__mark.active {
+			transform: scale(1.7);
+			opacity: 0.85;
+			background-color: $zoomActiveBg;
+		}
+		&__mark--first {
+			top: 250px;
+			left: 105px;
+		}
+		&__mark::before {
+			content: "";
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			bottom: 1rem;
+			left: 1rem;
+			background-image: url("/build/img/search-interface-symbol.png");
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+		}
+
+		&__item {
+			right: 4rem;
+			bottom: 4rem;
+		}
+		&__btn {
+			display: none;
+		}
+		&__drop {
+			z-index: -10;
+			display: flex;
+			flex-direction: column;
+			width: 520px;
+			height: 730px;
+			padding: 2.5rem 2rem;
+			background-color: white;
+			border-radius: 1.5rem;
+			box-shadow: 0px 10px 20px 0 rgb(37,37,37,0.3);
+			opacity: 0;
+			overflow: hidden;
+			pointer-events: none;
+			transition: all 0.3s ease;
+		}
+		&__item.active &__drop {
+			z-index: 1;
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+
+		&__drop-view {
+			height: 140px;
+			margin-bottom: 2rem;
+			background-color: $mainTxtDark;
+		}
+		&__drop-img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+
+		&__drop-descr {
+			height: calc((730px - 5rem) - 140px - 2rem);
+			margin-right: -15px;
+			padding-right: 15px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+		&__drop-descr::-webkit-scrollbar {
+			width: 15px;
+			border-radius: 8px;
+
+			background-color: $white;
+		}
+		&__drop-descr::-webkit-scrollbar-thumb {
+			border-radius: 8px;
+			background-color: $mainRed;
+		}
+		&__drop-descr::-webkit-scrollbar-track {
+			width: 30px;
+			border-radius: 8px;
+			-webkit-box-shadow: 0px 5px 15px 0 rgba(23, 19, 15, 0.2);
+			background-color: $white;
+		}
+
+		&__drop-item:not(:last-of-type) {
+			margin-bottom: 1.5rem;
+		}
+		&__drop-item a {
+			display: block;
+			font-weight: 500;
+		}
+		&__drop-item a:not(:last-of-type) {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	/*.business-solution {
+		background-color: $businessBg;
+
+		&__item,
+		&__item-box,
+		&__mark {
+			position: absolute;
+		}
+		&__item-box {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		&__mark {
+			width: 57px;
+			height: 57px;
+			padding: 1rem;
+			border-radius: 50%;
+			transform: scale(1);
+			opacity: 1;
+			background-color: $mainRed;
+			transition: all 0.3s ease;
+		}
+		&__mark.active,
+		&__mark.active {
+			transform: scale(1.7);
+			opacity: 0.85;
+			background-color: $zoomActiveBg;
+		}
+		&__mark--first {
+			top: 250px;
+			left: 105px;
+		}
+		&__mark::before {
+			content: "";
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			bottom: 1rem;
+			left: 1rem;
+			background-image: url("/build/img/search-interface-symbol.png");
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+		}
+		&__btn,
+		&__drop {
+			display: none;
+		}
+		&__item input {
+			clip: rect(0 0 0 0);
+			width: 1px;
+			height: 1px;
+			margin: -1px;
+		}
+		&__item.active {
+			right: 4rem;
+			bottom: 4rem;
+			display: none;
+		}
+		&__item.active {
+			display: block;
+		}
+		&__item &__drop {
+			width: 520px;
+			height: 730px;
+			padding: 2.5rem 2rem;
+			background-color: white;
+			border-radius: 1.5rem;
+			box-shadow: 0px 10px 20px 0 rgb(37,37,37,0.3)
+		}
+
+		!*&__mark--first.active {
+			top: 250px;
+			left: 105px;
+		}*!
+	}*/
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
 	.main--inner {
