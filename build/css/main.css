@@ -6924,6 +6924,7 @@ a.text-dark:focus {
   font-style: italic;
 }
 
+.popover,
 .btn,
 body {
   font-family: "Montserrat", sans-serif;
@@ -8258,6 +8259,83 @@ svg {
   width: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+}
+
+.contacts-map {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.popover {
+  max-width: 470px;
+  width: 470px;
+  height: 360px;
+  border: 0;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 20px 0 rgba(37, 37, 37, 0.3);
+  background-color: #ffffff;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  transform-origin: bottom;
+}
+
+.popover .close {
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+}
+
+.popover-inner {
+  height: 100%;
+  padding: 2rem 1.25rem;
+}
+
+.popover-inner ymaps {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.popover-title {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.popover-content__row:not(:last-of-type) {
+  margin-bottom: 1.25rem;
+}
+
+.popover-content__title {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.popover-content__title img {
+  display: inline-block;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.popover-content__title span {
+  color: #363636;
+}
+
+.popover-content__link-row:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
+.popover-content__link {
+  padding-left: 1.75rem;
+  font-weight: 500;
+}
+
+.popover-content__row span,
+.popover-content__link {
+  display: inline-block;
+  font-size: 1.25rem;
 }
 
 /* ============= main .end/ ============= */
@@ -11785,6 +11863,11 @@ body.compensate-for-scrollbar {
     height: 415px;
   }
 
+  .pre-footer--contacts {
+    margin-top: -6.25rem;
+    margin-bottom: 3rem;
+  }
+
   .inner-btn {
     max-width: 765px;
     width: 50%;
@@ -11942,6 +12025,15 @@ body.compensate-for-scrollbar {
   .business-solution__drop-item a {
     display: block;
     font-weight: 500;
+  }
+
+  .contacts-map__board-wrapper {
+    display: none;
+  }
+
+  #map {
+    width: 100%;
+    height: 50vw;
   }
 
   .footer__board {
@@ -14073,7 +14165,7 @@ body.compensate-for-scrollbar {
   }
 
   .breadcrumb {
-    margin-bottom: 6.25rem;
+    margin-bottom: 4rem;
     padding: 4rem 0 0;
   }
 
@@ -14301,6 +14393,10 @@ body.compensate-for-scrollbar {
 
   .footer__board-top .footer__link:last-of-type {
     margin-bottom: 4rem;
+  }
+
+  .footer__board-col:nth-child(1) .footer__link {
+    text-align: left;
   }
 
   .footer__board .footer__link,
@@ -14883,6 +14979,10 @@ body.compensate-for-scrollbar {
   .business-solution__drop-descr {
     height: calc((730px - 5rem) - 140px - 2rem);
   }
+
+  .popover {
+    transform: scale(1);
+  }
 }
 
 @media (max-width: 1199.98px) {
@@ -15419,6 +15519,11 @@ body.compensate-for-scrollbar {
     height: 320px;
   }
 
+  .pre-footer--contacts {
+    margin-top: -4rem;
+    margin-bottom: 2rem;
+  }
+
   .inner-btn {
     width: 100%;
     padding-right: 1rem;
@@ -15471,6 +15576,63 @@ body.compensate-for-scrollbar {
 
   .registration__checkbox label span:last-of-type {
     font-size: 0.75rem;
+  }
+
+  .contacts-map__board-wrapper {
+    z-index: 5;
+    margin-top: -2.5rem;
+  }
+
+  .contacts-map__board {
+    margin-bottom: -350px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 35px 0 rgba(52, 34, 34, 0.15);
+    background-color: #ffffff;
+  }
+
+  .contacts-map__board-col {
+    margin-bottom: 1rem;
+  }
+
+  .contacts-map__board-item {
+    text-align: center;
+  }
+
+  .contacts-map__board-item:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+
+  .contacts-map__board-i {
+    display: flex;
+    align-self: center;
+    min-width: 24px;
+    min-height: 24px;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 0.5rem;
+  }
+
+  .contacts-map__link {
+    display: inline-block;
+    color: #242424;
+    line-height: 1;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .contacts-map__link-row {
+    margin-bottom: 1rem;
+  }
+
+  #map {
+    width: 100%;
+    height: 150vw;
+  }
+
+  .popover {
+    display: none;
   }
 
   .footer::before {
@@ -15686,6 +15848,10 @@ body.compensate-for-scrollbar {
     height: calc((100% - 5rem) / 3);
   }
 
+  .request__design {
+    display: none;
+  }
+
   .registration__item label,
   .registration__item .btn {
     font-size: 1rem;
@@ -15720,6 +15886,41 @@ body.compensate-for-scrollbar {
 
   .registration__checkbox-mark {
     margin-right: 8px;
+  }
+
+  .contacts-map__board-item,
+  .contacts-map__link {
+    font-size: 1rem;
+  }
+
+  .contacts-map__link {
+    margin-bottom: 0.25rem;
+  }
+
+  #map {
+    margin-top: 12rem;
+  }
+
+  .footer__link-row:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+
+  .footer__link-row .footer__link {
+    margin-bottom: 0.25rem;
+  }
+
+  .footer__link-row span {
+    display: block;
+  }
+
+  .footer__link-row span span {
+    display: none;
+  }
+}
+
+@media (max-width: 433.98px) {
+  .footer::before {
+    bottom: 3.75rem;
   }
 }
 
@@ -15779,6 +15980,10 @@ body.compensate-for-scrollbar {
 
   .business-solution__drop-descr {
     height: calc((650px - 5rem) - 140px - 2rem);
+  }
+
+  .popover {
+    transform: scale(0.9);
   }
 }
 
@@ -15938,6 +16143,15 @@ body.compensate-for-scrollbar {
 
   .registration__item:first-of-type .btn:not(:last-of-type) {
     margin-right: 1rem;
+  }
+
+  .contacts-map__board-item,
+  .contacts-map__link {
+    font-size: 1.125rem;
+  }
+
+  .contacts-map__link {
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -16153,6 +16367,10 @@ body.compensate-for-scrollbar {
     border-radius: 4px;
   }
 
+  .popover {
+    transform: scale(0.6);
+  }
+
   .footer__board-top .footer__link:not(:last-of-type) {
     margin-bottom: 1rem;
   }
@@ -16237,7 +16455,7 @@ body.compensate-for-scrollbar {
   }
 
   .breadcrumb {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     padding: 3rem 0 0;
   }
 
@@ -16375,7 +16593,7 @@ body.compensate-for-scrollbar {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .breadcrumb {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     padding: 2rem 0 0;
   }
 
@@ -16695,6 +16913,10 @@ body.compensate-for-scrollbar {
 
   .business-solution__drop-item:not(:last-of-type) {
     margin-bottom: 1.25rem;
+  }
+
+  .popover {
+    transform: scale(0.75);
   }
 }
 

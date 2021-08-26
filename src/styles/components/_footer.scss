@@ -46,6 +46,29 @@
 	}
 }
 
+@media (max-width: 433.98px) {
+	.footer {
+		&::before {
+			bottom: 3.75rem;
+		}
+	}
+}
+@media (max-width: 575.98px) {
+	.footer {
+		&__link-row:not(:last-of-type) {
+			margin-bottom: 1rem;
+		}
+		&__link-row &__link {
+			margin-bottom: 0.25rem;
+		}
+		&__link-row span {
+			display: block;
+		}
+		&__link-row span span {
+			display: none;
+		}
+	}
+}
 @media (max-width: 767.98px) {
 	.footer {
 		&::before {
@@ -143,6 +166,9 @@
 		}
 		&__board-top &__link:last-of-type {
 			margin-bottom: 4rem;
+		}
+		&__board-col:nth-child(1) &__link {
+			text-align: left;
 		}
 		&__board &__link,
 		&__board &__link + span {

@@ -624,6 +624,76 @@
 	}
 }
 
+.contacts-map {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.popover {
+	max-width: 470px;
+	width: 470px;
+	height: 360px;
+	border: 0;
+	border-radius: 2rem;
+	box-shadow: 5px 5px 20px 0 rgba(37, 37, 37, 0.3);
+	background-color: $white;
+	@extend %fontFamily;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	transform-origin: bottom;
+}
+.popover .close {
+	opacity: 0;
+	pointer-events: none;
+	cursor: default;
+}
+.popover-inner {
+	height: 100%;
+	padding: 2rem 1.25rem;
+
+	& ymaps {
+		width: 100%!important;
+		height: 100%!important;
+	}
+}
+.popover-title {
+	margin-bottom: 1.5rem;
+	font-size: 2.5rem;
+}
+.popover-content {
+	&__row:not(:last-of-type) {
+		margin-bottom: 1.25rem;
+	}
+	&__title {
+		display: flex;
+		margin-bottom: 0.75rem;
+	}
+	&__title img {
+		display: inline-block;
+		min-width: 1.25rem;
+		min-height: 1.25rem;
+		width: 1.25rem;
+		height: 1.25rem;
+		margin-right: 0.5rem;
+	}
+	&__title span {
+		color: $greyBg;
+	}
+	&__link-row:not(:last-of-type) {
+		margin-bottom: 0.5rem;
+	}
+	&__link {
+		padding-left: 1.75rem;
+		font-weight: 500;
+	}
+	&__row span,
+	&__link {
+		display: inline-block;
+		font-size: 1.25rem;
+	}
+}
+
 @media (max-width: 575.98px) {
 	.intro {
 		&__service {
@@ -700,6 +770,12 @@
 		}
 	}
 
+	.request {
+		&__design {
+			display: none;
+		}
+	}
+
 	.registration {
 		&__item label,
 		&__item .btn {
@@ -729,6 +805,19 @@
 		&__checkbox-mark {
 			margin-right: 8px;
 		}
+	}
+
+	.contacts-map {
+		&__board-item,
+		&__link {
+			font-size: 1rem;
+		}
+		&__link {
+			margin-bottom: 0.25rem;
+		}
+	}
+	#map {
+		margin-top: 12rem;
 	}
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -835,6 +924,16 @@
 		}
 		&__item:first-of-type .btn:not(:last-of-type) {
 			margin-right: 1rem;
+		}
+	}
+
+	.contacts-map {
+		&__board-item,
+		&__link {
+			font-size: 1.125rem;
+		}
+		&__link {
+			margin-bottom: 0.5rem;
 		}
 	}
 }
@@ -1103,6 +1202,10 @@
 			min-height: 320px;
 			height: 320px;
 		}
+		&--contacts {
+			margin-top: -4rem;
+			margin-bottom: 2rem;
+		}
 	}
 
 	.inner-btn {
@@ -1151,6 +1254,57 @@
 		&__checkbox label span:last-of-type {
 			font-size: 0.75rem;
 		}
+	}
+
+	.contacts-map {
+		&__board-wrapper {
+			z-index: 5;
+			margin-top: -2.5rem;
+		}
+		&__board {
+			margin-bottom: -350px;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			border-radius: 2rem;
+			box-shadow: 5px 5px 35px 0 rgb(52 34 34 / 15%);
+			background-color: $white;
+		}
+		&__board-col {
+			margin-bottom: 1rem;
+		}
+		&__board-item {
+			text-align: center;
+		}
+		&__board-item:not(:last-of-type) {
+			margin-bottom: 1rem;
+		}
+		&__board-i {
+			display: flex;
+			align-self: center;
+			min-width: 24px;
+			min-height: 24px;
+			width: 24px;
+			height: 24px;
+			margin: 0 auto 0.5rem;
+		}
+		&__link {
+			display: inline-block;
+			color: $mainTxtDark;
+			line-height: 1;
+			text-align: center;
+			transition: all 0.3s ease;
+		}
+		&__link-row {
+			margin-bottom: 1rem;
+		}
+	}
+
+	#map {
+		width: 100%;
+		height: 150vw;
+	}
+	.popover {
+		display: none;
 	}
 }
 @media (min-width: 768px) {
@@ -1421,6 +1575,10 @@
 			min-height: 415px;
 			height: 415px;
 		}
+		&--contacts {
+			margin-top: -6.25rem;
+			margin-bottom: 3rem;
+		}
 	}
 
 	.inner-btn {
@@ -1559,6 +1717,16 @@
 			display: block;
 			font-weight: 500;
 		}
+	}
+
+	.contacts-map {
+		&__board-wrapper {
+			display: none;
+		}
+	}
+	#map {
+		width: 100%;
+		height: 50vw;
 	}
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1850,6 +2018,10 @@
 			width: 16px;
 			border-radius: 4px;
 		}
+	}
+
+	.popover {
+		transform: scale(0.6);
 	}
 }
 @media (min-width: 992px) {
@@ -2245,6 +2417,10 @@
 			margin-bottom: 1.25rem;
 		}
 	}
+
+	.popover {
+		transform: scale(0.75);
+	}
 }
 @media (min-width: 1200px) and (max-width: 1599.98px) {
 	.intro {
@@ -2370,6 +2546,10 @@
 			height: calc((650px - 5rem) - 140px - 2rem);
 		}
 	}
+
+	.popover {
+		transform: scale(0.9);
+	}
 }
 @media (min-width: 1600px) {
 	.intro {
@@ -2453,5 +2633,9 @@
 		&__drop-descr {
 			height: calc((730px - 5rem) - 140px - 2rem);
 		}
+	}
+
+	.popover {
+		transform: scale(1);
 	}
 }

@@ -1157,7 +1157,7 @@ svg {
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
 	.breadcrumb {
-		margin-bottom: 4rem;
+		margin-bottom: 2rem;
 		padding: 2rem 0 0;
 
 		& li:not(:last-of-type)::before {
@@ -1170,7 +1170,7 @@ svg {
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
 	.breadcrumb {
-		margin-bottom: 5rem;
+		margin-bottom: 3rem;
 		padding: 3rem 0 0;
 
 		& li:not(:last-of-type)::before {
@@ -1183,7 +1183,7 @@ svg {
 }
 @media (min-width: 1200px) {
 	.breadcrumb {
-		margin-bottom: 6.25rem;
+		margin-bottom: 4rem;
 		padding: 4rem 0 0;
 
 		& li:not(:last-of-type)::before {

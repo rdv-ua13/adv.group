@@ -4,19 +4,19 @@
         <ol class="breadcrumb fsz-md" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope
                 itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="https://example.com/dresses">
+                <a itemprop="item" href="/">
                     <span itemprop="name">Главная</span></a>
                 <meta itemprop="position" content="1" />
             </li>
             <li itemprop="itemListElement" itemscope
                 itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="https://example.com/dresses/real">
+                <a itemprop="item" href="/vendors.php">
                     <span itemprop="name">Вендоры</span></a>
                 <meta itemprop="position" content="2" />
             </li>
             <li itemprop="itemListElement" itemscope
                 itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="https://example.com/dresses/real">
+                <a itemprop="item" href="vendors-page.php">
                     <span itemprop="name">Braun</span></a>
                 <meta itemprop="position" content="3" />
             </li>

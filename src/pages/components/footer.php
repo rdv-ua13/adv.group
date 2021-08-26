@@ -2,7 +2,14 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="footer__board col-md-12">
+			<?/* if (strstr($APPLICATION->GetCurDir(), "/path")) */
+			if (strpos($_SERVER["REQUEST_URI"], "contacts.php")) {
+				echo '<div class="footer__board col-md-12" style="display: none;">';
+			}
+			else {
+				echo '<div class="footer__board col-md-12">';
+			}?>
+
                 <div class="footer__board-top row">
                     <div class="col-md-4 fsz-md">
                         <a class="footer__link" href="#">О компании</a>
@@ -27,7 +34,7 @@
                             <div class="footer__board-i">
                                 <img src="/build/img/placeholder.png" alt="location mark">
                             </div>
-                            <a class="footer__link text-left" href="#">111524, Москва, Электродная 11.стр.7</a>
+                            <a class="footer__link" href="#">111524,&nbsp;Москва, Электродная&nbsp;11.стр.7</a>
                         </div>
                     </div>
                     <div class="footer__board-col col-xl-4">
@@ -44,13 +51,13 @@
                                 <img src="/build/img/mail.png" alt="e-mail">
                             </div>
                             <div>
-                                <div>
+                                <div class="footer__link-row">
                                     <a class="footer__link" href="mailto:service@arv.group">service@arv.group</a>
-                                    <span>– сервисный центр</span>
+                                    <span><span>–</span> сервисный центр</span>
                                 </div>
-                                <div>
+                                <div class="footer__link-row">
                                     <a class="footer__link" href="mailto:info@arv.group">info@arv.group</a>
-                                    <span>– по всем вопросам</span>
+                                    <span><span>–</span> по всем вопросам</span>
                                 </div>
                             </div>
                         </div>
@@ -78,6 +85,7 @@
 
 
     <?/*<script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript"></script>*/?>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=6617a1b6-abb2-45da-8cf2-13e5890cc7fa&lang=ru_RU" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../../build/js/libs.min.js"></script>
     <script src="../../build/js/script.js"></script>
