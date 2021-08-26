@@ -52,40 +52,197 @@ else {
                     </div>
                 </div>
 
-
-
-                <!--<label class="business-solution__mark business-solution__mark--first" for="businessMarkFirst"></label>
+                <div class="business-solution__mark business-solution__mark--second js-item-mark"></div>
                 <div class="business-solution__item">
-                    <input id="businessMarkFirst" class="js-input-mark" type="checkbox">
-                    <button class="btn btn-primary business-solution__btn">Настольный компьютер</button>
-                    <div class="business-solution__drop fsz-sm">
-                        <div class="business-solution__drop-item">
-                            <img class="business-solution__drop-img" src="" alt="">
+                    <button class="btn btn-primary business-solution__btn">Принтер</button>
+                    <div class="business-solution__drop">
+                        <div class="business-solution__drop-view">
+                            <img class="business-solution__drop-img" src="/build/img/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg" alt="Показ баннера глазами современников">
                         </div>
-                        <div class="business-solution__drop-item">
-                            <div class="h2 mb-4 mb-lg-5">
-                                <span>Показ баннера</span>
-                                <span class="text--red">глазами&nbsp;современников</span>
-                            </div>
+                        <div class="business-solution__drop-descr fsz-sm">
+                            <div class="business-solution__drop-item">
+                                <div class="mb-3 mb-lg-4 fsz-lg">
+                                    <span>Показ баннера2</span>
+                                    <span class="text--red">глазами&nbsp;современников</span>
+                                </div>
 
-                            <p class="fsz-md lh-1_5">Партисипативное планирование переворачивает медиамикс. Такое понимание ситуации восходит к Эл Райс, при этом маркетинг
-                                ригиден как никогда. Коммуникация естественно позиционирует имидж предприятия. Позиционирование на рынке, анализируя
-                                результаты рекламной кампании, недостижимо. Согласно предыдущему, стратегический рыночный план тормозит коллективный
-                                рекламоноситель. К тому же повторный контакт изящно восстанавливает бренд.
-                            </p>
-                            <p class="mb-0 fsz-md lh-1_5">Тем не менее, перераспределение бюджета раскручивает традиционный канал, используя опыт предыдущих кампаний.
-                                Привлечение аудитории, согласно Ф.Котлеру, уравновешивает жизненный цикл продукции, используя опыт предыдущих кампаний.
-                                До недавнего времени считалось, что рейтинг конкурентоспособен.
-                            </p>
-                        </div>
-                        <div class="business-solution__drop-item">
-                            <a href="#">Название услуги</a>
-                        </div>
-                        <div class="business-solution__drop-item">
-                            <a href="#">Название услуги</a>
+                                <p class="fsz-sm lh-1_5">Партисипативное планирование переворачивает медиамикс. Такое понимание ситуации восходит к Эл Райс, при этом маркетинг
+                                    ригиден как никогда. Коммуникация естественно позиционирует имидж предприятия. Позиционирование на рынке, анализируя
+                                    результаты рекламной кампании, недостижимо. Согласно предыдущему, стратегический рыночный план тормозит коллективный
+                                    рекламоноситель. К тому же повторный контакт изящно восстанавливает бренд.
+                                </p>
+                                <p class="mb-0 fsz-am lh-1_5">Тем не менее, перераспределение бюджета раскручивает традиционный канал, используя опыт предыдущих кампаний.
+                                    Привлечение аудитории, согласно Ф.Котлеру, уравновешивает жизненный цикл продукции, используя опыт предыдущих кампаний.
+                                    До недавнего времени считалось, что рейтинг конкурентоспособен.
+                                </p>
+                            </div>
+                            <div class="business-solution__drop-item fsz-md">
+                                <a href="#">Название услуги</a>
+                                <a href="#">Название услуги</a>
+                            </div>
                         </div>
                     </div>
-                </div>-->
+                </div>
+
+                <div class="business-solution__mark business-solution__mark--third js-item-mark"></div>
+                <div class="business-solution__item">
+                    <button class="btn btn-primary business-solution__btn">Цифровая машина</button>
+                    <div class="business-solution__drop">
+                        <div class="business-solution__drop-view">
+                            <img class="business-solution__drop-img" src="/build/img/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg" alt="Показ баннера глазами современников">
+                        </div>
+                        <div class="business-solution__drop-descr fsz-sm">
+                            <div class="business-solution__drop-item">
+                                <div class="mb-3 mb-lg-4 fsz-lg">
+                                    <span>Показ баннера3</span>
+                                    <span class="text--red">глазами&nbsp;современников</span>
+                                </div>
+
+                                <p class="fsz-sm lh-1_5">Партисипативное планирование переворачивает медиамикс. Такое понимание ситуации восходит к Эл Райс, при этом маркетинг
+                                    ригиден как никогда. Коммуникация естественно позиционирует имидж предприятия. Позиционирование на рынке, анализируя
+                                    результаты рекламной кампании, недостижимо. Согласно предыдущему, стратегический рыночный план тормозит коллективный
+                                    рекламоноситель. К тому же повторный контакт изящно восстанавливает бренд.
+                                </p>
+                                <p class="mb-0 fsz-am lh-1_5">Тем не менее, перераспределение бюджета раскручивает традиционный канал, используя опыт предыдущих кампаний.
+                                    Привлечение аудитории, согласно Ф.Котлеру, уравновешивает жизненный цикл продукции, используя опыт предыдущих кампаний.
+                                    До недавнего времени считалось, что рейтинг конкурентоспособен.
+                                </p>
+                            </div>
+                            <div class="business-solution__drop-item fsz-md">
+                                <a href="#">Название услуги</a>
+                                <a href="#">Название услуги</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="business-solution__mark business-solution__mark--fourth js-item-mark"></div>
+                <div class="business-solution__item">
+                    <button class="btn btn-primary business-solution__btn">Плоттер</button>
+                    <div class="business-solution__drop">
+                        <div class="business-solution__drop-view">
+                            <img class="business-solution__drop-img" src="/build/img/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg" alt="Показ баннера глазами современников">
+                        </div>
+                        <div class="business-solution__drop-descr fsz-sm">
+                            <div class="business-solution__drop-item">
+                                <div class="mb-3 mb-lg-4 fsz-lg">
+                                    <span>Показ баннера4</span>
+                                    <span class="text--red">глазами&nbsp;современников</span>
+                                </div>
+
+                                <p class="fsz-sm lh-1_5">Партисипативное планирование переворачивает медиамикс. Такое понимание ситуации восходит к Эл Райс, при этом маркетинг
+                                    ригиден как никогда. Коммуникация естественно позиционирует имидж предприятия. Позиционирование на рынке, анализируя
+                                    результаты рекламной кампании, недостижимо. Согласно предыдущему, стратегический рыночный план тормозит коллективный
+                                    рекламоноситель. К тому же повторный контакт изящно восстанавливает бренд.
+                                </p>
+                                <p class="mb-0 fsz-am lh-1_5">Тем не менее, перераспределение бюджета раскручивает традиционный канал, используя опыт предыдущих кампаний.
+                                    Привлечение аудитории, согласно Ф.Котлеру, уравновешивает жизненный цикл продукции, используя опыт предыдущих кампаний.
+                                    До недавнего времени считалось, что рейтинг конкурентоспособен.
+                                </p>
+                            </div>
+                            <div class="business-solution__drop-item fsz-md">
+                                <a href="#">Название услуги</a>
+                                <a href="#">Название услуги</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="business-solution__mark business-solution__mark--fifth js-item-mark"></div>
+                <div class="business-solution__item">
+                    <button class="btn btn-primary business-solution__btn">Ризограф</button>
+                    <div class="business-solution__drop">
+                        <div class="business-solution__drop-view">
+                            <img class="business-solution__drop-img" src="/build/img/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg" alt="Показ баннера глазами современников">
+                        </div>
+                        <div class="business-solution__drop-descr fsz-sm">
+                            <div class="business-solution__drop-item">
+                                <div class="mb-3 mb-lg-4 fsz-lg">
+                                    <span>Показ баннера5</span>
+                                    <span class="text--red">глазами&nbsp;современников</span>
+                                </div>
+
+                                <p class="fsz-sm lh-1_5">Партисипативное планирование переворачивает медиамикс. Такое понимание ситуации восходит к Эл Райс, при этом маркетинг
+                                    ригиден как никогда. Коммуникация естественно позиционирует имидж предприятия. Позиционирование на рынке, анализируя
+                                    результаты рекламной кампании, недостижимо. Согласно предыдущему, стратегический рыночный план тормозит коллективный
+                                    рекламоноситель. К тому же повторный контакт изящно восстанавливает бренд.
+                                </p>
+                                <p class="mb-0 fsz-am lh-1_5">Тем не менее, перераспределение бюджета раскручивает традиционный канал, используя опыт предыдущих кампаний.
+                                    Привлечение аудитории, согласно Ф.Котлеру, уравновешивает жизненный цикл продукции, используя опыт предыдущих кампаний.
+                                    До недавнего времени считалось, что рейтинг конкурентоспособен.
+                                </p>
+                            </div>
+                            <div class="business-solution__drop-item fsz-md">
+                                <a href="#">Название услуги</a>
+                                <a href="#">Название услуги</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="business-solution__mark business-solution__mark--sixth js-item-mark"></div>
+                <div class="business-solution__item">
+                    <button class="btn btn-primary business-solution__btn">Сканер</button>
+                    <div class="business-solution__drop">
+                        <div class="business-solution__drop-view">
+                            <img class="business-solution__drop-img" src="/build/img/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg" alt="Показ баннера глазами современников">
+                        </div>
+                        <div class="business-solution__drop-descr fsz-sm">
+                            <div class="business-solution__drop-item">
+                                <div class="mb-3 mb-lg-4 fsz-lg">
+                                    <span>Показ баннера6</span>
+                                    <span class="text--red">глазами&nbsp;современников</span>
+                                </div>
+
+                                <p class="fsz-sm lh-1_5">Партисипативное планирование переворачивает медиамикс. Такое понимание ситуации восходит к Эл Райс, при этом маркетинг
+                                    ригиден как никогда. Коммуникация естественно позиционирует имидж предприятия. Позиционирование на рынке, анализируя
+                                    результаты рекламной кампании, недостижимо. Согласно предыдущему, стратегический рыночный план тормозит коллективный
+                                    рекламоноситель. К тому же повторный контакт изящно восстанавливает бренд.
+                                </p>
+                                <p class="mb-0 fsz-am lh-1_5">Тем не менее, перераспределение бюджета раскручивает традиционный канал, используя опыт предыдущих кампаний.
+                                    Привлечение аудитории, согласно Ф.Котлеру, уравновешивает жизненный цикл продукции, используя опыт предыдущих кампаний.
+                                    До недавнего времени считалось, что рейтинг конкурентоспособен.
+                                </p>
+                            </div>
+                            <div class="business-solution__drop-item fsz-md">
+                                <a href="#">Название услуги</a>
+                                <a href="#">Название услуги</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="business-solution__mark business-solution__mark--seventh js-item-mark"></div>
+                <div class="business-solution__item">
+                    <button class="btn btn-primary business-solution__btn">Шредер</button>
+                    <div class="business-solution__drop">
+                        <div class="business-solution__drop-view">
+                            <img class="business-solution__drop-img" src="/build/img/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg" alt="Показ баннера глазами современников">
+                        </div>
+                        <div class="business-solution__drop-descr fsz-sm">
+                            <div class="business-solution__drop-item">
+                                <div class="mb-3 mb-lg-4 fsz-lg">
+                                    <span>Показ баннера7</span>
+                                    <span class="text--red">глазами&nbsp;современников</span>
+                                </div>
+
+                                <p class="fsz-sm lh-1_5">Партисипативное планирование переворачивает медиамикс. Такое понимание ситуации восходит к Эл Райс, при этом маркетинг
+                                    ригиден как никогда. Коммуникация естественно позиционирует имидж предприятия. Позиционирование на рынке, анализируя
+                                    результаты рекламной кампании, недостижимо. Согласно предыдущему, стратегический рыночный план тормозит коллективный
+                                    рекламоноситель. К тому же повторный контакт изящно восстанавливает бренд.
+                                </p>
+                                <p class="mb-0 fsz-am lh-1_5">Тем не менее, перераспределение бюджета раскручивает традиционный канал, используя опыт предыдущих кампаний.
+                                    Привлечение аудитории, согласно Ф.Котлеру, уравновешивает жизненный цикл продукции, используя опыт предыдущих кампаний.
+                                    До недавнего времени считалось, что рейтинг конкурентоспособен.
+                                </p>
+                            </div>
+                            <div class="business-solution__drop-item fsz-md">
+                                <a href="#">Название услуги</a>
+                                <a href="#">Название услуги</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>

@@ -202,8 +202,17 @@ application.prototype.initRegValidation = function () {
 // Business-solutions marks behaviour
 application.prototype.toggleClassBusinessMark = function () {
     if($(".business-solution .js-item-mark").length) {
+        $(document).on("click", function (e) {
+            if(!$(".business-solution .js-item-mark").is(e.target)) {
+                $(".business-solution .js-item-mark").removeClass("active");
+                $(".business-solution__item").removeClass("active");
+            }
+        });
+
         $(".business-solution .js-item-mark").on("click", function () {
             if (!$(this).hasClass("active")) {
+                $(".business-solution .js-item-mark").removeClass("active");
+                $(".business-solution__item").removeClass("active");
                 $(this).addClass("active");
                 $(this).next(".business-solution__item").addClass("active");
             } else {
@@ -212,7 +221,6 @@ application.prototype.toggleClassBusinessMark = function () {
             }
         });
 
-        // if() {} here stoped!!!
        /* $(".business-solution .js-item-mark").on("click", function () {
             if (!$(this).hasClass("active")) {
                 $(this).addClass("active");
