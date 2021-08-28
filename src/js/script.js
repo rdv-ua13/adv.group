@@ -19,8 +19,7 @@ application.prototype.init = function () {
     this.initRegValidation();
     this.toggleClassBusinessMark();
     this.initMap();
-
-    /*this.topMenu();*/
+    this.toggleClassBusinessDrop();
 }
 
 // Mobile device сheck
@@ -160,6 +159,10 @@ application.prototype.toggleClassDropMenu = function () {
             }
         });
     } else { return }
+}
+// Mobile number mask
+application.prototype.addMaskedInput = function () {
+    $(".isPhone").mask("+7 (999) 999-99-99", { autoclear: false });
 }
 // Validation of registration form
 application.prototype.initRegValidation = function () {
@@ -419,88 +422,23 @@ application.prototype.initMap = function () {
         }
     }
 }
+// Business solutions mobile dropdown menu
+application.prototype.toggleClassBusinessDrop = function () {
+    if (window.matchMedia("(max-width:767.98px)").matches) {
+        $('.js-bs-drop').hide();
 
-
-
-// Top menu
-application.prototype.topMenu = function () {
-    //desktop
-    if (!$('html').hasClass('touch')) {
-        // Shows drop-menu when it's parent is hovered.
-        $('.js-drop-menu').parent().hover(function () {
-            $(this).find('>.js-drop-menu').stop();
-            $(this).find('>.js-drop-menu').slideDown(300);
-            $(this).addClass('active');
-        }, function () {
-            $(this).find('>.js-drop-menu').stop();
-            $(this).find('>.js-drop-menu').slideUp(150);
-            $(this).removeClass('active');
-        });
-        // Shows drop-submenu when it's parent is hovered.
-        $('.js-drop-submenu').parent().hover(function () {
-            // Вывод __drop-submenu одинаковой высоты с __drop-menu
-            var h = $(this).closest('.js-drop-menu').innerHeight();
-            $(this).find('>.js-drop-submenu').css({
-                'min-height': h,
-            });
-
-            $(this).find('>.js-drop-submenu').stop();
-            $(this).find('>.js-drop-submenu').animate({ width: "toggle" });
-            $(this).toggleClass('active');
-        });
-
-        if (window.matchMedia("(max-width:1199px)").matches) {
-            $('.goods-menu__link').hover(function () {
-                $(this).addClass('active');
-            }, function () {
+        $('.js-bs-btn').on('click', function () {
+            if (!$(this).hasClass('active')) {
+                $(".js-bs-btn").removeClass("active");
+                $(".js-bs-drop").slideUp(300);
+                $(this).addClass("active");
+                $(this).next('.js-bs-drop').addClass("active").slideDown(300);
+            }
+            else if ($(this).hasClass('active')) {
                 $(this).removeClass('active');
-            });
-        }
-    }
-    else //mobile
-    {
-        $('.header-bottom__menu .goods-menu__link').on('click', function (e) {
-            if ($(this).parent().hasClass('active')) return true;
-            e.preventDefault();
-
-            ///////////////
-            $('.header-bottom__menu .goods-menu__item.active').each(function (i, el) {
-                $(el).removeClass('active');
-                $(el).find('.js-drop-menu').slideUp(150);
-            });
-            $('.header-bottom__menu .goods-menu__drop-menu-item').each(function (i, el) {
-                $(el).removeClass('active');
-                $(el).find('.js-drop-submenu').hide();
-            });
-            ///////////////
-            $(this).parent().addClass('active');
-            $(this).parent().find('>.js-drop-menu').slideDown(300);
-        });
-
-        $('.header-bottom__menu .goods-menu__drop-menu-link').on('click', function (e) {
-            if ($(this).parent().hasClass('active')) return true;
-            if (!$(this).parent().find('.js-drop-submenu').length) return true;
-            e.preventDefault();
-
-            $('.header-bottom__menu .goods-menu__drop-menu-item').each(function (i, el) {
-                $(el).removeClass('active');
-                $(el).find('.js-drop-submenu').hide();
-            });
-
-            $(this).parent().addClass('active');
-
-            $(this).parent().find('.js-drop-submenu').animate({ width: "toggle" });
-        });
-
-        $(document).on('click', function (e) {
-            if (!$(e.target).closest('.header-bottom__menu').length) {
-                $('.header-bottom__menu .goods-menu__item').removeClass('active');
-                $('.header-bottom__menu').find('.js-drop-menu').slideUp(150);
+                $(this).next('.js-bs-drop').removeClass('active').slideUp(300);
             }
         });
-    }
+    } else { return }
 }
-// Mobile number mask
-application.prototype.addMaskedInput = function () {
-    $(".isPhone").mask("+7 (999) 999-99-99", { autoclear: false });
-}
+

@@ -2,7 +2,7 @@
 
 <?/* if (strstr($APPLICATION->GetCurDir(), "/path")) */
 if (strpos($_SERVER["REQUEST_URI"], "business-solutions-details.php")) {
-	echo '<div class="intro intro--inner">';
+	echo '<div class="intro intro--inner intro--inner-empty mb-5 mb-md-0">';
 }
 else {
 	echo '<div class="intro intro--inner mb-5 mb-md-6 mb-lg-7 mb-xl-8">';
@@ -22,8 +22,8 @@ else {
 
                 <div class="business-solution__mark business-solution__mark--first js-item-mark"></div>
                 <div class="business-solution__item">
-                    <button class="btn btn-primary business-solution__btn">Настольный компьютер</button>
-                    <div class="business-solution__drop">
+                    <button class="btn btn-primary business-solution__btn js-bs-btn">Настольный компьютер</button>
+                    <div class="business-solution__drop js-bs-drop">
                         <div class="business-solution__drop-view">
                             <img class="business-solution__drop-img" src="/build/img/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg" alt="Показ баннера глазами современников">
                         </div>
@@ -54,8 +54,8 @@ else {
 
                 <div class="business-solution__mark business-solution__mark--second js-item-mark"></div>
                 <div class="business-solution__item">
-                    <button class="btn btn-primary business-solution__btn">Принтер</button>
-                    <div class="business-solution__drop">
+                    <button class="btn btn-primary business-solution__btn js-bs-btn">Принтер</button>
+                    <div class="business-solution__drop js-bs-drop">
                         <div class="business-solution__drop-view">
                             <img class="business-solution__drop-img" src="/build/img/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg" alt="Показ баннера глазами современников">
                         </div>
@@ -86,8 +86,8 @@ else {
 
                 <div class="business-solution__mark business-solution__mark--third js-item-mark"></div>
                 <div class="business-solution__item">
-                    <button class="btn btn-primary business-solution__btn">Цифровая машина</button>
-                    <div class="business-solution__drop">
+                    <button class="btn btn-primary business-solution__btn js-bs-btn">Цифровая машина</button>
+                    <div class="business-solution__drop js-bs-drop">
                         <div class="business-solution__drop-view">
                             <img class="business-solution__drop-img" src="/build/img/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg" alt="Показ баннера глазами современников">
                         </div>
@@ -118,8 +118,8 @@ else {
 
                 <div class="business-solution__mark business-solution__mark--fourth js-item-mark"></div>
                 <div class="business-solution__item">
-                    <button class="btn btn-primary business-solution__btn">Плоттер</button>
-                    <div class="business-solution__drop">
+                    <button class="btn btn-primary business-solution__btn js-bs-btn">Плоттер</button>
+                    <div class="business-solution__drop js-bs-drop">
                         <div class="business-solution__drop-view">
                             <img class="business-solution__drop-img" src="/build/img/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg" alt="Показ баннера глазами современников">
                         </div>
@@ -150,8 +150,8 @@ else {
 
                 <div class="business-solution__mark business-solution__mark--fifth js-item-mark"></div>
                 <div class="business-solution__item">
-                    <button class="btn btn-primary business-solution__btn">Ризограф</button>
-                    <div class="business-solution__drop">
+                    <button class="btn btn-primary business-solution__btn js-bs-btn">Ризограф</button>
+                    <div class="business-solution__drop js-bs-drop">
                         <div class="business-solution__drop-view">
                             <img class="business-solution__drop-img" src="/build/img/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg" alt="Показ баннера глазами современников">
                         </div>
@@ -182,8 +182,8 @@ else {
 
                 <div class="business-solution__mark business-solution__mark--sixth js-item-mark"></div>
                 <div class="business-solution__item">
-                    <button class="btn btn-primary business-solution__btn">Сканер</button>
-                    <div class="business-solution__drop">
+                    <button class="btn btn-primary business-solution__btn js-bs-btn">Сканер</button>
+                    <div class="business-solution__drop js-bs-drop">
                         <div class="business-solution__drop-view">
                             <img class="business-solution__drop-img" src="/build/img/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg" alt="Показ баннера глазами современников">
                         </div>
@@ -214,8 +214,8 @@ else {
 
                 <div class="business-solution__mark business-solution__mark--seventh js-item-mark"></div>
                 <div class="business-solution__item">
-                    <button class="btn btn-primary business-solution__btn">Шредер</button>
-                    <div class="business-solution__drop">
+                    <button class="btn btn-primary business-solution__btn js-bs-btn">Шредер</button>
+                    <div class="business-solution__drop js-bs-drop">
                         <div class="business-solution__drop-view">
                             <img class="business-solution__drop-img" src="/build/img/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg" alt="Показ баннера глазами современников">
                         </div>
@@ -246,8 +246,8 @@ else {
 
                 <div class="business-solution__mark business-solution__mark--eighth js-item-mark"></div>
                 <div class="business-solution__item">
-                    <button class="btn btn-primary business-solution__btn">Шредер2</button>
-                    <div class="business-solution__drop">
+                    <button class="btn btn-primary business-solution__btn js-bs-btn">Шредер2</button>
+                    <div class="business-solution__drop js-bs-drop">
                         <div class="business-solution__drop-view">
                             <img class="business-solution__drop-img" src="/build/img/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg" alt="Показ баннера глазами современников">
                         </div>
@@ -281,7 +281,7 @@ else {
     </div>
 </div>
 
-<div class="container">
+<div class="container business-solution-info">
 	<div class="row">
 		<div class="col-12 mb-5 mb-md-6 mb-lg-7 mb-xl-8">
 			<div class="h2 mb-4 mb-lg-5">
@@ -303,7 +303,7 @@ else {
 	</div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid pre-footer-container">
 	<div class="row">
 		<div class="pre-footer pre-footer--main">
 			<?php include($_SERVER["DOCUMENT_ROOT"].'/build/components/request-form.php');?>

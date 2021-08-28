@@ -8268,6 +8268,29 @@ svg {
   object-fit: contain;
 }
 
+.business-solution__drop-item a {
+  display: block;
+  font-weight: 500;
+}
+
+.business-solution__drop {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.business-solution__drop-view {
+  background-color: #242424;
+}
+
+.business-solution__drop-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .contacts-map {
   padding-right: 0;
   padding-left: 0;
@@ -12084,32 +12107,17 @@ body.compensate-for-scrollbar {
 
   .business-solution__drop {
     z-index: -10;
-    display: flex;
-    flex-direction: column;
     background-color: white;
     border-radius: 1.5rem;
     box-shadow: 0px 10px 20px 0 rgba(37, 37, 37, 0.3);
     opacity: 0;
-    overflow: hidden;
     pointer-events: none;
-    transition: all 0.3s ease;
   }
 
   .business-solution__item.active .business-solution__drop {
     z-index: 1;
     opacity: 1;
     pointer-events: auto;
-  }
-
-  .business-solution__drop-view {
-    background-color: #242424;
-  }
-
-  .business-solution__drop-img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
   }
 
   .business-solution__drop-descr {
@@ -12128,11 +12136,6 @@ body.compensate-for-scrollbar {
   .business-solution__drop-descr::-webkit-scrollbar-track {
     -webkit-box-shadow: 0px 5px 15px 0 rgba(23, 19, 15, 0.2);
     background-color: #ffffff;
-  }
-
-  .business-solution__drop-item a {
-    display: block;
-    font-weight: 500;
   }
 
   .contacts-map__board-wrapper {
@@ -15803,6 +15806,84 @@ body.compensate-for-scrollbar {
 
   .registration__checkbox label span:last-of-type {
     font-size: 0.75rem;
+  }
+
+  .business-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .business-details .intro {
+    order: 1;
+  }
+
+  .business-details .business-solution {
+    order: 3;
+  }
+
+  .business-details .business-solution-info {
+    order: 2;
+  }
+
+  .business-details .pre-footer-container {
+    order: 4;
+  }
+
+  .business-solution__img {
+    display: none;
+  }
+
+  .business-solution__item:not(:last-of-type) {
+    margin-bottom: 0.75rem;
+  }
+
+  .business-solution__btn {
+    padding: 2rem 0;
+    border-color: #ffffff;
+    background-color: #ffffff;
+    color: #242424;
+  }
+
+  .business-solution__btn.active {
+    border-color: #d90505;
+    box-shadow: none;
+    background-color: #d90505;
+    color: #ffffff;
+  }
+
+  .business-solution__drop {
+    height: 360px;
+    margin-top: 1.25rem;
+    padding: 0 0.5rem 1.25rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .business-solution__drop::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+
+  .business-solution__drop::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #d90505;
+  }
+
+  .business-solution__drop::-webkit-scrollbar-track {
+    width: 16px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 5px 15px 0 rgba(23, 19, 15, 0.2);
+    background-color: #ffffff;
+  }
+
+  .business-solution__drop-view,
+  .business-solution__drop-item:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+
+  .business-solution__drop-item a:not(:last-of-type) {
+    margin-bottom: 0.25rem;
   }
 
   .contacts-map__board-wrapper {

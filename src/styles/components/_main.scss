@@ -624,6 +624,24 @@
 		width: 100%;
 		object-fit: contain;
 	}
+	&__drop-item a {
+		display: block;
+		font-weight: 500;
+	}
+	&__drop {
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		transition: all 0.3s ease;
+	}
+	&__drop-view {
+		background-color: $mainTxtDark;
+	}
+	&__drop-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }
 
 .contacts-map {
@@ -1321,6 +1339,76 @@
 		}
 	}
 
+	.business-details {
+		display: flex;
+		flex-direction: column;
+
+		& .intro {
+			order: 1;
+		}
+		& .business-solution {
+			order: 3;
+		}
+		& .business-solution-info {
+			order: 2;
+		}
+		& .pre-footer-container {
+			order: 4;
+		}
+	}
+	.business-solution {
+		&__img {
+			display: none;
+		}
+		&__item:not(:last-of-type) {
+			margin-bottom: 0.75rem;
+		}
+		&__btn {
+			padding: 2rem 0;
+			border-color: $white;
+			background-color: $white;
+			color: $mainTxtDark;
+		}
+		&__btn.active {
+			border-color: $mainRed;
+			box-shadow: none;
+			background-color: $mainRed;
+			color: $white;
+		}
+		&__drop {
+			height: 360px;
+			margin-top: 1.25rem;
+			padding: 0 0.5rem 1.25rem;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+		&__drop::-webkit-scrollbar {
+			width: 8px;
+			border-radius: 4px;
+			background-color: $white;
+		}
+		&__drop::-webkit-scrollbar-thumb {
+			border-radius: 4px;
+			background-color: $mainRed;
+		}
+		&__drop::-webkit-scrollbar-track {
+			width: 16px;
+			border-radius: 4px;
+			-webkit-box-shadow: 0px 5px 15px 0 rgba(23, 19, 15, 0.2);
+			background-color: $white;
+		}
+		&__drop-view,
+		&__drop-item:not(:last-of-type) {
+			margin-bottom: 1rem;
+		}
+		&__drop-item a:not(:last-of-type) {
+			margin-bottom: 0.25rem;
+		}
+	}
+	.business-solution-info {
+
+	}
+
 	.contacts-map {
 		&__board-wrapper {
 			z-index: 5;
@@ -1821,28 +1909,16 @@
 		}
 		&__drop {
 			z-index: -10;
-			display: flex;
-			flex-direction: column;
 			background-color: white;
 			border-radius: 1.5rem;
 			box-shadow: 0px 10px 20px 0 rgb(37,37,37,0.3);
 			opacity: 0;
-			overflow: hidden;
 			pointer-events: none;
-			transition: all 0.3s ease;
 		}
 		&__item.active &__drop {
 			z-index: 1;
 			opacity: 1;
 			pointer-events: auto;
-		}
-		&__drop-view {
-			background-color: $mainTxtDark;
-		}
-		&__drop-img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
 		}
 		&__drop-descr {
 			overflow-y: scroll;
@@ -1857,10 +1933,6 @@
 		&__drop-descr::-webkit-scrollbar-track {
 			-webkit-box-shadow: 0px 5px 15px 0 rgba(23, 19, 15, 0.2);
 			background-color: $white;
-		}
-		&__drop-item a {
-			display: block;
-			font-weight: 500;
 		}
 	}
 

@@ -209,6 +209,9 @@
 	<? if($isSubsection) {
 		echo '<main class="main main--inner">';
 	}
+	else if (strpos($_SERVER["REQUEST_URI"], "business-solutions-details.php")) {
+		echo '<main class="main business-details">';
+	}
 	else {
 		echo '<main class="main">';
 	} ?>
