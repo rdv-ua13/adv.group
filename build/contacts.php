@@ -18,7 +18,7 @@
     </div>
 
     <div class="intro intro--inner intro--inner-empty">
-        <div class="intro__wrapper" style="background-image: url('/build/img/georgie-cobbs-bKjHgo_Lbpo-unsplash.jpg')">
+        <div class="intro__wrapper" style="background-image: url('/build/img/rachel-moenning-zjxYwd4HOu0-unsplash.jpg')">
             <div class="container intro__content">
                 <h1 class="intro__title visually-hidden-md">Наши&nbsp;<span class="text--red">контакты</span></h1>
             </div>

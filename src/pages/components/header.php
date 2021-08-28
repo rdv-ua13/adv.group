@@ -19,6 +19,7 @@
         || strpos($_SERVER["REQUEST_URI"], "wholesale.php")
         || strpos($_SERVER["REQUEST_URI"], "copy-contract.php")
         || strpos($_SERVER["REQUEST_URI"], "business-solutions.php")
+        || strpos($_SERVER["REQUEST_URI"], "business-solutions-details.php")
         || strpos($_SERVER["REQUEST_URI"], "service-repair.php")
         || strpos($_SERVER["REQUEST_URI"], "write-off.php")
         || strpos($_SERVER["REQUEST_URI"], "trade-in.php")
@@ -119,16 +120,19 @@
                                     </a>
                                     <ul class="nav-bottom__drop fsz-sm">
                                         <li class="nav-bottom__drop-item">
-                                            <a href="#">Лизинг оргтехники</a>
+                                            <a href="#">Полиграфические услуги, архитектурные бюро</a>
                                         </li>
                                         <li class="nav-bottom__drop-item">
-                                            <a href="#">Трейд-ин оргтехники</a>
+                                            <a href="#">Производство и добыча сырья</a>
                                         </li>
                                         <li class="nav-bottom__drop-item">
-                                            <a href="#">Покопийный контракт</a>
+                                            <a href="#">Банковские и финансовые услуги печати</a>
                                         </li>
                                         <li class="nav-bottom__drop-item">
-                                            <a href="#">Списание оргтехники</a>
+                                            <a href="#">Туризм, рестораны, кинотеатры</a>
+                                        </li>
+                                        <li class="nav-bottom__drop-item">
+                                            <a href="#">Строительство, недвижимость</a>
                                         </li>
                                     </ul>
                                 </div>

@@ -421,6 +421,7 @@ application.prototype.initMap = function () {
 }
 
 
+
 // Top menu
 application.prototype.topMenu = function () {
     //desktop

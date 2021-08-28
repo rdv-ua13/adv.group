@@ -1,7 +1,7 @@
 <?php include($_SERVER["DOCUMENT_ROOT"].'/build/components/header.php'); ?>
 
 <div class="intro intro--inner mb-5 mb-md-6 mb-lg-7 mb-xl-8">
-	<div class="intro__wrapper" style="background-image: url('/build/img/georgie-cobbs-bKjHgo_Lbpo-unsplash.jpg')">
+	<div class="intro__wrapper" style="background-image: url('/build/img/rachel-moenning-zjxYwd4HOu0-unsplash.jpg')">
 		<div class="container intro__content">
 			<h1 class="intro__title">Трейд-ин&nbsp;<span class="text--red">оргтехники</span></h1>
 			<div class="intro__btn">
