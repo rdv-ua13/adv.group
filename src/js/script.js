@@ -19,6 +19,7 @@ application.prototype.init = function () {
     this.initRegValidation();
     this.toggleClassBusinessMark();
     this.initMap();
+    this.setIndentsContactsMap();
     this.toggleClassBusinessDrop();
 }
 
@@ -144,21 +145,24 @@ application.prototype.toggleClassBurger = function () {
 }
 // Menu top "nav-bottom__drop"
 application.prototype.toggleClassDropMenu = function () {
-    if (window.matchMedia("(max-width:767.98px)").matches) {
-        $('.nav-bottom__item--contains .nav-bottom__drop').hide();
+    responsiveDropMenu();
+    $(window).on("resize", responsiveDropMenu);
 
-        $('.js-nav-bottom-link').on('click', function () {
-            if (!$(this).closest('.nav-bottom__item--contains').hasClass('active')) {
-                $(".nav-bottom__item--contains").removeClass("active");
-                $(".nav-bottom__drop").slideUp(300);
-                $(this).closest(".nav-bottom__item--contains").addClass("active");
-                $(this).closest(".nav-bottom__item--contains").find('.nav-bottom__drop').slideDown(300);
-            }
-            else if ($(this).closest('.nav-bottom__item--contains').hasClass('active')) {
-                $(this).closest('.nav-bottom__item--contains').removeClass('active');
-            }
-        });
-    } else { return }
+    function responsiveDropMenu() {
+        if (window.matchMedia("(max-width:767.98px)").matches) {
+            /*$('.nav-bottom__item--contains .nav-bottom__drop').hide();*/
+
+            $('.js-nav-bottom-link').on('click', function () {
+                if (!$(this).closest('.nav-bottom__item--contains').hasClass('active')) {
+                    $(".nav-bottom__item--contains").removeClass("active");
+                    $(this).closest(".nav-bottom__item--contains").addClass("active");
+                }
+                else if ($(this).closest('.nav-bottom__item--contains').hasClass('active')) {
+                    $(this).closest('.nav-bottom__item--contains').removeClass('active');
+                }
+            });
+        } else { return }
+    }
 }
 // Mobile number mask
 application.prototype.addMaskedInput = function () {
@@ -210,6 +214,7 @@ application.prototype.toggleClassBusinessMark = function () {
             if(!$(".business-solution .js-item-mark").is(e.target)) {
                 $(".business-solution .js-item-mark").removeClass("active");
                 $(".business-solution__item").removeClass("active");
+                $(".business-solution__item-box").removeClass("has-active");
             }
         });
 
@@ -219,9 +224,17 @@ application.prototype.toggleClassBusinessMark = function () {
                 $(".business-solution__item").removeClass("active");
                 $(this).addClass("active");
                 $(this).next(".business-solution__item").addClass("active");
+                $(".business-solution__item-box").addClass("has-active");
+
+                $("html, body").animate({
+                    scrollTop: $(".business-solution").offset().top
+                }, 300);
+
+                $(".js-item-mark").removeClass("animated animation-delay-2 animation-delay-3 animation-delay-4 animation-delay-5 animation-delay-6 animation-delay-7 animation-delay-8");
             } else {
                 $(this).removeClass("active");
                 $(this).next(".business-solution__item").removeClass("active");
+                $(".business-solution__item-box").removeClass("has-active");
             }
         });
     }
@@ -229,196 +242,59 @@ application.prototype.toggleClassBusinessMark = function () {
 // Map initialization
 application.prototype.initMap = function () {
     if($("#map").length) {
+        var coords = null;
+        var ratio = null;
+
+        if (window.matchMedia("(max-width:767.98px)").matches) {
+            zoomval = 12;
+            coords = [55.79, 37.76];
+            ratio = 1;
+        }
+        else if (window.matchMedia("(min-width:768px)").matches) {
+            zoomval = 11;
+            coords = [55.76, 37.63];
+            ratio = 2;
+        }
+
         ymaps.ready(init);
+        $(window).on("resize", init);
         function init(){
             // Создание карты.
             var myMap = new ymaps.Map("map", {
                 // Координаты центра карты.
                 // Порядок по умолчанию: «широта, долгота».
-                center: [55.76, 37.64],
+                center: coords,
                 controls: [],
-                zoom: 10
+                zoom: zoomval,
             }, {
                 searchControlProvider: 'yandex#search'
-            });
+            }),
 
-            // Создание макета балуна на основе Twitter Bootstrap.
-            MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
-                '<div class="popover top">' +
-                '<a class="close" href="javascript:void(0)">&times;</a>' +
-                '<div class="arrow"></div>' +
-                '<div class="popover-inner">' +
-                '$[[options.contentLayout observeSize minWidth=235 maxWidth=235 maxHeight=350]]' +
-                '</div>' +
-                '</div>', {
-                    /**
-                     * Строит экземпляр макета на основе шаблона и добавляет его в родительский HTML-элемент.
-                     * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#build
-                     * @function
-                     * @name build
-                     */
-                    build: function () {
-                        this.constructor.superclass.build.call(this);
+            myPlacemark = new ymaps.Placemark([55.752019,37.759488]);
+            myMap.geoObjects.add(myPlacemark);
+            myMap.controls.add('zoomControl', {position: {right: '10px', bottom: 80 * ratio + 'px'}});
+            myMap.behaviors.disable('scrollZoom');
+            //на мобильных устройствах... (проверяем по userAgent браузера)
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+                //... отключаем перетаскивание карты
+                myMap.behaviors.disable('drag');
+            }
+        }
 
-                        this._$element = $('.popover', this.getParentElement());
+    }
+}
+// Contacts map indents for mobile
+application.prototype.setIndentsContactsMap = function () {
+    if($("#map").length) {
+        setHeight();
+        $(window).on("resize", setHeight);
 
-                        this.applyElementOffset();
+        function setHeight() {
+            if (window.matchMedia("(max-width:767.98px)").matches) {
+                var height = $(".js-contacts-map-board").outerHeight();
 
-                        this._$element.find('.close')
-                            .on('click', $.proxy(this.onCloseClick, this));
-                    },
-
-                    /**
-                     * Удаляет содержимое макета из DOM.
-                     * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#clear
-                     * @function
-                     * @name clear
-                     */
-                    clear: function () {
-                        this._$element.find('.close')
-                            .off('click');
-
-                        this.constructor.superclass.clear.call(this);
-                    },
-
-                    /**
-                     * Метод будет вызван системой шаблонов АПИ при изменении размеров вложенного макета.
-                     * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
-                     * @function
-                     * @name onSublayoutSizeChange
-                     */
-                    onSublayoutSizeChange: function () {
-                        MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
-
-                        if(!this._isElement(this._$element)) {
-                            return;
-                        }
-
-                        this.applyElementOffset();
-
-                        this.events.fire('shapechange');
-                    },
-
-                    /**
-                     * Сдвигаем балун, чтобы "хвостик" указывал на точку привязки.
-                     * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
-                     * @function
-                     * @name applyElementOffset
-                     */
-                    applyElementOffset: function () {
-                        this._$element.css({
-                            left: -(this._$element[0].offsetWidth / 2),
-                            top: -(this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight)
-                        });
-                    },
-
-                    /**
-                     * Закрывает балун при клике на крестик, кидая событие "userclose" на макете.
-                     * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
-                     * @function
-                     * @name onCloseClick
-                     */
-                    onCloseClick: function (e) {
-                        e.preventDefault();
-
-                        this.events.fire('userclose');
-                    },
-
-                    /**
-                     * Используется для автопозиционирования (balloonAutoPan).
-                     * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/ILayout.xml#getClientBounds
-                     * @function
-                     * @name getClientBounds
-                     * @returns {Number[][]} Координаты левого верхнего и правого нижнего углов шаблона относительно точки привязки.
-                     */
-                    getShape: function () {
-                        if(!this._isElement(this._$element)) {
-                            return MyBalloonLayout.superclass.getShape.call(this);
-                        }
-
-                        var position = this._$element.position();
-
-                        return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([
-                            [position.left, position.top], [
-                                position.left + this._$element[0].offsetWidth,
-                                position.top + this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight
-                            ]
-                        ]));
-                    },
-
-                    /**
-                     * Проверяем наличие элемента (в ИЕ и Опере его еще может не быть).
-                     * @function
-                     * @private
-                     * @name _isElement
-                     * @param {jQuery} [element] Элемент.
-                     * @returns {Boolean} Флаг наличия.
-                     */
-                    _isElement: function (element) {
-                        return element && element[0] && element.find('.arrow')[0];
-                    }
-                }),
-
-                // Создание вложенного макета содержимого балуна.
-                MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
-                    '<div class="popover-title">$[properties.balloonHeader]</div>' +
-                    '<div class="popover-content">$[properties.balloonContent]</div>'
-                ),
-
-                // Создание метки с пользовательским макетом балуна.
-                myPlacemark = window.myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                    balloonHeader: "Наши <span class='text--red'>контакты</span>",
-                    balloonContent:
-                        "<div class='popover-content__row'>" +
-                            "<div class='popover-content__title'>" +
-                                "<img src='/build/img/placeholder.png' alt='location mark'>" +
-                                "<span>Адрес</span>" +
-                            "</div>" +
-                            "<div class='popover-content__link'>111524, Москва, Электродная 11.стр.7</div>" +
-                        "</div>" +
-                        "<div class='popover-content__row'>" +
-                            "<div class='popover-content__title'>" +
-                                "<img src='/build/img/call.png' alt='phone number'>" +
-                                "<span>Телефон</span>" +
-                            "</div>" +
-                            "<a class='popover-content__link' href='tel:+74955805556'>+7 (495) 580-55-56</a>" +
-                        "</div>" +
-                        "<div class='popover-content__row'>" +
-                            "<div class='popover-content__title'>" +
-                                "<img src='/build/img/mail.png' alt='email'>" +
-                                "<span>Email</span>" +
-                            "</div>" +
-                            "<div>" +
-                                "<div class='popover-content__link-row'>" +
-                                    "<a class='popover-content__link' href='mailto:service@arv.group'>service@arv.group&nbsp;</a>" +
-                                    "<span>– сервисный центр</span>" +
-                                "</div>" +
-                                "<div class='popover-content__link-row'>" +
-                                    "<a class='popover-content__link' href='mailto:info@arv.group'>info@arv.group&nbsp;</a>" +
-                                    "<span>– по всем вопросам</span>" +
-                                "</div>" +
-                            "</div>" +
-                        "</div>"
-                }, {
-                    balloonShadow: false,
-                    balloonLayout: MyBalloonLayout,
-                    balloonContentLayout: MyBalloonContentLayout,
-                    balloonPanelMaxMapArea: 0
-                    // Не скрываем иконку при открытом балуне.
-                    // hideIconOnBalloonOpen: false,
-                    // И дополнительно смещаем балун, для открытия над иконкой.
-                    // balloonOffset: [3, -40]
-                });
-
-                myMap.geoObjects.add(myPlacemark);
-                myMap.events.add('click', e => e.get('target').balloon.close());
-                myMap.controls.add('zoomControl', {position: {left: '15px', bottom: '25vw'}});
-                myMap.behaviors.disable('scrollZoom');
-                //на мобильных устройствах... (проверяем по userAgent браузера)
-                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-                    //... отключаем перетаскивание карты
-                    myMap.behaviors.disable('drag');
-                }
+                $(".js-contacts-map-board").css({"margin-bottom" : -height});
+            } else { return }
         }
     }
 }
@@ -441,4 +317,3 @@ application.prototype.toggleClassBusinessDrop = function () {
         });
     } else { return }
 }
-

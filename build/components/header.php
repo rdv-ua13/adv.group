@@ -19,12 +19,16 @@
         || strpos($_SERVER["REQUEST_URI"], "wholesale.php")
         || strpos($_SERVER["REQUEST_URI"], "copy-contract.php")
         || strpos($_SERVER["REQUEST_URI"], "business-solutions.php")
-        || strpos($_SERVER["REQUEST_URI"], "business-solutions-details.php")
         || strpos($_SERVER["REQUEST_URI"], "service-repair.php")
         || strpos($_SERVER["REQUEST_URI"], "write-off.php")
         || strpos($_SERVER["REQUEST_URI"], "trade-in.php")
-        || strpos($_SERVER["REQUEST_URI"], "cooperation-form.php")) {
+        || strpos($_SERVER["REQUEST_URI"], "cooperation-form.php")
+        || strpos($_SERVER["REQUEST_URI"], "auth.php")) {
         echo '<header class="header">';
+    }
+    else if (strpos($_SERVER["REQUEST_URI"], "business-solutions-details.php")) {
+		$isSubsection = 1;
+        echo '<header class="header header--inner header--inner-extended">';
     }
     else {
 		$isSubsection = 1;
@@ -33,20 +37,24 @@
         <div class="container">
             <div class="row">
 				<? if($isSubsection) {
-					echo '<div class="order-1 col-4 col-sm-3 col-md-2 col-xl-3 mb-md-3 py-2 py-sm-3 py-md-0 d-flex align-items-center">';
+					/*echo '<div class="order-1 col-4 col-sm-3 col-md-2 col-xl-3 mb-md-3 py-2 py-sm-3 py-md-0 d-flex align-items-center">';*/
+					echo '<div class="order-1 col-4 col-sm-3 col-md-2 col-xl-3 py-2 py-sm-3 py-md-0 d-flex align-items-center">';
 				}
 				else {
-					echo '<div class="order-1 col-4 col-sm-3 mb-md-3 py-2 py-sm-3 py-md-0 d-flex align-items-center">';
+					/*echo '<div class="order-1 col-4 col-sm-3 mb-md-3 py-2 py-sm-3 py-md-0 d-flex align-items-center">';*/
+					echo '<div class="order-1 col-4 col-sm-3 py-2 py-sm-3 py-md-0 d-flex align-items-center">';
 				} ?>
-                    <a class="logo" href="/">
+                    <a class="logo" href="/build/index.php">
                         <img class="logo-i" src="/build/img/logo.png" alt="logo">
                     </a>
                 </div>
                 <? if($isSubsection) {
-                    echo '<div class="order-3 order-md-2 col-4 col-sm-3 col-md-10 col-xl-9 mb-md-3 py-2 py-sm-3 py-md-0">';
+                    /*echo '<div class="order-3 order-md-2 col-4 col-sm-3 col-md-10 col-xl-9 mb-md-3 py-2 py-sm-3 py-md-0">';*/
+                    echo '<div class="order-3 order-md-2 col-4 col-sm-3 col-md-10 col-xl-9 py-2 py-sm-3 py-md-0">';
                 }
                 else {
-                    echo '<div class="order-3 order-md-2 col-4 col-sm-3 col-md-9 mb-md-3 py-2 py-sm-3 py-md-0">';
+                    /*echo '<div class="order-3 order-md-2 col-4 col-sm-3 col-md-9 mb-md-3 py-2 py-sm-3 py-md-0">';*/
+                    echo '<div class="order-3 order-md-2 col-4 col-sm-3 col-md-9 py-2 py-sm-3 py-md-0">';
                 } ?>
                     <div class="row h-100">
 						<? if($isSubsection) {
@@ -206,10 +214,11 @@
         </div>
     </header>
 
-	<? if($isSubsection) {
+	<?
+    if($isSubsection && !strpos($_SERVER["REQUEST_URI"], "business-solutions-details.php")) {
 		echo '<main class="main main--inner">';
 	}
-	else if (strpos($_SERVER["REQUEST_URI"], "business-solutions-details.php")) {
+	else if ($isSubsection && strpos($_SERVER["REQUEST_URI"], "business-solutions-details.php")) {
 		echo '<main class="main business-details">';
 	}
 	else {

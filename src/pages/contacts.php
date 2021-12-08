@@ -27,49 +27,64 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="contacts-map col-12">
+            <div class="contacts-map col">
 
-                <div class="contacts-map__board-wrapper col-md-12">
-                    <div class="contacts-map__board col-md-12">
+                <div class="contacts-map__board-container container">
+                    <div class="contacts-map__board col-md-12 js-contacts-map-board">
                         <div class="row">
-                            <div class="contacts-map__board-col col-xl-4">
-                                <div class="contacts-map__board-item text-uppercase">
+                            <div class="h3">Наши <span class='text--red'>контакты</span></div>
+                            <div class="contacts-map__board-col">
+                                <div class="contacts-map__board-item">
                                     <div class="contacts-map__board-i">
                                         <img src="/build/img/placeholder.png" alt="location mark">
+                                        <span class="contacts-map__title">Адрес</span>
                                     </div>
-                                    <a class="contacts-map__link" href="#">111524,&nbsp;Москва, Электродная&nbsp;11.стр.7</a>
+                                    <a class="contacts-map__link text-uppercase" href="#">111524,&nbsp;Москва, Электродная&nbsp;11.стр.7</a>
                                 </div>
                             </div>
-                            <div class="contacts-map__board-col col-xl-4">
+                            <div class="contacts-map__board-col">
                                 <div class="contacts-map__board-item">
                                     <div class="contacts-map__board-i">
                                         <img src="/build/img/call.png" alt="phone number">
+                                        <span class="contacts-map__title">Телефон</span>
                                     </div>
                                     <a class="contacts-map__link" href="tel:+74955805556">+7 (495) 580-55-56</a>
                                 </div>
                             </div>
-                            <div class="contacts-map__board-col col-xl-4">
+                            <div class="contacts-map__board-col">
                                 <div class="contacts-map__board-item">
                                     <div class="contacts-map__board-i">
                                         <img src="/build/img/mail.png" alt="e-mail">
+                                        <span class="contacts-map__title">Email</span>
                                     </div>
                                     <div>
                                         <div class="contacts-map__link-row">
                                             <a class="contacts-map__link" href="mailto:service@arv.group">service@arv.group</a>
-                                            <div>сервисный центр</div>
+                                            <div class="contacts-map__link-descr"><span>-&nbsp;</span>сервисный центр</div>
                                         </div>
-                                        <div>
+                                        <div class="contacts-map__link-row">
                                             <a class="contacts-map__link" href="mailto:info@arv.group">info@arv.group</a>
-                                            <div>по всем вопросам</div>
+                                            <div class="contacts-map__link-descr"><span>-&nbsp;</span>по всем вопросам</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="contacts-map__board-col"><!--popover-content__row-->
+                                <div class="contacts-map__board-item"><!-- popover-content__title-->
+                                    <div class="contacts-map__board-i">
+                                        <img src="/build/img/clock.png" alt="schedule">
+                                        <span class="contacts-map__title">Мы работаем для Вас:</span>
+                                    </div>
+                                    <span class="contacts-map__link mb-1">c Понедельника по Пятницу, 10:00&nbsp;-&nbsp;19:00</span><!-- popover-content__link-->
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 <div id="map"></div>
+
             </div>
         </div>
     </div>

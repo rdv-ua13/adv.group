@@ -40,33 +40,33 @@
                         <div class="framed__container col-md-11 mx-md-auto pt-md-5 pt-xl-7">
                             <div class="framed__col">
                                 <div class="framed__view">
-                                    <img src="/build/img/framedSolutions1.png" alt="framed block image">
+                                    <img src="/build/img/mimi-thian-ZKBzlifgkgw-unsplash.jpg" alt="framed block image">
                                 </div>
-                                <div class="framed__item">Полиграфические услуги, архитектурные бюро</div>
+                                <a class="framed__item" href="#">Полиграфические услуги, архитектурные бюро</a>
                             </div>
                             <div class="framed__col">
                                 <div class="framed__view">
                                     <img src="/build/img/framedSolutions2.png" alt="framed block image">
                                 </div>
-                                <div class="framed__item">Производство и добыча сырья</div>
+                                <a class="framed__item" href="#">Производство и добыча сырья</a>
                             </div>
                             <div class="framed__col">
                                 <div class="framed__view">
                                     <img src="/build/img/framedSolutions3.png" alt="framed block image">
                                 </div>
-                                <div class="framed__item">Банковские и финансовые услуги печати</div>
+                                <a class="framed__item" href="#">Банковские и финансовые услуги печати</a>
                             </div>
                             <div class="framed__col">
                                 <div class="framed__view">
                                     <img src="/build/img/framedSolutions4.png" alt="framed block image">
                                 </div>
-                                <div class="framed__item">Туризм, рестораны, кинотеатры</div>
+                                <a class="framed__item" href="#">Туризм, рестораны, кинотеатры</a>
                             </div>
                             <div class="framed__col">
                                 <div class="framed__view">
                                     <img src="/build/img/framedSolutions5.png" alt="framed block image">
                                 </div>
-                                <div class="framed__item">Строительство, недвижимость</div>
+                                <a class="framed__item" href="#">Строительство, недвижимость</a>
                             </div>
                         </div>
                     </div>

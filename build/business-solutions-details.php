@@ -17,7 +17,7 @@ else {
 <div class="business-solution mb-5 mb-md-6 mb-lg-7 mb-xl-8">
     <div class="container">
         <div class="business-solution__wrapper">
-            <img class="business-solution__img" src="/build/img/untitled1.png" alt="floor plan with the location of office equipment">
+            <img class="business-solution__img" src="/build/img/business-bg.png" alt="floor plan with the location of office equipment">
             <div class="business-solution__item-box">
 
                 <div class="business-solution__mark business-solution__mark--first js-item-mark"></div>

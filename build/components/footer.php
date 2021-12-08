@@ -67,7 +67,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    <a class="logo footer__logo" href="/">
+                    <a class="logo footer__logo" href="/build/index.php">
                         <svg class="header__logo-i">
                             <use xlink:href="/build/img/sprite.svg#logo"></use>
                         </svg>

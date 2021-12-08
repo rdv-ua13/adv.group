@@ -1,8 +1,11 @@
+html {
+	scroll-behavior: smooth;
+}
 html,
 body {
 	font-weight: normal;
 	font-style: normal;
-	font-size: 16px; // большинство значений в проекте заданы в "rem"
+	font-size: 16px;
 	line-height: 1.4;
 }
 body {
@@ -18,16 +21,17 @@ body {
 	color: $mainTxtDark;
 }
 
-@media (min-width: 1440px) and (max-width: 1599.98px) {
+@media (min-width: 1440px) /*and (max-width: 1599.98px) */{
 	.container {
-		max-width: 1380px;
+		/*max-width: 1380px;*/
+		max-width: 1360px;
 	}
 }
-@media (min-width: 1600px) {
+/*@media (min-width: 1600px) {
 	.container {
 		max-width: 1560px;
 	}
-}
+}*/
 
 .col-xxl-1, .col-xxl-2, .col-xxl-3, .col-xxl-4, .col-xxl-5, .col-xxl-6, .col-xxl-7, .col-xxl-8, .col-xxl-9, .col-xxl-10, .col-xxl-11, .col-xxl-12, .col-xxl,
 .col-xxl-auto, .col-xxxl-1, .col-xxxl-2, .col-xxxl-3, .col-xxxl-4, .col-xxxl-5, .col-xxxl-6, .col-xxxl-7, .col-xxxl-8, .col-xxxl-9, .col-xxxl-10, .col-xxxl-11, .col-xxxl-12, .col-xxxl,
@@ -767,7 +771,8 @@ body {
 }
 @media (min-width: 1600px) {
 	.h1, h1 {
-		font-size: 4rem;
+		/*font-size: 4rem;*/
+		font-size: 52px;
 	}
 	.h2, h2 {
 		font-size: 3.5rem;
@@ -895,13 +900,16 @@ svg {
 }
 @media (min-width: 1200px) {
 	.fsz-lg {
-		font-size: 1.6875rem;
+		/*font-size: 1.6875rem;*/
+		font-size: 20px;
 	}
 	.fsz-md {
-		font-size: 1.375rem;
+		/*font-size: 1.375rem;*/
+		font-size: 16px;
 	}
 	.fsz-sm {
-		font-size: 1.125rem;
+		/*font-size: 1.125rem;*/
+		font-size: 14px;
 	}
 }
 
@@ -1093,8 +1101,11 @@ svg {
 }
 @media (min-width: 1200px) {
 	.logo {
-		max-width: 190px;
-		max-height: 55px;
+		/*max-width: 190px;
+		max-height: 55px;*/
+		max-width: 160px;
+		min-height: 48px;
+		max-height: 48px;
 	}
 }
 

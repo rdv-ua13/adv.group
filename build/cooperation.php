@@ -3,7 +3,7 @@
 <div class="intro intro--inner intro--inner-empty mb-5 mb-md-6 mb-lg-7 mb-xl-8">
 	<div class="intro__wrapper" style="background-image: url('/build/img/rachel-moenning-zjxYwd4HOu0-unsplash.jpg')">
 		<div class="container intro__content">
-			<h1 class="visually-hidden">Сотрудничество</h1>
+			<h1 class="intro__title">Сотрудничество</span></h1>
 		</div>
 	</div>
 </div>
@@ -29,8 +29,13 @@
             <?/*<div class="inner-btn">
                 <button class="btn btn-primary fsz-md" type="submit">Вход/Регистрация</button>
             </div>*/?>
-            <div class="inner-btn">
-                <a class="btn btn-primary fsz-md" href="/cooperation-form.php">Вход/Регистрация</a>
+            <div class="inner-btn m-auto">
+                <div class="btn btn-primary cooperation-btn-auth fsz-md">
+                    <a class="cooperation-btn-auth__link fsz-md" href="<?/*https://b2b.ruprinters.ru/auth/*/?>https://arv.group/build/cooperation-form.php">Вход</a>
+                    <span>/</span>
+                    <a class="cooperation-btn-auth__link fsz-md" href="<?/*https://b2b.ruprinters.ru/auth/register/*/?>https://arv.group/build/cooperation-form.php">Регистрация</a>
+                </div>
+
             </div>
 
 		</div>
