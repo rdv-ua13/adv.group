@@ -1,7 +1,7 @@
 "use strict";
 
 /* прокси проекта */
-let rootDir = "arv.group";
+let rootDir = "arv.loc";
 
 /* пути к исходным файлам (src), к готовым файлам (build), а также к тем, за изменениями которых нужно наблюдать (watch) */
 let path = {
