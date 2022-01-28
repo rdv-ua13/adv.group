@@ -1,60 +1,50 @@
 <?php include($_SERVER["DOCUMENT_ROOT"].'/build/components/header.php'); ?>
 
-<div class="intro intro--main mb-5 mb-md-6 mb-lg-7 mb-xl-8">
+<div class="intro intro--main mb-5 <?/*mb-md-6*/?> mb-lg-7 <?/*mb-xl-8*/?>">
     <div class="intro__wrapper" style="background-image: url('/build/img/nordwood-themes-kRNZiGKtz48-unsplash.jpg')">
         <div class="container intro__content">
-            <h1 class="intro__title">
-                <div>АРВ-качественное обслуживание</div>
-                <div class="text--red">техники и товаров для офиса.</div>
-            </h1>
-            <div class="intro__subtitle fsz-md">
-                <div>Оргтехника, сервис, кликовые контракты,</div>
-                <div>пост печатная техника, компьютеры</div>
+            <div class="intro__title-container">
+                <h1 class="intro__title">
+                    <div>АРВ ТРЕЙДИНГ: КОМПЛЕКСНОЕ&nbsp;ОСНАЩЕНИЕ</div>
+                    <div class="text--red">ОРГАНИЗАЦИИ ТЕХНИКОЙ И ТОВАРАМИ ДЛЯ ОФИСА.</div>
+                </h1>
+                <div class="intro__subtitle fsz-md">
+                    <div>Компьютерная и оргтехника, сервера, АТС, мультимедиа, мебель, озеленение.</div>
+                    <div style="display: none;">мультимедиа, мебель, озеленение.</div>
+                </div>
             </div>
             <div class="d-flex flex-column flex-md-row">
-                <a class="intro__service" href="#">
+                <a class="intro__service" href="javascript:;">
                     <span class="intro__service-view">
                         <svg class="">
                           <use xlink:href="/build/img/sprite.svg#barter"></use>
                         </svg>
                     </span>
-                    <span class="intro__service-title">
-                        <span>Оптовые </span>
-                        <span class="intro__service-link">продажи</span>
-                    </span>
+                    <span class="intro__service-title">Решения для организаций</span>
                 </a>
-                <a class="intro__service" href="#">
+                <a class="intro__service" href="javascript:;">
                     <span class="intro__service-view">
                         <svg class="">
                             <use xlink:href="/build/img/sprite.svg#handshake"></use>
                         </svg>
                     </span>
-                    <span class="intro__service-title">
-                        <span>Решения для </span>
-                        <span class="intro__service-link">бизнеса</span>
-                    </span>
+                    <span class="intro__service-title">Сервис и ремонт</span>
                 </a>
-                <a class="intro__service" href="#">
+                <a class="intro__service" href="javascript:;">
                     <span class="intro__service-view">
                         <svg class="">
                             <use xlink:href="/build/img/sprite.svg#settings"></use>
                         </svg>
                     </span>
-                    <span class="intro__service-title">
-                        <span>Сервис и </span>
-                        <span class="intro__service-link">ремонт</span>
-                    </span>
+                    <span class="intro__service-title">Услуги</span>
                 </a>
-                <a class="intro__service" href="#">
+                <a class="intro__service" href="javascript:;">
                     <span class="intro__service-view">
                         <svg class="">
                             <use xlink:href="/build/img/sprite.svg#consult"></use>
                         </svg>
                     </span>
-                    <span class="intro__service-title">
-                        <span></span>
-                        <span class="intro__service-link">Услуги</span>
-                    </span>
+                    <span class="intro__service-title">Оптовые продажи</span>
                 </a>
             </div>
         </div>
@@ -65,7 +55,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 mb-5 mb-md-6 mb-lg-7 mb-xl-8">
+        <div class="col-12 mb-5 <?/*mb-md-6*/?> mb-lg-7 <?/*mb-xl-8*/?>">
             <div class="h2 mb-4 mb-lg-5">Деятельность <span class="text--red">«АРВ Трейдинг»</span></div>
             <div class="row">
                 <div class="col-md-12 framed framed--main">
@@ -105,7 +95,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 mb-5 mb-md-6 mb-lg-7 mb-xl-8">
+        <div class="col-12 mb-5 <?/*mb-md-6*/?> mb-lg-7 <?/*mb-xl-8*/?>">
             <div class="h2 mb-4 mb-lg-5">Сертификаты <span class="text--red">и награды</span></div>
             <div class="row">
                 <div class="col-md-12 awards">

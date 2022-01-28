@@ -23,7 +23,7 @@
 				<label>
 					<input type="checkbox" value="">
 					<span class="request__form-note-marker"></span>
-					<span class="text-left">Согласен на обработку персональных данных</span>
+					<span class="text-left fsz-sm">Согласен на обработку персональных данных</span>
 				</label>
 			</div>
 		</form>

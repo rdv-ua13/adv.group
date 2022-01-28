@@ -12,7 +12,6 @@ application.prototype.init = function () {
     this.initTouch();
     this.checkNavBottomDropmenu();
     this.initSliders();
-    this.changeImageUser();
     this.toggleClassBurger();
     this.toggleClassDropMenu();
     this.addMaskedInput();
@@ -119,24 +118,6 @@ application.prototype.initSliders = function () {
         });
     }
 }
-// Сhange the image of the entrance to personal account
-application.prototype.changeImageUser = function () {
-    var srcImgKey = "/build/img/key.png",
-        srcImgUser = "/build/img/user.png",
-        srcImgCallBlack = "/build/img/call-black.png",
-        srcImgCallRed = "/build/img/call.png";
-
-    $(window).on("resize", function () {
-        if (window.matchMedia("(min-width:768px)").matches) {
-            $('.js-user img').attr("src", srcImgKey);
-            $('.js-call img').attr("src", srcImgCallRed);
-        }
-        else if (window.matchMedia("(max-width:767.98px)").matches) {
-            $('.js-user img').attr("src", srcImgUser);
-            $('.js-call img').attr("src", srcImgCallBlack);
-        }
-    }).trigger('resize');
-}
 // Menu-burger button
 application.prototype.toggleClassBurger = function () {
     $(".menu-btn").on("click", function () {
@@ -146,12 +127,9 @@ application.prototype.toggleClassBurger = function () {
 // Menu top "nav-bottom__drop"
 application.prototype.toggleClassDropMenu = function () {
     responsiveDropMenu();
-    $(window).on("resize", responsiveDropMenu);
 
     function responsiveDropMenu() {
         if (window.matchMedia("(max-width:767.98px)").matches) {
-            /*$('.nav-bottom__item--contains .nav-bottom__drop').hide();*/
-
             $('.js-nav-bottom-link').on('click', function () {
                 if (!$(this).closest('.nav-bottom__item--contains').hasClass('active')) {
                     $(".nav-bottom__item--contains").removeClass("active");
