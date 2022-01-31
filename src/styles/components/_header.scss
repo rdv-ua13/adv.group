@@ -6,6 +6,11 @@
 	left: 0;
 	min-width: 300px;
 }
+/*.header--inner {
+	& .user-control:not(:first-child) {
+		display: none;
+	}
+}*/
 
 .user-control-top {
 	position: relative;
@@ -393,16 +398,19 @@
 			content: none;
 		}
 	}
-	.header--inner:not(.header--inner-extended) {
+	.header--inner {
 		& .nav-bottom-container {
 			display: none;
 		}
+		/*& .user-control {
+			margin-right: 0 !important;
+		}*/
 	}
-	.header--inner-extended {
+	/*.header--inner-extended {
 		& .nav-bottom-container {
 			padding-top: 0!important;
 		}
-	}
+	}*/
 
 	.user-control {
 		&__i .img-mobile {

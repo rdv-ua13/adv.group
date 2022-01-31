@@ -997,21 +997,23 @@ svg {
 	.btn {
 		padding: 1.5rem 0;
 	}
+	.btn-secondary span {
+		text-decoration: underline solid $mainRed 2px;
+		text-underline-offset: 2px;
+		transition: text-decoration-color 1s;
+	}
+	.btn-secondary:hover span {
+		text-decoration-color: transparent;
+	}
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+	.btn--high {
+		padding: 2rem 0;
+	}
+}
+@media (min-width: 1200px) {
 	.btn--high {
 		padding: 3rem 0;
-	}
-	.btn-secondary span::before {
-		content: "";
-		position: absolute;
-		right: -4px;
-		bottom: -4px;
-		left: -4px;
-		height: 2px;
-		background-color: $mainRed;
-		transition: all 0.3s ease;
-	}
-	.btn-secondary:hover span::before {
-		background-color: transparent;
 	}
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1113,44 +1115,23 @@ svg {
 			height: 1px;
 			background-color: $mainRed;
 		}
+		& li:not(:last-of-type)::before {
+			top: 7px;
+		}
+		& li:not(:last-of-type)::after {
+			bottom: 8px;
+		}
 	}
 }
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 768px) and (max-width: 1199.98px) {
 	.breadcrumb {
 		margin-bottom: 2rem;
 		padding: 2rem 0 0;
-
-		& li:not(:last-of-type)::before {
-			top: 9px;
-		}
-		& li:not(:last-of-type)::after {
-			bottom: 9px;
-		}
-	}
-}
-@media (min-width: 992px) and (max-width: 1199.98px) {
-	.breadcrumb {
-		margin-bottom: 3rem;
-		padding: 3rem 0 0;
-
-		& li:not(:last-of-type)::before {
-			top: 11px;
-		}
-		& li:not(:last-of-type)::after {
-			bottom: 10px;
-		}
 	}
 }
 @media (min-width: 1200px) {
 	.breadcrumb {
-		margin-bottom: 4rem;
-		padding: 4rem 0 0;
-
-		& li:not(:last-of-type)::before {
-			top: 12px;
-		}
-		& li:not(:last-of-type)::after {
-			bottom: 12px;
-		}
+		margin-bottom: 3rem;
+		padding: 3rem 0 0;
 	}
 }

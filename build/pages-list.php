@@ -85,19 +85,19 @@
         <li><a href="/build/index.php" target="_blank">Главная (!адаптив 100%)</a></li>
         <li><a href="/build/contracts.php" target="_blank">Договоры (!адаптив 100%)</a></li>
         <li><a href="/build/contacts.php" target="_blank">Контакты (!адаптив 100%)</a></li>
-        <li><a href="./cooperation.php" target="_blank">Коопирейшн (!адаптив 100%)</a></li>
-        <li><a href="./leasing.php" target="_blank">Лизинг оргтехники (!адаптив 100%)</a></li>
-        <li><a href="./about.php" target="_blank">О компании (!адаптив 100%)</a></li>
-        <li><a href="./wholesale.php" target="_blank">Оптовые продажи (!адаптив 100%)</a></li>
-        <li><a href="./copy-contract.php" target="_blank">Покопийный контракт (!адаптив 100%)</a></li>
-        <li><a href="./business-solutions.php" target="_blank">Решения для бизнеса (!адаптив 100%)</a></li>
-        <li><a href="./business-solutions-details.php" target="_blank">Решения для бизнеса [детальная] (!адаптив 100%)</a></li>
-        <li><a href="./service-repair.php" target="_blank">Сервис и ремонт (!адаптив 100%)</a></li>
-        <li><a href="./write-off.php" target="_blank">Списание оргтехники (!адаптив 100%)</a></li>
-        <li><a href="./vendors-page.php" target="_blank">Страница вендоров (!адаптив 100%)</a></li>
-        <li><a href="./trade-in.php" target="_blank">Трейд-ин оргтехники (!адаптив 100%)</a></li>
-        <li><a href="./cooperation-form.php" target="_blank">Форма сотрудничества (!адаптив 100%)</a></li>
-        <li><a href="./auth.php" target="_blank">Форма авторизации (!адаптив 100%)</a></li>
+        <li><a href="/build/cooperation.php" target="_blank">Коопирейшн (!адаптив 100%)</a></li>
+        <li><a href="/build/leasing.php" target="_blank">Лизинг оргтехники (!адаптив 100%)</a></li>
+        <li><a href="/build/about.php" target="_blank">О компании (!адаптив 100%)</a></li>
+        <li><a href="/build/wholesale.php" target="_blank">Оптовые продажи (!адаптив 100%)</a></li>
+        <li><a href="/build/copy-contract.php" target="_blank">Покопийный контракт (!адаптив 100%)</a></li>
+        <li><a href="/build/business-solutions.php" target="_blank">Решения для бизнеса (!адаптив 100%)</a></li>
+        <li><a href="/build/business-solutions-details.php" target="_blank">Решения для бизнеса [детальная] (!адаптив 100%)</a></li>
+        <li><a href="/build/service-repair.php" target="_blank">Сервис и ремонт (!адаптив 100%)</a></li>
+        <li><a href="/build/write-off.php" target="_blank">Списание оргтехники (!адаптив 100%)</a></li>
+        <li><a href="/build/vendors-page.php" target="_blank">Страница вендоров (!адаптив 100%)</a></li>
+        <li><a href="/build/trade-in.php" target="_blank">Трейд-ин оргтехники (!адаптив 100%)</a></li>
+        <li><a href="/build/cooperation-form.php" target="_blank">Форма сотрудничества (!адаптив 100%)</a></li>
+        <li><a href="/build/auth.php" target="_blank">Форма авторизации (!адаптив 100%)</a></li>
     </ul>
   </div>
 </body>

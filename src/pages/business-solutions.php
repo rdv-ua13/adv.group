@@ -1,9 +1,9 @@
 <?php include($_SERVER["DOCUMENT_ROOT"] . '/build/components/header.php'); ?>
 
 <div class="intro intro--inner mb-5 mb-md-6 mb-lg-7 mb-xl-8">
-	<div class="intro__wrapper" style="background-image: url('/build/img/rachel-moenning-zjxYwd4HOu0-unsplash.jpg')">
+	<div class="intro__wrapper" style="background-image: url('/build/img/page-bg-1.jpg')">
 		<div class="container intro__content">
-			<h1 class="intro__title">Решения&nbsp;<span class="text--red">для&nbsp;бизнеса</span></h1>
+			<h1 class="intro__title">Решения&nbsp;<span class="text--red">для&nbsp;организаций</span></h1>
 		</div>
 	</div>
 </div>
@@ -88,16 +88,16 @@
                 <div class="col-md-12 framed framed--stack">
                     <div class="row">
                         <div class="framed__container col-md-11 mx-md-auto mb-4 pt-5 mb-xl-5 pt-md-0">
-                                <div class="framed__col">
+                                <div class="framed__col framed__col-z-3">
                                     <a class="framed__item" href="#">Лизинг оргтехники</a>
                                 </div>
-                                <div class="framed__col">
+                                <div class="framed__col framed__col-z-2">
                                     <a class="framed__item" href="#">Трейд-ин оргтехники</a>
                                 </div>
-                                <div class="framed__col">
+                                <div class="framed__col framed__col-z-1">
                                     <a class="framed__item" href="#">Покопийный контракт</a>
                                 </div>
-                                <div class="framed__col">
+                                <div class="framed__col framed__col-z-0">
                                     <a class="framed__item" href="#">Списание оргтехники</a>
                                 </div>
                         </div>

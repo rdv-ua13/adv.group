@@ -1,5 +1,23 @@
 <?php include($_SERVER["DOCUMENT_ROOT"].'/build/components/header.php'); ?>
 
+<div class="container">
+    <ol class="breadcrumb fsz-md" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+            <a href="/" title="Главная" itemprop="item">
+                <span itemprop="name">Главная</span>
+                <meta itemprop="position" content="1">
+            </a>
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+            <a href="/resheniya-dlya-organizacij/" title="Решения для организаций" itemprop="item">
+                <span itemprop="name">Решения для организаций</span>
+                <meta itemprop="position" content="2">
+            </a>
+        </li>
+        <li><span>Офисы</span></li>
+    </ol>
+</div>
+
 <?/* if (strstr($APPLICATION->GetCurDir(), "/path")) */
 if (strpos($_SERVER["REQUEST_URI"], "business-solutions-details.php")) {
 	echo '<div class="intro intro--inner intro--inner-empty mb-5 mb-md-0">';

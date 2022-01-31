@@ -1,7 +1,7 @@
 <?php include($_SERVER["DOCUMENT_ROOT"] . '/build/components/header.php'); ?>
 
 <div class="intro intro--inner intro--has-btn-multiple mb-5 mb-md-6 mb-lg-7 mb-xl-8">
-	<div class="intro__wrapper" style="background-image: url('/build/img/rachel-moenning-zjxYwd4HOu0-unsplash.jpg')">
+	<div class="intro__wrapper" style="background-image: url('/build/img/page-bg-5.jpg')">
 		<div class="container intro__content intro__content--has-btn-short">
 			<h1 class="intro__title">Сервис&nbsp;<span class="text--red">и ремонт</span></h1>
 			<div class="intro__btn intro__btn--short">
@@ -11,7 +11,7 @@
 				<button class="btn btn--high btn-secondary fsz-md" type="submit"><span>Договор2</span></button>
 			</div>
 			<div class="intro__btn intro__btn--short">
-				<button class="btn btn--high btn-secondary fsz-md" type="submit"><span>Договор3</span></button>
+				<button class="btn btn--high btn-secondary fsz-md" type="submit"><span>Тариф Минимальный</span></button>
 			</div>
 		</div>
 	</div>

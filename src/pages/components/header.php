@@ -26,21 +26,17 @@
         || strpos($_SERVER["REQUEST_URI"], "auth.php")) {
         echo '<header class="header pt-md-3">';
     }
-    else if (strpos($_SERVER["REQUEST_URI"], "business-solutions-details.php")) {
-		$isSubsection = 1;
-        echo '<header class="header header--inner header--inner-extended">';
-    }
     else {
 		$isSubsection = 1;
-        echo '<header class="header header--inner">';
+        echo '<header class="header pt-md-3 header--inner">';
     }?>
         <div class="container header__container">
             <div class="row">
 				<? if($isSubsection) {
-					echo '<div class="order-1 col-4 col-md-2 col-xl-3 py-2 pt-sm-3 py-md-0 d-flex align-items-center">';
+					echo '<div class="order-1 col-4 col-md-3 col-xl-2 mb-md-3 py-2 py-sm-3 py-md-0 d-flex align-items-center">';
 				}
 				else {
-					echo '<div class="order-1 col-4 col-md-3 col-xl-2  mb-md-3 py-2 py-sm-3 py-md-0 d-flex align-items-center ">';
+					echo '<div class="order-1 col-4 col-md-3 col-xl-2 mb-md-3 py-2 py-sm-3 py-md-0 d-flex align-items-center">';
 				} ?>
                     <div class="logo">
                         <a class="mr-2" href="/build/">
@@ -49,14 +45,14 @@
                     </div>
                 </div>
                 <? if($isSubsection) {
-                    echo '<div class="order-3 order-md-2 col-4 col-md-10 col-xl-9 py-2 py-sm-3 pt-md-0">';
+                    echo '<div class="order-3 order-md-2 col-4 col-md-9 col-xl-10 mb-md-3 py-2 py-sm-3 py-md-0 header__user-control">';
                 }
                 else {
-                    echo '<div class="order-3 order-md-2 col-4 col-md-9 col-xl-10  mb-md-3 py-2 py-sm-3 py-md-0  header__user-control">';
+                    echo '<div class="order-3 order-md-2 col-4 col-md-9 col-xl-10 mb-md-3 py-2 py-sm-3 py-md-0 header__user-control">';
                 } ?>
                     <div class="row h-100">
 						<? if($isSubsection) {
-						    echo '<nav class="nav-top col-md-7 col-xl-8 d-none d-md-flex justify-content-end align-items-center fsz-md">';
+						    echo '<nav class="nav-top col-md-12 mb-md-3 d-none d-md-flex justify-content-end align-items-center fsz-md">';
 						}
 						else {
 						    echo '<nav class="nav-top col-md-12 col-xxl-9 mb-md-3 mb-xxl-0 d-none d-md-flex justify-content-end align-items-center fsz-md">';
@@ -69,7 +65,7 @@
                             <a class="nav-top-item" href="">Контакты</a>
                         </nav>
 						<? if($isSubsection) {
-						    echo '<div class="user-control-top col-md-5 col-xl-4 fsz-md">';
+						    echo '<div class="user-control-top col-md-12 fsz-md">';
 						}
 						else {
 						    echo '<div class="user-control-top col-md-12 col-xxl-3 fsz-md">';
@@ -82,7 +78,7 @@
                                 <span>+7 (495) 580-55-56</span>
                             </a>
                             <? if($isSubsection) {
-                                echo '<a class="user-control order-1 order-md-2 d-md-none" href="javascript:;">';
+                                echo '<a class="user-control order-2" href="javascript:;">';
                             }
                             else {
                                 echo '<a class="user-control order-2 d-xxl-none" href="javascript:;">';
@@ -219,12 +215,12 @@
     </header>
 
 	<?
-    if($isSubsection && !strpos($_SERVER["REQUEST_URI"], "business-solutions-details.php")) {
+    if($isSubsection) {
 		echo '<main class="main main--inner">';
 	}
-	else if ($isSubsection && strpos($_SERVER["REQUEST_URI"], "business-solutions-details.php")) {
+	/*else if ($isSubsection && strpos($_SERVER["REQUEST_URI"], "business-solutions-details.php")) {
 		echo '<main class="main business-details">';
-	}
+	}*/
 	else {
 		echo '<main class="main">';
 	} ?>

@@ -32,7 +32,7 @@
                 <div class="contacts-map__board-container container">
                     <div class="contacts-map__board col-md-12 js-contacts-map-board">
                         <div class="row">
-                            <div class="h3">Наши <span class='text--red'>контакты</span></div>
+                            <div class="title h2">Контакты <span class="text--red">АРВ Трейдинг</span></div>
                             <div class="contacts-map__board-col">
                                 <div class="contacts-map__board-item">
                                     <div class="contacts-map__board-i">
@@ -69,13 +69,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="contacts-map__board-col"><!--popover-content__row-->
-                                <div class="contacts-map__board-item"><!-- popover-content__title-->
+                            <div class="contacts-map__board-col">
+                                <div class="contacts-map__board-item">
                                     <div class="contacts-map__board-i">
                                         <img src="/build/img/clock.png" alt="schedule">
                                         <span class="contacts-map__title">Мы работаем для Вас:</span>
                                     </div>
-                                    <span class="contacts-map__link mb-1">c Понедельника по Пятницу, 10:00&nbsp;-&nbsp;19:00</span><!-- popover-content__link-->
+                                    <span class="contacts-map__link mb-1">c Понедельника по Пятницу, 10:00&nbsp;-&nbsp;19:00</span>
                                 </div>
                             </div>
 
